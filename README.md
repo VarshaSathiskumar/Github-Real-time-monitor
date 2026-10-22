@@ -152,6 +152,10 @@ terraform apply                                # creates billable resources, rev
 
 Cost estimates, HTTPS setup, operations and **cleanup (`terraform destroy`)** are in [`docs/deployment.md`](docs/deployment.md). Nothing is provisioned automatically by this repository.
 
+## Frontend on Vercel
+
+The React app can be hosted on Vercel while the backend runs on a Docker host. `frontend/vercel.json` configures the build; the required environment variables (`VITE_API_BASE_URL`, `VITE_WS_URL`) and the CORS setting are in [`docs/vercel.md`](docs/vercel.md).
+
 ## API
 
 Interactive documentation: `/swagger-ui.html` (OpenAPI JSON at `/v3/api-docs`).
