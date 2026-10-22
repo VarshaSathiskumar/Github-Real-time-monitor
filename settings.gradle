@@ -1,0 +1,5 @@
+rootProject.name = 'githubpulse'
+
+include 'proto'
+include 'services:ingestion-service'
+include 'services:analytics-service'

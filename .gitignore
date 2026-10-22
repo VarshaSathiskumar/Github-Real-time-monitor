@@ -1,0 +1,28 @@
+# build output
+build/
+.gradle/
+out/
+*.class
+*.log
+# IDE
+.idea/
+*.iml
+.vscode/
+.DS_Store
+# secrets and local config
+.env
+.env.*
+!.env.example
+*.pem
+*.tfvars
+!*.tfvars.example
+# terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+# frontend
+frontend/node_modules/
+frontend/dist/
+# load test output
+scripts/results/

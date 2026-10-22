@@ -1,0 +1,43 @@
+syntax = "proto3";
+
+package githubpulse.ingestion.v1;
+
+import "google/protobuf/timestamp.proto";
+
+option java_multiple_files = true;
+option java_package = "com.githubpulse.proto.ingestion.v1";
+option java_outer_classname = "IngestionProto";
+
+// Synchronous health query served by the ingestion service and consumed by the
+// analytics service. Event delivery itself stays on Kafka.
+service IngestionService {
+  rpc GetIngestionStatus(GetIngestionStatusRequest) returns (GetIngestionStatusResponse);
+}
+
+enum IngestionState {
+  INGESTION_STATE_UNSPECIFIED = 0;
+  INGESTION_STATE_STARTING = 1;
+  INGESTION_STATE_HEALTHY = 2;
+  INGESTION_STATE_DEGRADED = 3;
+  INGESTION_STATE_RATE_LIMITED = 4;
+  INGESTION_STATE_FAILING = 5;
+  INGESTION_STATE_STOPPED = 6;
+}
+
+message GetIngestionStatusRequest {}
+
+message GetIngestionStatusResponse {
+  // Last poll of the GitHub events API that completed successfully (200 or 304).
+  google.protobuf.Timestamp last_successful_poll = 1;
+  // Events published to Kafka since this ingestion process started.
+  int64 events_ingested = 2;
+  IngestionState status = 3;
+  // Empty when the most recent poll succeeded.
+  string last_error = 4;
+  google.protobuf.Timestamp last_poll_attempt = 5;
+  int32 consecutive_failures = 6;
+  // Seconds between polls currently in effect (from X-Poll-Interval).
+  int32 poll_interval_seconds = 7;
+  // Remaining GitHub rate limit quota, -1 when unknown.
+  int32 rate_limit_remaining = 8;
+}

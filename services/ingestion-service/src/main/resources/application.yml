@@ -1,0 +1,52 @@
+server:
+  port: ${INGESTION_HTTP_PORT:8081}
+  shutdown: graceful
+
+spring:
+  application:
+    name: ingestion-service
+  lifecycle:
+    timeout-per-shutdown-phase: 20s
+  kafka:
+    bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS:localhost:9092}
+    producer:
+      acks: all
+      compression-type: lz4
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      properties:
+        enable.idempotence: true
+        linger.ms: 50
+        delivery.timeout.ms: 30000
+        request.timeout.ms: 10000
+
+pulse:
+  ingestion:
+    github-api-url: ${GITHUB_API_URL:https://api.github.com/events}
+    # Optional. Only read from the environment, never hardcoded.
+    github-token: ${GITHUB_TOKEN:}
+    # Pages per poll when authenticated (anonymous clients poll one page: 60 requests/hour limit).
+    pages: ${GITHUB_PAGES:3}
+    per-page: 100
+    min-poll-interval: ${GITHUB_MIN_POLL_INTERVAL:60s}
+    max-backoff: 5m
+    request-timeout: 15s
+    publish-timeout: 20s
+    dedup-cache-size: 50000
+    rate-limit-reserve: 3
+    raw-topic: github.events.raw
+    dlq-topic: github.events.dlq
+    raw-topic-partitions: 3
+    topic-replication-factor: 1
+    grpc-port: ${INGESTION_GRPC_PORT:9090}
+    polling-enabled: ${INGESTION_POLLING_ENABLED:true}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      probes:
+        enabled: true

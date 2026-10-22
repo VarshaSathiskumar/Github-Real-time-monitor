@@ -1,0 +1,6 @@
+# Optional TLS terminator (compose profile "https"). Set DOMAIN to a name that points at this host;
+# Caddy then obtains and renews a Let's Encrypt certificate automatically.
+{$DOMAIN} {
+    encode gzip
+    reverse_proxy frontend:80
+}

@@ -1,0 +1,105 @@
+server:
+  port: ${ANALYTICS_HTTP_PORT:8080}
+  shutdown: graceful
+
+spring:
+  application:
+    name: analytics-service
+  lifecycle:
+    timeout-per-shutdown-phase: 25s
+  datasource:
+    url: ${POSTGRES_URL:jdbc:postgresql://localhost:5432/githubpulse}
+    username: ${POSTGRES_USER:githubpulse}
+    password: ${POSTGRES_PASSWORD:githubpulse}
+    hikari:
+      maximum-pool-size: 10
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+  flyway:
+    enabled: true
+  data:
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
+      password: ${REDIS_PASSWORD:}
+  kafka:
+    bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS:localhost:9092}
+    streams:
+      application-id: githubpulse-analytics
+      properties:
+        processing.guarantee: at_least_once
+        commit.interval.ms: 1000
+        num.stream.threads: 1
+        default.deserialization.exception.handler: org.apache.kafka.streams.errors.LogAndContinueExceptionHandler
+        auto.offset.reset: earliest
+        state.dir: ${STREAMS_STATE_DIR:/tmp/kafka-streams}
+        replication.factor: 1
+        # Internal topics inherit this: keep the single-broker dev setup working.
+        producer.acks: all
+  jackson:
+    default-property-inclusion: non_null
+    serialization:
+      write-dates-as-timestamps: false
+
+pulse:
+  topics:
+    raw: github.events.raw
+    dlq: github.events.dlq
+    raw-partitions: 3
+    replication-factor: 1
+  # Activity Score = push x push + pull requests x pull-request + forks x fork + everything else x other
+  score:
+    push: ${SCORE_WEIGHT_PUSH:2}
+    pull-request: ${SCORE_WEIGHT_PULL_REQUEST:3}
+    fork: ${SCORE_WEIGHT_FORK:2}
+    other: ${SCORE_WEIGHT_OTHER:1}
+  momentum:
+    window: 5m
+    baseline-windows: 6
+    min-history-windows: 3
+    min-events: ${MOMENTUM_MIN_EVENTS:8}
+    spike-ratio: 3.0
+    min-baseline: 1.0
+    visible-for: 15m
+  retention:
+    events: 48h
+    repo-minutes: 72h
+    minutes: 30d
+    rising: 7d
+    failures: 14d
+  redis:
+    key-ttl: 26h
+    recent-events-max: 100
+  ws:
+    interval: ${WS_BROADCAST_INTERVAL:3s}
+  ingestion-grpc:
+    target: ${INGESTION_GRPC_TARGET:localhost:9090}
+    deadline: 2s
+  streams:
+    dedup-ttl: 2h
+    persist-retries: 3
+    retry-backoff: 200ms
+    grace-period: 30s
+  demo:
+    backfill: 6h
+    idle-timeout: 90s
+    events-per-second: 4
+  cors-allowed-origins: ${CORS_ALLOWED_ORIGINS:http://localhost:5173}
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+  api-docs:
+    path: /v3/api-docs
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      probes:
+        enabled: true

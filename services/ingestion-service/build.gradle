@@ -1,0 +1,21 @@
+plugins {
+    id 'org.springframework.boot'
+    id 'io.spring.dependency-management'
+}
+
+dependencies {
+    implementation project(':proto')
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    implementation 'org.springframework.kafka:spring-kafka'
+    implementation "io.grpc:grpc-netty-shaded:${grpcVersion}"
+    implementation 'net.logstash.logback:logstash-logback-encoder:8.0'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation "io.grpc:grpc-inprocess:${grpcVersion}"
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+springBoot {
+    mainClass = 'com.githubpulse.ingestion.IngestionApplication'
+}
