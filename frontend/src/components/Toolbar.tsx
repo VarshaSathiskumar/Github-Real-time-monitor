@@ -1,4 +1,4 @@
-import { ArrowLeft, HeartPulse, Info } from 'lucide-react'
+import { ArrowLeft, HeartPulse } from 'lucide-react'
 import type { Mode, RangeCode } from '@/lib/types'
 import { cn } from '@/lib/utils'
 import { Button } from '@/components/ui/button'
@@ -53,14 +53,7 @@ interface Props {
 
 export function Toolbar({ mode, range, onRange, onReturnToLive }: Props) {
   return (
-    <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-      <p className="flex items-start gap-2 text-xs leading-relaxed text-muted-foreground sm:max-w-2xl sm:text-[13px]">
-        <Info className="mt-0.5 h-3.5 w-3.5 shrink-0 text-slate-500" aria-hidden />
-        <span>
-          Near real time. Events come from GitHub&apos;s public events API, which is sampled, delayed and
-          rate limited, so counts describe the observed sample, not all of GitHub.
-        </span>
-      </p>
+    <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-end">
       <div className="flex flex-wrap items-center gap-3">
         <RangeSelector value={range} onChange={onRange} />
         <Button variant="primary" asChild>
