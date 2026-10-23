@@ -26,7 +26,7 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { Skeleton } from '@/components/ui/skeleton'
 
-const ICONS: Record<EventKind, LucideIcon> = {
+export const ICONS: Record<EventKind, LucideIcon> = {
   PUSH: Upload,
   PULL_REQUEST: GitPullRequest,
   FORK: GitFork,

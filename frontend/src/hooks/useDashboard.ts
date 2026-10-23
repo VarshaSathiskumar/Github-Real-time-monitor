@@ -88,6 +88,8 @@ function backoffMs(attempt: number): number {
   return base / 2 + Math.random() * (base / 2)
 }
 
+export type FeedListener = (events: FeedEvent[], mode: Mode) => void
+
 export function useDashboard() {
   const [state, dispatch] = useReducer(reducer, initial)
   const [paused, setPausedState] = useState(false)
@@ -97,8 +99,19 @@ export function useDashboard() {
   const pausedRef = useRef(false)
   const pending = useRef<FeedEvent[]>([])
   const socket = useRef<WebSocket | null>(null)
+  const listeners = useRef(new Set<FeedListener>())
 
   ctx.current = { mode: state.mode, range: state.range }
+
+  /** Lets other views (the network graph) tap the same event stream, newest first, unaffected by feed pause. */
+  const subscribeEvents = useCallback((listener: FeedListener) => {
+    listeners.current.add(listener)
+    return () => void listeners.current.delete(listener)
+  }, [])
+
+  const publish = useCallback((events: FeedEvent[], mode: Mode) => {
+    for (const l of listeners.current) l(events, mode)
+  }, [])
 
   const subscribe = useCallback(() => {
     const ws = socket.current
@@ -123,11 +136,13 @@ export function useDashboard() {
       api.rising(mode).then(put('rising')),
       api.status(mode).then(put('status')),
       api.events(mode).then((events) => {
-        if (current()) dispatch({ type: 'events', events, replace: true })
+        if (!current()) return
+        dispatch({ type: 'events', events, replace: true })
+        publish(events, mode)
       }),
     ])
     if (current() && results.every((r) => r.status === 'rejected')) dispatch({ type: 'failed', value: true })
-  }, [])
+  }, [publish])
 
   // Context (mode or range) changes: reset views, reload and tell the server what to stream.
   useEffect(() => {
@@ -150,6 +165,7 @@ export function useDashboard() {
       switch (msg.type) {
         case 'events': {
           const incoming = msg.data as FeedEvent[]
+          publish(incoming, msg.mode)
           if (pausedRef.current) {
             pending.current = mergeEvents(pending.current, incoming)
             setPendingCount(pending.current.length)
@@ -216,7 +232,7 @@ export function useDashboard() {
       window.removeEventListener('online', onOnline)
       socket.current?.close()
     }
-  }, [loadSnapshot, subscribe])
+  }, [loadSnapshot, subscribe, publish])
 
   // REST polling fallback while the socket is down.
   useEffect(() => {
@@ -254,5 +270,5 @@ export function useDashboard() {
 
   const dismissAlert = useCallback(() => dispatch({ type: 'alert', value: undefined }), [])
 
-  return { state, paused, pendingCount, setPaused, setRange, launchDemo, returnToLive, dismissAlert }
+  return { state, paused, pendingCount, setPaused, setRange, launchDemo, returnToLive, dismissAlert, subscribeEvents }
 }

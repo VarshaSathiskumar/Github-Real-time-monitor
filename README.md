@@ -12,6 +12,7 @@ Behind the UI sits a small distributed system: a polling ingestion service, Apac
 
 ## What it does
 
+- **Network Graph (landing page)**: an interactive graph of repositories, developers and events built from the live WebSocket stream. Zoom, pan and drag; click a node to see its details in a side panel. Click a repository to expand its developers and events. The graph updates incrementally and is capped at 60 repositories, 120 developers and 200 events. Everything below is on the **Analytics** tab.
 - **Five live KPI cards**: total events, active repositories, push events, pull requests, forks. Each has an animated number, a sparkline, the percent change, and an explanatory tooltip. The change compares the selected window with the previous equivalent one; while less history exists it compares the latest minutes with the span before them and says so in the tooltip.
 - **Activity chart**: events per minute (total, push, pull request) with series toggles and 15 min / 1 h / 6 h / 24 h ranges. The live window comes from Redis counters, longer ranges from PostgreSQL aggregates.
 - **Trending Repositories**: the five most active repositories in the observed event stream, ranked by a documented, configurable activity score.
@@ -76,7 +77,7 @@ More detail (time semantics, delivery guarantees, Redis layout, WebSocket protoc
 
 | Area | Stack |
 |---|---|
-| Frontend | React 18, TypeScript, Vite, Tailwind CSS, shadcn/ui-style components (Radix), Recharts, Lucide, Framer Motion |
+| Frontend | React 18, TypeScript, Vite, Tailwind CSS, shadcn/ui-style components (Radix), Recharts, Cytoscape.js and d3-force (network graph), Lucide, Framer Motion |
 | Backend | Java 21, Spring Boot 3.5, Apache Kafka + Kafka Streams, Redis, PostgreSQL 16, Spring Data JPA + JDBC, Flyway, WebSockets, gRPC, springdoc OpenAPI, Gradle |
 | Infrastructure | Docker, Docker Compose, Terraform (AWS EC2), nginx, Caddy (optional HTTPS), GitHub Actions |
 | Testing | JUnit 5, Mockito, Kafka Streams `TopologyTestDriver`, embedded PostgreSQL, Testcontainers, Vitest |

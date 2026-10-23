@@ -161,3 +161,6 @@ export interface WsEnvelope {
   ts: string
   data: unknown
 }
+
+/** Top level screens: the network graph landing page and the analytics dashboard. */
+export type View = 'graph' | 'analytics'

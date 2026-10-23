@@ -19,6 +19,15 @@ export default defineConfig({
   },
   build: {
     chunkSizeWarningLimit: 900,
+    rollupOptions: {
+      output: {
+        // Keep the two heavy visualisation libraries out of the app chunk so they cache independently.
+        manualChunks: (id) => {
+          if (id.includes('node_modules/cytoscape')) return 'cytoscape'
+          if (id.includes('node_modules/recharts') || (id.includes('node_modules/d3-') && !id.includes('d3-force'))) return 'charts'
+        },
+      },
+    },
   },
   test: {
     environment: 'node',

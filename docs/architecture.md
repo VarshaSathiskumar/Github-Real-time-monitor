@@ -85,3 +85,13 @@ On reconnect the frontend backs off exponentially, re-subscribes and fetches a f
 ## Demo mode
 
 `DemoSimulator` backfills six hours of minute buckets, then emits roughly four events per second plus a periodic 100 s spike on a quiet repository. State lives in `DemoDataStore`, an in-memory implementation of the same `ActivityStore`/`DashboardSource` interfaces the real data uses, so all view models are computed by identical code. It runs while a demo client is connected (or for 90 s after the last `POST /api/demo/start`) and then discards its data.
+
+## Network graph
+
+The landing page is frontend only; it needs no new backend API. `useDashboard` exposes a `subscribeEvents` tap on the existing `events` WebSocket messages and REST snapshots, and `useGraph` folds them into a `GraphStore` (`lib/graph.ts`):
+
+- Nodes are repositories, developers and events; edges link developer to repository (weighted by event count) and each event to its repository and actor. Event ids are deduplicated, and live and demo data never share a store (it is cleared on mode change).
+- Limits: 60 repositories, 120 developers, 200 events. Least recently active repositories and developers are evicted with their events, developers left without a repository are dropped, and the oldest events go first.
+- Only the 20 freshest events are drawn by default. Selecting a repository expands all of its events; selecting a developer shows theirs.
+- `GraphCanvas` (Cytoscape.js) diffs the visible elements against the canvas and adds or removes only what changed, while `ForceLayout` (d3-force) keeps running and is re-heated rather than rebuilt, so positions stay stable as events stream in.
+- The store lives in `App`, so the graph keeps updating while the Analytics tab is open. The active tab is mirrored in `?view=analytics`.

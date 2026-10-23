@@ -2,15 +2,18 @@ import { Github, Radio, WifiOff } from 'lucide-react'
 import { useNow } from '@/hooks/useNow'
 import { GITHUB_REPO_URL } from '@/lib/config'
 import { timeAgo } from '@/lib/format'
-import type { ConnectionState, Mode } from '@/lib/types'
+import type { ConnectionState, Mode, View } from '@/lib/types'
 import { cn } from '@/lib/utils'
 import { Button } from '@/components/ui/button'
+import { ViewTabs } from './ViewTabs'
 
 interface Props {
   mode: Mode
   connection: ConnectionState
   lastUpdated?: number
   ingestionStatus?: string
+  view: View
+  onViewChange: (v: View) => void
 }
 
 function LiveIndicator({ mode, connected }: { mode: Mode; connected: boolean }) {
@@ -38,7 +41,7 @@ const connectionLabel: Record<ConnectionState, string> = {
   reconnecting: 'Reconnecting',
 }
 
-export function Header({ mode, connection, lastUpdated, ingestionStatus }: Props) {
+export function Header({ mode, connection, lastUpdated, ingestionStatus, view, onViewChange }: Props) {
   const now = useNow(1000)
   const connected = connection === 'open'
   return (
@@ -86,6 +89,9 @@ export function Header({ mode, connection, lastUpdated, ingestionStatus }: Props
             </a>
           </Button>
         </div>
+      </div>
+      <div className="mx-auto max-w-[1320px] px-2 sm:px-5">
+        <ViewTabs view={view} onChange={onViewChange} />
       </div>
     </header>
   )
