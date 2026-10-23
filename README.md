@@ -1,6 +1,6 @@
 # GitHubPulse
 
-**The internet's open-source activity, live.** GitHubPulse is a light-themed dashboard with an interactive network graph and an analytics tab that watch GitHub's public event stream in near real time and turns it into KPIs, trends, trending repositories and activity-spike detection.
+**The internet's open-source activity, live.** GitHubPulse is a light-themed dashboard with an interactive network graph and an analytics tab that watch GitHub's public event stream in near real time and turn it into KPIs, trends, trending repositories and activity-spike detection.
 
 Behind the UI sits a small distributed system: a polling ingestion service, Apache Kafka, a Kafka Streams processor, Redis for the live window, PostgreSQL for history, and WebSockets pushing updates to the browser.
 
