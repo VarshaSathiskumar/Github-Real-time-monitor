@@ -11,10 +11,10 @@ import { Card, CardContent } from '@/components/ui/card'
 import { Skeleton } from '@/components/ui/skeleton'
 
 const LEVELS: Record<RisingRepo['level'], { label: string; bars: number; color: string }> = {
-  BURST: { label: 'New burst', bars: 2, color: '#22d3ee' },
-  WARMING: { label: 'Warming up', bars: 2, color: '#fbbf24' },
-  RISING: { label: 'Rising', bars: 3, color: '#fb923c' },
-  SURGING: { label: 'Surging', bars: 4, color: '#fb7185' },
+  BURST: { label: 'New burst', bars: 2, color: '#0e7490' },
+  WARMING: { label: 'Warming up', bars: 2, color: '#d97706' },
+  RISING: { label: 'Rising', bars: 3, color: '#ea580c' },
+  SURGING: { label: 'Surging', bars: 4, color: '#e11d48' },
 }
 
 function Momentum({ level }: { level: RisingRepo['level'] }) {
@@ -73,7 +73,7 @@ export function RisingRepos({ data, mode }: { data?: Rising; mode: Mode }) {
                   initial={{ opacity: 0, scale: 0.97 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: i * 0.04 }}
-                  className="rounded-xl border border-white/[0.07] bg-white/[0.03] p-3"
+                  className="rounded-xl border border-slate-900/[0.08] bg-slate-900/[0.03] p-3"
                   style={{ boxShadow: `inset 3px 0 0 ${level.color}` }}
                 >
                   <div className="flex items-start justify-between gap-3">
@@ -81,7 +81,7 @@ export function RisingRepos({ data, mode }: { data?: Rising; mode: Mode }) {
                       href={r.repoUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group inline-flex min-w-0 items-center gap-1.5 text-sm font-semibold text-white hover:text-pulse-cyan"
+                      className="group inline-flex min-w-0 items-center gap-1.5 text-sm font-semibold text-slate-900 hover:text-pulse-cyan"
                     >
                       <span className="truncate">{r.repo}</span>
                       <ExternalLink className="h-3 w-3 shrink-0 text-slate-500 group-hover:text-pulse-cyan" aria-label="Opens on GitHub" />
@@ -102,13 +102,13 @@ export function RisingRepos({ data, mode }: { data?: Rising; mode: Mode }) {
                   <dl className="mt-2 grid grid-cols-3 gap-2 text-xs">
                     <div>
                       <dt className="text-slate-500">Current</dt>
-                      <dd className="num font-medium text-white">
+                      <dd className="num font-medium text-slate-900">
                         {formatCount(r.currentCount)} <span className="text-slate-500">/ {r.windowMinutes}m</span>
                       </dd>
                     </div>
                     <div>
                       <dt className="text-slate-500">Baseline</dt>
-                      <dd className="num font-medium text-slate-200">
+                      <dd className="num font-medium text-slate-800">
                         {r.baseline.toFixed(1)} <span className="text-slate-500">/ {r.windowMinutes}m</span>
                       </dd>
                     </div>

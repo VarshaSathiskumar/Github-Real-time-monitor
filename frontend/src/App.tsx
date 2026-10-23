@@ -3,7 +3,6 @@ import { CloudOff } from 'lucide-react'
 import { ActivityBreakdown } from '@/components/ActivityBreakdown'
 import { ActivityChart } from '@/components/ActivityChart'
 import { AlertToast } from '@/components/AlertToast'
-import { Background } from '@/components/Background'
 import { DemoBanner } from '@/components/DemoBanner'
 import { Header } from '@/components/Header'
 import { KpiCards } from '@/components/KpiCards'
@@ -28,7 +27,6 @@ export default function App() {
 
   return (
     <TooltipProvider delayDuration={150}>
-      <Background />
       <Header
         mode={mode}
         connection={state.connection}
@@ -48,7 +46,7 @@ export default function App() {
         {state.loadFailed && !state.metrics && (
           <div
             role="alert"
-            className="flex items-start gap-3 rounded-2xl border border-amber-400/25 bg-amber-400/10 px-4 py-3 text-sm text-amber-100"
+            className="flex items-start gap-3 rounded-2xl border border-amber-400/25 bg-amber-400/10 px-4 py-3 text-sm text-amber-900"
           >
             <CloudOff className="mt-0.5 h-4 w-4 shrink-0" aria-hidden />
             <p>

@@ -63,10 +63,10 @@ function Row({ event, now }: { event: FeedEvent; now: number }) {
     <motion.li
       layout="position"
       initial={{ opacity: 0, y: -14, backgroundColor: `${meta.color}33` }}
-      animate={{ opacity: 1, y: 0, backgroundColor: 'rgba(255,255,255,0.0)' }}
+      animate={{ opacity: 1, y: 0, backgroundColor: 'rgba(255,255,255,0)' }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-      className="flex items-center gap-3 rounded-xl border border-transparent px-2.5 py-2.5 hover:border-white/[0.08] hover:bg-white/[0.04]"
+      className="flex items-center gap-3 rounded-xl border border-transparent px-2.5 py-2.5 hover:border-slate-900/[0.08] hover:bg-slate-900/[0.03]"
     >
       <span
         className="grid h-8 w-8 shrink-0 place-items-center rounded-lg"
@@ -75,12 +75,12 @@ function Row({ event, now }: { event: FeedEvent; now: number }) {
         <Icon className="h-4 w-4" aria-hidden />
       </span>
       <div className="min-w-0 flex-1">
-        <p className="truncate text-sm text-slate-200">
+        <p className="truncate text-sm text-slate-800">
           <a
             href={`https://github.com/${event.actor}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="font-medium text-white hover:text-pulse-cyan"
+            className="font-medium text-slate-900 hover:text-pulse-cyan"
           >
             {event.actor}
           </a>{' '}
@@ -89,7 +89,7 @@ function Row({ event, now }: { event: FeedEvent; now: number }) {
             href={event.repoUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="font-medium text-pulse-cyan/90 hover:text-pulse-cyan hover:underline"
+            className="font-medium text-pulse-cyan hover:text-pulse-cyan hover:underline"
           >
             {event.repo}
           </a>
@@ -109,7 +109,7 @@ function Row({ event, now }: { event: FeedEvent; now: number }) {
           target="_blank"
           rel="noopener noreferrer"
           aria-label={`Open ${event.repo} event on GitHub`}
-          className="shrink-0 rounded-md p-1.5 text-slate-500 hover:bg-white/10 hover:text-white"
+          className="shrink-0 rounded-md p-1.5 text-slate-500 hover:bg-slate-900/[0.06] hover:text-slate-900"
         >
           <ExternalLink className="h-3.5 w-3.5" />
         </a>
@@ -156,8 +156,8 @@ export function LiveFeed({ events, loaded, mode, paused, pendingCount, onPausedC
               className={cn(
                 'rounded-full border px-2.5 py-1 text-[11px] font-medium transition-colors',
                 filter === f.key
-                  ? 'border-white/20 bg-white/15 text-white'
-                  : 'border-white/[0.07] text-slate-400 hover:text-slate-100',
+                  ? 'border-slate-900/15 bg-slate-900/10 text-slate-900'
+                  : 'border-slate-900/[0.08] text-slate-600 hover:text-slate-900',
               )}
             >
               {f.label}

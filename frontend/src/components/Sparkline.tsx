@@ -23,7 +23,7 @@ export function Sparkline({ data, color, className }: Props) {
     <svg viewBox="0 0 100 32" preserveAspectRatio="none" className={className} aria-hidden>
       <defs>
         <linearGradient id={id} x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor={color} stopOpacity="0.4" />
+          <stop offset="0%" stopColor={color} stopOpacity="0.18" />
           <stop offset="100%" stopColor={color} stopOpacity="0" />
         </linearGradient>
       </defs>

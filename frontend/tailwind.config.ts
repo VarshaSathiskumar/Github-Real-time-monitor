@@ -6,9 +6,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-        display: ['"Space Grotesk"', 'Inter', 'ui-sans-serif', 'sans-serif'],
-        mono: ['"JetBrains Mono"', 'ui-monospace', 'SFMono-Regular', 'monospace'],
+        sans: ['"IBM Plex Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        display: ['"IBM Plex Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },
       colors: {
         border: 'hsl(var(--border))',
@@ -19,27 +18,22 @@ export default {
         popover: { DEFAULT: 'hsl(var(--popover))', foreground: 'hsl(var(--foreground))' },
         primary: { DEFAULT: 'hsl(var(--primary))', foreground: 'hsl(var(--primary-foreground))' },
         pulse: {
-          blue: '#4f8cff',
-          cyan: '#22d3ee',
-          violet: '#8b5cf6',
-          green: '#34d399',
-          amber: '#fbbf24',
-          rose: '#fb7185',
+          blue: '#2563eb',
+          cyan: '#0e7490',
+          violet: '#7c3aed',
+          green: '#059669',
+          amber: '#d97706',
+          rose: '#e11d48',
         },
       },
       borderRadius: { xl: '1rem', '2xl': '1.25rem' },
       keyframes: {
         shimmer: { '100%': { transform: 'translateX(100%)' } },
         ping2: { '75%, 100%': { transform: 'scale(2.4)', opacity: '0' } },
-        drift: {
-          '0%, 100%': { transform: 'translate3d(0,0,0) scale(1)' },
-          '50%': { transform: 'translate3d(2%, -3%, 0) scale(1.08)' },
-        },
       },
       animation: {
         shimmer: 'shimmer 1.6s infinite',
         ping2: 'ping2 1.8s cubic-bezier(0,0,0.2,1) infinite',
-        drift: 'drift 22s ease-in-out infinite',
       },
     },
   },

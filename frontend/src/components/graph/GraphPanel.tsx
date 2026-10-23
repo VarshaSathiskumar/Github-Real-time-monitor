@@ -44,8 +44,8 @@ function Section({ title, children }: { title: string; children: ReactNode }) {
 
 function Stat({ label, value }: { label: string; value: ReactNode }) {
   return (
-    <div className="rounded-xl border border-white/[0.07] bg-white/[0.03] px-3 py-2">
-      <p className="num text-lg font-semibold leading-tight text-white">{value}</p>
+    <div className="rounded-xl border border-slate-900/[0.08] bg-slate-900/[0.03] px-3 py-2">
+      <p className="num text-lg font-semibold leading-tight text-slate-900">{value}</p>
       <p className="text-[11px] text-slate-500">{label}</p>
     </div>
   )
@@ -67,7 +67,7 @@ function LinkRow({
       <button
         type="button"
         onClick={onClick}
-        className="flex w-full items-center gap-2.5 rounded-lg px-2 py-1.5 text-left text-sm text-slate-200 transition-colors hover:bg-white/[0.07]"
+        className="flex w-full items-center gap-2.5 rounded-lg px-2 py-1.5 text-left text-sm text-slate-800 transition-colors hover:bg-slate-900/[0.05]"
       >
         <NodeSwatch type={type} />
         <span className="min-w-0 flex-1 truncate">{label}</span>
@@ -86,7 +86,7 @@ function EventRow({ node, now, onClick }: { node: EventNode; now: number; onClic
       <button
         type="button"
         onClick={onClick}
-        className="flex w-full items-start gap-2.5 rounded-lg px-2 py-1.5 text-left transition-colors hover:bg-white/[0.07]"
+        className="flex w-full items-start gap-2.5 rounded-lg px-2 py-1.5 text-left transition-colors hover:bg-slate-900/[0.05]"
       >
         <span
           className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-md"
@@ -95,7 +95,7 @@ function EventRow({ node, now, onClick }: { node: EventNode; now: number; onClic
           <Icon className="h-3.5 w-3.5" aria-hidden />
         </span>
         <span className="min-w-0 flex-1">
-          <span className="line-clamp-2 text-[13px] leading-snug text-slate-200">{e.description}</span>
+          <span className="line-clamp-2 text-[13px] leading-snug text-slate-800">{e.description}</span>
           <span className="text-[11px] text-slate-500">{timeAgo(e.createdAt, now)}</span>
         </span>
       </button>
@@ -122,13 +122,13 @@ function Overview({ store, mode, onSelect }: Pick<Props, 'store' | 'mode' | 'onS
   const top = [...store.repos.values()].sort((a, b) => b.events - a.events).slice(0, 5)
   return (
     <div className="space-y-5">
-      <p className="text-sm leading-relaxed text-slate-300">
+      <p className="text-sm leading-relaxed text-slate-700">
         Every node is something seen in the GitHub public events stream
         {mode === 'demo' ? ' (simulated demo data)' : ''}. Lines connect developers to the repositories they acted
         on, and events to both.
       </p>
       <Section title="Legend">
-        <ul className="space-y-1.5 text-sm text-slate-300">
+        <ul className="space-y-1.5 text-sm text-slate-700">
           {(['repo', 'dev', 'event'] as const).map((t) => (
             <li key={t} className="flex items-center gap-2.5">
               <NodeSwatch type={t} />
@@ -146,13 +146,13 @@ function Overview({ store, mode, onSelect }: Pick<Props, 'store' | 'mode' | 'onS
         ) : (
           <ul>
             {top.map((r) => (
-              <LinkRow key={r.id} type="repo" label={r.name} meta={`${formatCount(r.events)} events`} onClick={() => onSelect(r.id)} />
+              <LinkRow key={r.id} type="repo" label={r.name} meta={`${formatCount(r.events)} ${r.events === 1 ? 'event' : 'events'}`} onClick={() => onSelect(r.id)} />
             ))}
           </ul>
         )}
       </Section>
       <Section title="How to explore">
-        <ul className="space-y-1.5 text-xs leading-relaxed text-slate-400">
+        <ul className="space-y-1.5 text-xs leading-relaxed text-slate-600">
           <li>Scroll or pinch to zoom, drag the background to pan, drag a node to move it.</li>
           <li>Click a repository to expand its developers and recent events.</li>
           <li>Click a developer to see their activity, or an event for its details.</li>
@@ -259,7 +259,7 @@ function EventDetail({ node, now, onSelect }: { node: EventNode; now: number } &
     {
       label: 'Actor',
       value: (
-        <button type="button" onClick={() => onSelect(node.devId)} className="font-medium text-violet-200 hover:underline">
+        <button type="button" onClick={() => onSelect(node.devId)} className="font-medium text-violet-800 hover:underline">
           {e.actor}
         </button>
       ),
@@ -275,17 +275,17 @@ function EventDetail({ node, now, onSelect }: { node: EventNode; now: number } &
   ]
   return (
     <div className="space-y-5">
-      <div className="flex items-start gap-3 rounded-xl border border-white/[0.07] bg-white/[0.03] p-3">
+      <div className="flex items-start gap-3 rounded-xl border border-slate-900/[0.08] bg-slate-900/[0.03] p-3">
         <span className="grid h-9 w-9 shrink-0 place-items-center rounded-lg" style={{ background: `${meta.color}1f`, color: meta.color }}>
           <Icon className="h-4 w-4" aria-hidden />
         </span>
-        <p className="text-sm leading-snug text-slate-100">{e.description}</p>
+        <p className="text-sm leading-snug text-slate-900">{e.description}</p>
       </div>
       <dl className="space-y-2.5 text-sm">
         {rows.map((r) => (
           <div key={r.label} className="flex items-baseline justify-between gap-4">
             <dt className="text-xs text-slate-500">{r.label}</dt>
-            <dd className="min-w-0 text-right text-slate-200">{r.value}</dd>
+            <dd className="min-w-0 text-right text-slate-800">{r.value}</dd>
           </div>
         ))}
       </dl>
@@ -304,7 +304,7 @@ export function GraphPanel(props: Props) {
 
   return (
     <aside aria-label="Selected node details" className="flex h-full min-h-0 flex-col">
-      <header className="flex items-start gap-3 border-b border-white/[0.07] px-4 py-3.5">
+      <header className="flex items-start gap-3 border-b border-slate-900/[0.08] px-4 py-3.5">
         <span
           className="mt-0.5 grid h-8 w-8 shrink-0 place-items-center rounded-lg"
           style={{ background: `${meta?.color ?? '#4f8cff'}22`, color: meta?.color ?? '#4f8cff' }}
@@ -313,7 +313,7 @@ export function GraphPanel(props: Props) {
         </span>
         <div className="min-w-0 flex-1">
           <p className="text-[11px] font-semibold uppercase tracking-wider text-slate-500">{meta ? meta.label : 'Nothing selected'}</p>
-          <h2 className="truncate font-display text-base font-semibold text-white" title={title}>
+          <h2 className="truncate font-display text-base font-semibold text-slate-900" title={title}>
             {title}
           </h2>
         </div>

@@ -13,9 +13,9 @@ import { Skeleton } from '@/components/ui/skeleton'
 type SeriesKey = 'total' | 'push' | 'pullRequest'
 
 const SERIES: { key: SeriesKey; label: string; color: string }[] = [
-  { key: 'total', label: 'Total events', color: '#22d3ee' },
-  { key: 'push', label: 'Push events', color: '#4f8cff' },
-  { key: 'pullRequest', label: 'Pull requests', color: '#a78bfa' },
+  { key: 'total', label: 'Total events', color: '#0e7490' },
+  { key: 'push', label: 'Push events', color: '#2563eb' },
+  { key: 'pullRequest', label: 'Pull requests', color: '#7c3aed' },
 ]
 
 interface Props {
@@ -35,8 +35,8 @@ interface TipProps {
 function ChartTip({ active, label, payload, bucketMinutes }: TipProps) {
   if (!active || !payload?.length || label === undefined) return null
   return (
-    <div className="rounded-xl border border-white/10 bg-popover/95 px-3 py-2 text-xs shadow-xl backdrop-blur">
-      <div className="mb-1.5 font-medium text-slate-200">
+    <div className="rounded-xl border border-slate-900/15 bg-white px-3 py-2 text-xs shadow-md ">
+      <div className="mb-1.5 font-medium text-slate-800">
         {new Date(label).toLocaleString([], { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' })}
         {bucketMinutes > 1 && <span className="text-slate-500"> ({bucketMinutes} min bucket)</span>}
       </div>
@@ -45,11 +45,11 @@ function ChartTip({ active, label, payload, bucketMinutes }: TipProps) {
         if (!p) return null
         return (
           <div key={s.key} className="flex items-center justify-between gap-6 py-0.5">
-            <span className="flex items-center gap-2 text-slate-300">
+            <span className="flex items-center gap-2 text-slate-700">
               <span className="h-2 w-2 rounded-full" style={{ background: s.color }} />
               {s.label}
             </span>
-            <span className="num font-medium text-white">{Number(p.value).toFixed(1)}/min</span>
+            <span className="num font-medium text-slate-900">{Number(p.value).toFixed(1)}/min</span>
           </div>
         )
       })}
@@ -96,7 +96,7 @@ export function ActivityChart({ activity, mode, range, onRange }: Props) {
                 onClick={() => toggle(s.key)}
                 className={cn(
                   'inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs font-medium transition-all',
-                  on ? 'border-white/15 bg-white/10 text-white' : 'border-white/5 text-slate-500 hover:text-slate-300',
+                  on ? 'border-slate-900/15 bg-slate-900/[0.06] text-slate-900' : 'border-slate-900/[0.08] text-slate-500 hover:text-slate-700',
                 )}
               >
                 <span
@@ -129,20 +129,20 @@ export function ActivityChart({ activity, mode, range, onRange }: Props) {
                     </linearGradient>
                   ))}
                 </defs>
-                <CartesianGrid stroke="rgba(255,255,255,0.06)" vertical={false} />
+                <CartesianGrid stroke="rgba(15,23,42,0.08)" vertical={false} />
                 <XAxis
                   dataKey="t"
                   type="number"
                   scale="time"
                   domain={['dataMin', 'dataMax']}
                   tickFormatter={xFormat}
-                  tick={{ fill: '#8794ad', fontSize: 11 }}
+                  tick={{ fill: '#64748b', fontSize: 11 }}
                   axisLine={false}
                   tickLine={false}
                   minTickGap={48}
                 />
                 <YAxis
-                  tick={{ fill: '#8794ad', fontSize: 11 }}
+                  tick={{ fill: '#64748b', fontSize: 11 }}
                   axisLine={false}
                   tickLine={false}
                   width={52}
@@ -150,7 +150,7 @@ export function ActivityChart({ activity, mode, range, onRange }: Props) {
                   allowDecimals={false}
                 />
                 <ChartTooltip
-                  cursor={{ stroke: 'rgba(255,255,255,0.25)', strokeDasharray: '3 3' }}
+                  cursor={{ stroke: 'rgba(15,23,42,0.3)', strokeDasharray: '3 3' }}
                   content={<ChartTip bucketMinutes={bucket} />}
                 />
                 {SERIES.filter((s) => !hidden.has(s.key)).map((s) => (

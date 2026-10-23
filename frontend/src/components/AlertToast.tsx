@@ -22,12 +22,12 @@ export function AlertToast({ alert, onDismiss }: { alert?: RisingRepo; onDismiss
             exit={{ opacity: 0, y: 10 }}
             className="glass pointer-events-auto flex items-start gap-3 rounded-2xl border-amber-400/30 p-3.5"
           >
-            <span className="grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-amber-400/15 text-amber-300">
+            <span className="grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-amber-400/15 text-amber-700">
               <Rocket className="h-4 w-4" aria-hidden />
             </span>
             <div className="min-w-0 flex-1 text-sm">
-              <p className="font-display font-semibold text-white">Activity spike detected</p>
-              <p className="truncate text-slate-300">
+              <p className="font-display font-semibold text-slate-900">Activity spike detected</p>
+              <p className="truncate text-slate-700">
                 {alert.repo}: {alert.currentCount} events in {alert.windowMinutes} min
               </p>
             </div>
@@ -35,7 +35,7 @@ export function AlertToast({ alert, onDismiss }: { alert?: RisingRepo; onDismiss
               type="button"
               onClick={onDismiss}
               aria-label="Dismiss"
-              className="rounded-md p-1 text-slate-400 hover:bg-white/10 hover:text-white"
+              className="rounded-md p-1 text-slate-600 hover:bg-slate-900/[0.06] hover:text-slate-900"
             >
               <X className="h-4 w-4" />
             </button>

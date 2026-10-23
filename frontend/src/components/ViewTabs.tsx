@@ -21,7 +21,7 @@ export function ViewTabs({ view, onChange }: { view: View; onChange: (v: View) =
             aria-current={active ? 'page' : undefined}
             className={cn(
               'relative inline-flex items-center gap-2 px-3 py-2.5 text-sm font-medium transition-colors',
-              active ? 'text-white' : 'text-slate-400 hover:text-slate-100',
+              active ? 'text-slate-900' : 'text-slate-600 hover:text-slate-900',
             )}
           >
             <t.icon className="h-4 w-4" aria-hidden />
@@ -29,7 +29,7 @@ export function ViewTabs({ view, onChange }: { view: View; onChange: (v: View) =
             {active && (
               <motion.span
                 layoutId="view-tab-underline"
-                className="absolute inset-x-2 bottom-0 h-0.5 rounded-full bg-gradient-to-r from-pulse-cyan via-pulse-blue to-pulse-violet"
+                className="absolute inset-x-2 bottom-0 h-0.5 rounded-full bg-pulse-blue"
               />
             )}
           </button>

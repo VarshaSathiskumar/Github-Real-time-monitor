@@ -67,10 +67,10 @@ export function ActivityBreakdown({ data, mode, range }: { data?: Breakdown; mod
               </ResponsiveContainer>
               <div className="pointer-events-none absolute inset-0 grid place-items-center text-center">
                 <div>
-                  <div className="num text-2xl font-semibold text-white">
+                  <div className="num text-2xl font-semibold text-slate-900">
                     {formatCount(focus ? focus.count : data.total)}
                   </div>
-                  <div className="max-w-[90px] text-[11px] leading-tight text-slate-400">
+                  <div className="max-w-[90px] text-[11px] leading-tight text-slate-600">
                     {focus ? `${focus.label}, ${focus.percent}%` : 'events'}
                   </div>
                 </div>
@@ -87,17 +87,17 @@ export function ActivityBreakdown({ data, mode, range }: { data?: Breakdown; mod
                     onMouseLeave={() => setActive(null)}
                     className={cn(
                       'flex items-center justify-between gap-3 rounded-lg px-2.5 py-1.5 text-sm transition-colors',
-                      idx >= 0 && idx === active ? 'bg-white/10' : 'hover:bg-white/[0.05]',
+                      idx >= 0 && idx === active ? 'bg-slate-900/[0.06]' : 'hover:bg-slate-900/[0.03]',
                       i.count === 0 && 'opacity-50',
                     )}
                   >
-                    <span className="flex min-w-0 items-center gap-2.5 text-slate-200">
+                    <span className="flex min-w-0 items-center gap-2.5 text-slate-800">
                       <span className="h-2.5 w-2.5 shrink-0 rounded-full" style={{ background: KIND_META[i.kind].color }} />
                       <span className="truncate">{i.label}</span>
                     </span>
                     <span className="flex shrink-0 items-baseline gap-2">
-                      <span className="num font-medium text-white">{formatCount(i.count)}</span>
-                      <span className="num w-12 text-right text-xs text-slate-400">{i.percent.toFixed(1)}%</span>
+                      <span className="num font-medium text-slate-900">{formatCount(i.count)}</span>
+                      <span className="num w-12 text-right text-xs text-slate-600">{i.percent.toFixed(1)}%</span>
                     </span>
                   </li>
                 )

@@ -9,9 +9,9 @@ const buttonVariants = cva(
     variants: {
       variant: {
         primary:
-          'bg-gradient-to-r from-pulse-blue to-pulse-violet text-white shadow-[0_8px_24px_-8px_rgba(99,102,241,0.7)] hover:brightness-110',
-        outline: 'border border-white/10 bg-white/5 text-slate-100 hover:bg-white/10',
-        ghost: 'text-slate-300 hover:bg-white/10 hover:text-white',
+          'bg-pulse-blue text-white shadow-sm hover:bg-blue-700',
+        outline: 'border border-slate-300 bg-white text-slate-900 shadow-sm hover:bg-slate-50',
+        ghost: 'text-slate-700 hover:bg-slate-900/[0.06] hover:text-slate-900',
       },
       size: {
         sm: 'h-8 px-3 text-xs',

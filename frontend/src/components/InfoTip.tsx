@@ -6,7 +6,7 @@ export function InfoTip({ children, label = 'More information' }: { children: Re
   return (
     <Tooltip>
       <TooltipTrigger asChild>
-        <button type="button" aria-label={label} className="text-slate-500 transition-colors hover:text-slate-200">
+        <button type="button" aria-label={label} className="text-slate-500 transition-colors hover:text-slate-800">
           <Info className="h-3.5 w-3.5" />
         </button>
       </TooltipTrigger>

@@ -19,7 +19,7 @@ interface Props {
 function LiveIndicator({ mode, connected }: { mode: Mode; connected: boolean }) {
   const demo = mode === 'demo'
   const color = demo ? 'bg-violet-400' : connected ? 'bg-emerald-400' : 'bg-amber-400'
-  const text = demo ? 'text-violet-200' : connected ? 'text-emerald-300' : 'text-amber-200'
+  const text = demo ? 'text-violet-800' : connected ? 'text-emerald-700' : 'text-amber-800'
   const ring = demo ? 'border-violet-400/30 bg-violet-500/10' : connected ? 'border-emerald-400/25 bg-emerald-400/10' : 'border-amber-400/25 bg-amber-400/10'
   return (
     <span
@@ -45,14 +45,14 @@ export function Header({ mode, connection, lastUpdated, ingestionStatus, view, o
   const now = useNow(1000)
   const connected = connection === 'open'
   return (
-    <header className="sticky top-0 z-40 border-b border-white/[0.07] bg-background/70 backdrop-blur-xl">
+    <header className="sticky top-0 z-40 border-b border-slate-200 bg-background">
       <div className="mx-auto flex max-w-[1320px] flex-wrap items-center justify-between gap-x-6 gap-y-3 px-4 py-3 sm:px-6">
         <div className="flex items-center gap-3">
-          <div className="grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-pulse-cyan via-pulse-blue to-pulse-violet shadow-[0_8px_24px_-8px_rgba(79,140,255,0.8)]">
+          <div className="grid h-10 w-10 place-items-center rounded-xl bg-pulse-blue">
             <Radio className="h-5 w-5 text-white" aria-hidden />
           </div>
           <div>
-            <h1 className="font-display text-xl font-bold leading-none tracking-tight text-white sm:text-2xl">
+            <h1 className="font-display text-xl font-bold leading-none tracking-tight text-slate-900 sm:text-2xl">
               GitHub<span className="text-gradient">Pulse</span>
             </h1>
             <p className="mt-1 text-xs text-muted-foreground sm:text-[13px]">
@@ -64,12 +64,12 @@ export function Header({ mode, connection, lastUpdated, ingestionStatus, view, o
         <div className="flex flex-wrap items-center gap-2 sm:gap-3">
           <LiveIndicator mode={mode} connected={connected} />
           <div className="hidden text-xs text-muted-foreground sm:block" aria-live="off">
-            Updated <span className="num text-slate-200">{lastUpdated ? timeAgo(lastUpdated, now) : 'never'}</span>
+            Updated <span className="num text-slate-800">{lastUpdated ? timeAgo(lastUpdated, now) : 'never'}</span>
           </div>
           <span
             className={cn(
               'inline-flex items-center gap-1.5 text-xs',
-              connected ? 'text-slate-300' : 'text-amber-200',
+              connected ? 'text-slate-700' : 'text-amber-800',
             )}
           >
             {connected ? (
@@ -79,7 +79,7 @@ export function Header({ mode, connection, lastUpdated, ingestionStatus, view, o
             )}
             {connectionLabel[connection]}
             {mode === 'live' && ingestionStatus && ingestionStatus !== 'HEALTHY' && (
-              <span className="text-amber-200">, ingestion {ingestionStatus.toLowerCase().replace('_', ' ')}</span>
+              <span className="text-amber-800">, ingestion {ingestionStatus.toLowerCase().replace('_', ' ')}</span>
             )}
           </span>
           <Button asChild variant="outline" size="sm">

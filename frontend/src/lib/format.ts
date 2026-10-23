@@ -36,11 +36,11 @@ export function formatClock(iso: string | number | Date, withSeconds = false): s
 }
 
 export const KIND_META: Record<EventKind, { label: string; short: string; color: string }> = {
-  PUSH: { label: 'Push events', short: 'Push', color: '#4f8cff' },
-  PULL_REQUEST: { label: 'Pull requests', short: 'PR', color: '#8b5cf6' },
-  FORK: { label: 'Forks', short: 'Fork', color: '#34d399' },
-  WATCH: { label: 'Stars', short: 'Star', color: '#fbbf24' },
-  ISSUES: { label: 'Issues', short: 'Issue', color: '#fb7185' },
-  ISSUE_COMMENT: { label: 'Issue comments', short: 'Comment', color: '#22d3ee' },
-  OTHER: { label: 'Other events', short: 'Other', color: '#7c8aa5' },
+  PUSH: { label: 'Push events', short: 'Push', color: '#2563eb' },
+  PULL_REQUEST: { label: 'Pull requests', short: 'PR', color: '#7c3aed' },
+  FORK: { label: 'Forks', short: 'Fork', color: '#059669' },
+  WATCH: { label: 'Stars', short: 'Star', color: '#d97706' },
+  ISSUES: { label: 'Issues', short: 'Issue', color: '#e11d48' },
+  ISSUE_COMMENT: { label: 'Issue comments', short: 'Comment', color: '#0e7490' },
+  OTHER: { label: 'Other events', short: 'Other', color: '#64748b' },
 }

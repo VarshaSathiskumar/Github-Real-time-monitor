@@ -9,7 +9,7 @@ import { Sparkline } from './Sparkline'
 import { Card, CardContent } from '@/components/ui/card'
 import { Skeleton } from '@/components/ui/skeleton'
 
-const RANK_COLORS = ['#fbbf24', '#cbd5e1', '#f59e0b', '#64748b', '#64748b']
+const RANK_COLORS = ['#d97706', '#64748b', '#b45309', '#64748b', '#64748b']
 
 export function TrendingRepos({ data, mode, range }: { data?: Trending; mode: Mode; range: RangeCode }) {
   return (
@@ -48,11 +48,11 @@ export function TrendingRepos({ data, mode, range }: { data?: Trending; mode: Mo
                 initial={{ opacity: 0, x: -10 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: i * 0.04, duration: 0.35 }}
-                className="rounded-xl border border-white/[0.07] bg-white/[0.03] p-3 transition-colors hover:bg-white/[0.06]"
+                className="rounded-xl border border-slate-900/[0.08] bg-slate-900/[0.03] p-3 transition-colors hover:bg-slate-900/[0.05]"
               >
                 <div className="flex items-center gap-3">
                   <span
-                    className="num grid h-8 w-8 shrink-0 place-items-center rounded-lg border border-white/10 text-sm font-bold"
+                    className="num grid h-8 w-8 shrink-0 place-items-center rounded-lg border border-slate-900/15 text-sm font-bold"
                     style={{ color: RANK_COLORS[i], background: `${RANK_COLORS[i]}18` }}
                     aria-label={`Rank ${r.rank}`}
                   >
@@ -65,14 +65,14 @@ export function TrendingRepos({ data, mode, range }: { data?: Trending; mode: Mo
                       rel="noopener noreferrer"
                       className="group inline-flex max-w-full items-center gap-1.5 text-sm"
                     >
-                      <span className="truncate text-slate-400">{r.owner}/</span>
-                      <span className="truncate font-semibold text-white group-hover:text-pulse-cyan">
+                      <span className="truncate text-slate-600">{r.owner}/</span>
+                      <span className="truncate font-semibold text-slate-900 group-hover:text-pulse-cyan">
                         {r.name.slice(r.owner.length + 1)}
                       </span>
                       <ExternalLink className="h-3 w-3 shrink-0 text-slate-500 group-hover:text-pulse-cyan" aria-label="Opens on GitHub" />
                     </a>
-                    <div className="mt-1.5 flex flex-wrap items-center gap-x-3 gap-y-1 text-[11px] text-slate-400">
-                      <span title="Total observed events" className="num text-slate-200">
+                    <div className="mt-1.5 flex flex-wrap items-center gap-x-3 gap-y-1 text-[11px] text-slate-600">
+                      <span title="Total observed events" className="num text-slate-800">
                         {formatCount(r.totalEvents)} events
                       </span>
                       <span className="inline-flex items-center gap-1" title="Push events">
@@ -90,24 +90,24 @@ export function TrendingRepos({ data, mode, range }: { data?: Trending; mode: Mo
                     </div>
                   </div>
                   <div className="hidden w-24 shrink-0 sm:block">
-                    <Sparkline data={r.sparkline} color="#22d3ee" className="h-8 w-full" />
+                    <Sparkline data={r.sparkline} color="#2563eb" className="h-8 w-full" />
                     <span className="sr-only">Activity trend</span>
                   </div>
                   <div className="shrink-0 text-right">
-                    <div className="num flex items-center justify-end gap-1 text-base font-semibold text-white">
-                      <Flame className="h-3.5 w-3.5 text-amber-400" aria-hidden />
+                    <div className="num flex items-center justify-end gap-1 text-base font-semibold text-slate-900">
+                      <Flame className="h-3.5 w-3.5 text-amber-600" aria-hidden />
                       {formatCount(r.score)}
                     </div>
                     <div className="text-[10px] uppercase tracking-wider text-slate-500">score</div>
                   </div>
                 </div>
                 <div
-                  className="mt-2.5 h-1.5 overflow-hidden rounded-full bg-white/[0.06]"
+                  className="mt-2.5 h-1.5 overflow-hidden rounded-full bg-slate-900/[0.05]"
                   role="img"
                   aria-label={`${Math.round(r.share * 100)}% of the top score`}
                 >
                   <motion.div
-                    className="h-full rounded-full bg-gradient-to-r from-pulse-cyan via-pulse-blue to-pulse-violet"
+                    className="h-full rounded-full bg-pulse-blue"
                     initial={{ width: 0 }}
                     animate={{ width: `${Math.max(3, r.share * 100)}%` }}
                     transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}

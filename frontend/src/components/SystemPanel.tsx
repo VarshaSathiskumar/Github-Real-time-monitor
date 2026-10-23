@@ -17,11 +17,11 @@ function Dot({ ok, warn }: { ok: boolean; warn?: boolean }) {
 
 function Item({ icon, label, children }: { icon: ReactNode; label: string; children: ReactNode }) {
   return (
-    <div className="flex items-start gap-3 rounded-xl border border-white/[0.07] bg-white/[0.03] p-3">
-      <span className="mt-0.5 text-slate-400">{icon}</span>
+    <div className="flex items-start gap-3 rounded-xl border border-slate-900/[0.08] bg-slate-900/[0.03] p-3">
+      <span className="mt-0.5 text-slate-600">{icon}</span>
       <div className="min-w-0">
         <div className="text-[11px] uppercase tracking-wider text-slate-500">{label}</div>
-        <div className="mt-0.5 text-sm text-slate-100">{children}</div>
+        <div className="mt-0.5 text-sm text-slate-900">{children}</div>
       </div>
     </div>
   )
@@ -34,7 +34,7 @@ export function SystemPanel({ status, mode }: { status?: SystemStatus; mode: Mod
   return (
     <section id="pipeline-health" aria-label="Pipeline health" className="glass scroll-mt-24 rounded-2xl p-5 sm:p-6">
       <div className="mb-4 flex flex-wrap items-baseline justify-between gap-2">
-        <h2 className="font-display text-lg font-semibold text-white">Pipeline Health</h2>
+        <h2 className="font-display text-lg font-semibold text-slate-900">Pipeline Health</h2>
         <span className="text-xs text-muted-foreground">
           {mode === 'demo' ? 'Showing the live pipeline' : 'Ingestion health arrives over gRPC'}
         </span>
@@ -87,7 +87,7 @@ export function SystemPanel({ status, mode }: { status?: SystemStatus; mode: Mod
         </div>
       )}
       {ing?.lastError && (
-        <p className="mt-3 rounded-lg border border-amber-400/20 bg-amber-400/10 px-3 py-2 text-xs text-amber-100">
+        <p className="mt-3 rounded-lg border border-amber-400/20 bg-amber-400/10 px-3 py-2 text-xs text-amber-900">
           Last ingestion error: {ing.lastError}
         </p>
       )}

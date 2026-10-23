@@ -26,7 +26,7 @@ function IconButton({ label, onClick, children }: { label: string; onClick: () =
       aria-label={label}
       title={label}
       onClick={onClick}
-      className="grid h-9 w-9 place-items-center text-slate-300 transition-colors hover:bg-white/10 hover:text-white"
+      className="grid h-9 w-9 place-items-center text-slate-700 transition-colors hover:bg-slate-900/[0.06] hover:text-slate-900"
     >
       {children}
     </button>
@@ -51,11 +51,11 @@ export function GraphView({ graph: g, mode, loaded }: Props) {
         }
       />
 
-      <div className="relative flex h-[calc(100svh-260px)] min-h-[520px] max-h-[900px] border-t border-white/[0.07]">
+      <div className="relative flex h-[calc(100svh-260px)] min-h-[520px] max-h-[900px] border-t border-slate-900/[0.08]">
         <div
           className="relative min-w-0 flex-1"
           style={{
-            backgroundImage: 'radial-gradient(rgb(255 255 255 / 0.07) 1px, transparent 1px)',
+            backgroundImage: 'radial-gradient(rgb(15 23 42 / 0.1) 1px, transparent 1px)',
             backgroundSize: '26px 26px',
           }}
         >
@@ -66,11 +66,11 @@ export function GraphView({ graph: g, mode, loaded }: Props) {
             {(['repo', 'dev', 'event'] as const).map((t) => (
               <span
                 key={t}
-                className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-background/70 px-2.5 py-1 text-[11px] text-slate-300 backdrop-blur-md"
+                className="inline-flex items-center gap-1.5 rounded-full border border-slate-300 bg-white px-2.5 py-1 text-[11px] text-slate-700"
               >
                 <NodeSwatch type={t} />
                 <span className="hidden sm:inline">{t === 'repo' ? 'Repositories' : t === 'dev' ? 'Developers' : 'Events'}</span>
-                <span className="num font-medium text-white">
+                <span className="num font-medium text-slate-900">
                   {formatCount(t === 'repo' ? store.repos.size : t === 'dev' ? store.devs.size : g.graph.nodes.filter((n) => n.type === 'event').length)}
                 </span>
               </span>
@@ -79,7 +79,7 @@ export function GraphView({ graph: g, mode, loaded }: Props) {
 
           {/* View controls */}
           <div className="absolute right-3 top-3 flex flex-col items-end gap-2">
-            <div className="flex overflow-hidden rounded-xl border border-white/10 bg-background/70 backdrop-blur-md">
+            <div className="flex overflow-hidden rounded-xl border border-slate-300 bg-white shadow-sm">
               <IconButton label="Zoom in" onClick={() => canvas.current?.zoomBy(1.4)}>
                 <ZoomIn className="h-4 w-4" aria-hidden />
               </IconButton>
@@ -93,7 +93,7 @@ export function GraphView({ graph: g, mode, loaded }: Props) {
             <Button
               variant={g.paused ? 'primary' : 'outline'}
               size="sm"
-              className="bg-background/70 backdrop-blur-md"
+              className="bg-white"
               onClick={() => g.setPaused(!g.paused)}
               aria-pressed={g.paused}
             >
@@ -118,7 +118,7 @@ export function GraphView({ graph: g, mode, loaded }: Props) {
         </div>
 
         {/* Desktop: permanent side panel */}
-        <div className="hidden w-[340px] shrink-0 border-l border-white/[0.07] bg-background/40 lg:block">
+        <div className="hidden w-[340px] shrink-0 border-l border-slate-200 bg-white lg:block">
           <GraphPanel
             store={store}
             mode={mode}
@@ -141,7 +141,7 @@ export function GraphView({ graph: g, mode, loaded }: Props) {
               transition={{ type: 'spring', stiffness: 380, damping: 36 }}
               className={cn(
                 'absolute inset-x-0 bottom-0 z-10 max-h-[62%] min-h-[220px] overflow-hidden rounded-t-2xl lg:hidden',
-                'border-t border-white/10 bg-popover/95 shadow-[0_-20px_40px_-20px_rgb(0_0_0/0.8)] backdrop-blur-xl',
+                'border-t border-slate-300 bg-white shadow-[0_-8px_24px_-12px_rgb(15_23_42/0.25)]',
               )}
             >
               <GraphPanel

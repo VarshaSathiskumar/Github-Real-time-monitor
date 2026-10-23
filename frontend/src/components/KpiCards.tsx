@@ -34,35 +34,35 @@ const DEFS: Def[] = [
     key: 'totalEvents',
     label: 'Total Events',
     icon: Activity,
-    color: '#22d3ee',
+    color: '#0e7490',
     help: 'Every GitHub public event observed during the selected window.',
   },
   {
     key: 'activeRepositories',
     label: 'Active Repositories',
     icon: FolderGit2,
-    color: '#4f8cff',
+    color: '#2563eb',
     help: 'Unique repositories that generated at least one event in the window.',
   },
   {
     key: 'pushEvents',
     label: 'Push Events',
     icon: Upload,
-    color: '#818cf8',
+    color: '#4f46e5',
     help: 'Number of PushEvents observed. One push can contain many commits.',
   },
   {
     key: 'pullRequests',
     label: 'Pull Requests',
     icon: GitPullRequest,
-    color: '#c084fc',
+    color: '#7c3aed',
     help: 'Pull request events observed (opened, closed, merged, updated and so on).',
   },
   {
     key: 'forks',
     label: 'Forks',
     icon: GitFork,
-    color: '#34d399',
+    color: '#059669',
     help: 'Fork events observed: repositories being copied by other users.',
   },
 ]
@@ -117,20 +117,15 @@ function KpiCard({
       transition={{ delay: index * 0.05, duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
     >
       <Card className="group relative h-full overflow-hidden p-4 sm:p-5">
-        <div
-          aria-hidden
-          className="pointer-events-none absolute -right-10 -top-10 h-28 w-28 rounded-full opacity-25 blur-2xl transition-opacity group-hover:opacity-40"
-          style={{ background: def.color }}
-        />
         <div className="relative flex items-center justify-between">
           <div className="flex items-center gap-2">
             <span
-              className="grid h-8 w-8 place-items-center rounded-lg border border-white/10"
-              style={{ background: `${def.color}22`, color: def.color }}
+              className="grid h-8 w-8 place-items-center rounded-lg border border-slate-900/10"
+              style={{ background: `${def.color}14`, color: def.color }}
             >
               <Icon className="h-4 w-4" aria-hidden />
             </span>
-            <span className="text-[13px] font-medium text-slate-300">{def.label}</span>
+            <span className="text-[13px] font-medium text-slate-700">{def.label}</span>
           </div>
           <div className="flex items-center gap-1.5">
             <InfoTip label={`About ${def.label}`}>{def.help}</InfoTip>
@@ -150,7 +145,7 @@ function KpiCard({
         ) : (
           <div className="relative mt-3">
             <div className="flex items-end justify-between gap-2">
-              <div className="num text-3xl font-semibold leading-none text-white sm:text-[34px] xl:text-[28px] 2xl:text-[32px]">
+              <div className="num text-3xl font-semibold leading-none text-slate-900 sm:text-[34px] xl:text-[28px] 2xl:text-[32px]">
                 <AnimatedNumber value={kpi.value} />
               </div>
               <Delta kpi={kpi} range={range} />
