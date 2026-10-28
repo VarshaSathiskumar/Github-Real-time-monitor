@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useReducer, useRef, useState } from 'react'
 import { api } from '@/lib/api'
-import { wsUrl } from '@/lib/config'
+import { POLLING_MODE, POLL_INTERVAL_MS, wsUrl } from '@/lib/config'
 import { mergeEvents } from '@/lib/feed'
 import type {
   Activity,
@@ -121,7 +121,7 @@ export function useDashboard() {
   }, [])
 
   /** Loads a full REST snapshot; used on start, on context change and after every reconnect. */
-  const loadSnapshot = useCallback(async () => {
+  const loadSnapshot = useCallback(async (background = false) => {
     const { mode, range } = ctx.current
     const current = () => ctx.current.mode === mode && ctx.current.range === range
     const put =
@@ -137,23 +137,34 @@ export function useDashboard() {
       api.status(mode).then(put('status')),
       api.events(mode).then((events) => {
         if (!current()) return
-        dispatch({ type: 'events', events, replace: true })
         publish(events, mode)
+        if (background && pausedRef.current) {
+          // Polling while the feed is paused: hold new events back like the WebSocket path does.
+          pending.current = mergeEvents(pending.current, events)
+          setPendingCount(pending.current.length)
+          return
+        }
+        dispatch({ type: 'events', events, replace: true })
       }),
     ])
-    if (current() && results.every((r) => r.status === 'rejected')) dispatch({ type: 'failed', value: true })
+    const failed = results.every((r) => r.status === 'rejected')
+    if (current() && failed) dispatch({ type: 'failed', value: true })
+    if (POLLING_MODE && background) dispatch({ type: 'connection', value: failed ? 'reconnecting' : 'open' })
   }, [publish])
 
   // Context (mode or range) changes: reset views, reload and tell the server what to stream.
   useEffect(() => {
     pending.current = []
     setPendingCount(0)
-    void loadSnapshot()
+    void loadSnapshot().then(() => {
+      if (POLLING_MODE) dispatch({ type: 'connection', value: 'open' })
+    })
     subscribe()
   }, [state.mode, state.range, loadSnapshot, subscribe])
 
   // WebSocket with exponential backoff; every reconnect pulls a fresh snapshot to recover missed updates.
   useEffect(() => {
+    if (POLLING_MODE) return
     let closed = false
     let attempt = 0
     let timer: number | undefined
@@ -234,10 +245,17 @@ export function useDashboard() {
     }
   }, [loadSnapshot, subscribe, publish])
 
-  // REST polling fallback while the socket is down.
+  // REST polling: the only refresh path on the deployed site, a slower fallback while the socket is down elsewhere.
   useEffect(() => {
-    if (state.connection === 'open') return
-    const id = window.setInterval(() => void loadSnapshot(), 10_000)
+    if (!POLLING_MODE && state.connection === 'open') return
+    const id = window.setInterval(
+      () => {
+        // Demo data only lives while the simulator lease is renewed, which the WebSocket subscribe does otherwise.
+        if (POLLING_MODE && ctx.current.mode === 'demo') void api.startDemo().catch(() => undefined)
+        void loadSnapshot(true)
+      },
+      POLLING_MODE ? POLL_INTERVAL_MS : 10_000,
+    )
     return () => window.clearInterval(id)
   }, [state.connection, loadSnapshot])
 

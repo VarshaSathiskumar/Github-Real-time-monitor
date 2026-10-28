@@ -13,6 +13,7 @@ import { Toolbar } from '@/components/Toolbar'
 import { TrendingRepos } from '@/components/TrendingRepos'
 import { TooltipProvider } from '@/components/ui/tooltip'
 import { GraphView } from '@/components/graph/GraphView'
+import { POLLING_MODE } from '@/lib/config'
 import { useDashboard } from '@/hooks/useDashboard'
 import { useGraph } from '@/hooks/useGraph'
 import { useView } from '@/hooks/useView'
@@ -95,6 +96,7 @@ export default function App() {
 
         <footer className="pt-2 text-center text-xs text-slate-500">
           GitHubPulse. Data from GitHub&apos;s public events API, not affiliated with or endorsed by GitHub.
+          {POLLING_MODE && ' This deployed demo uses REST polling to refresh analytics data.'}
         </footer>
       </main>
 

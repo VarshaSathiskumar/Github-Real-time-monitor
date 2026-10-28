@@ -24,10 +24,11 @@ Set them for Production (and Preview if you use it). They are read **at build ti
 | Variable | Required | Example | Meaning |
 |---|---|---|---|
 | `VITE_API_BASE_URL` | yes | `https://api.example.com` | Base URL of the analytics service. No trailing slash. The app calls `/api/...` on it. |
-| `VITE_WS_URL` | yes | `wss://api.example.com/ws` | Full WebSocket URL. Must be `wss://` (the page is HTTPS) and end with `/ws`. |
+| `VITE_REFRESH_MODE` | yes (for Vercel) | `polling` | The deployed site refreshes from the REST endpoints every 3 seconds instead of opening a WebSocket, and says so in the page footer. The WebSocket endpoint stays in the backend and is used by the Docker Compose setup. |
+| `VITE_WS_URL` | only without polling | `wss://api.example.com/ws` | Full WebSocket URL. Not used when `VITE_REFRESH_MODE=polling`. |
 | `VITE_GITHUB_REPO_URL` | no | `https://github.com/VarshaSathiskumar/Github-Real-time-monitor` | Target of the "View Source on GitHub" button. Defaults to this repository. |
 
-Leaving `VITE_API_BASE_URL` or `VITE_WS_URL` empty makes the app call its own origin (Vercel), which has no backend, so the dashboard would show "Cannot reach the analytics service".
+Leaving `VITE_API_BASE_URL` empty makes the app call its own origin (Vercel), which has no backend, so the dashboard would show "Cannot reach the analytics service".
 
 ## 4. Deploy and verify
 
@@ -35,7 +36,7 @@ Deploy, open the Vercel URL and check:
 
 - the header shows **LIVE** and **Connected**
 - the browser network tab shows `GET https://api.example.com/api/metrics` returning 200 (a CORS error means `CORS_ALLOWED_ORIGINS` on the backend does not match the page origin exactly, including `https://` and no trailing slash)
-- a `wss://api.example.com/ws` connection is open
+- `GET .../api/metrics` repeats about every 3 seconds (no WebSocket is opened)
 
 ## Notes
 
