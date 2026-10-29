@@ -60,6 +60,21 @@ export default function App() {
           </div>
         )}
 
+        {view === 'analytics' && (
+          <div
+            role="note"
+            className="flex items-start gap-3 rounded-2xl border border-sky-300 bg-sky-50 px-4 py-3 text-xs text-sky-950"
+          >
+            <Info className="mt-0.5 h-4 w-4 shrink-0" aria-hidden />
+            <p>
+              <strong className="font-semibold">Why do different time ranges show the same numbers?</strong> The 15 min,
+              1 hour, 6 hour and 24 hour windows overlap and only count events observed since collection started
+              (there is no backfill from GitHub). Until more history than the selected range has accumulated, longer
+              ranges contain the same events as shorter ones.
+            </p>
+          </div>
+        )}
+
         {LITE_MODE && idle && (
           <div
             role="status"
