@@ -67,10 +67,8 @@ export default function App() {
           >
             <Info className="mt-0.5 h-4 w-4 shrink-0" aria-hidden />
             <p>
-              <strong className="font-semibold">Why do different time ranges show the same numbers?</strong> The 15 min,
-              1 hour, 6 hour and 24 hour windows overlap and only count events observed since collection started
-              (there is no backfill from GitHub). Until more history than the selected range has accumulated, longer
-              ranges contain the same events as shorter ones.
+              Time ranges may show identical metrics because GitHub events are collected only while the dashboard is
+              active, with no historical backfill. Metrics will differ as more history accumulates.
             </p>
           </div>
         )}
