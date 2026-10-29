@@ -1,0 +1,217 @@
+[ {
+  "name" : "steady-no-spike"
+}, {
+  "name" : "below-min-events"
+}, {
+  "name" : "not-enough-history"
+}, {
+  "name" : "exactly-min-history",
+  "spike" : {
+    "repo" : "octo/hello",
+    "repoUrl" : "https://github.com/octo/hello",
+    "windowStart" : 1773144000000,
+    "windowMinutes" : 5,
+    "currentCount" : 20,
+    "baseline" : 2.0,
+    "pctIncrease" : 900.0,
+    "level" : "SURGING",
+    "note" : "Activity spike in the observed event sample.",
+    "detectedAt" : 1773144120000
+  }
+}, {
+  "name" : "warming",
+  "spike" : {
+    "repo" : "octo/hello",
+    "repoUrl" : "https://github.com/octo/hello",
+    "windowStart" : 1773144000000,
+    "windowMinutes" : 5,
+    "currentCount" : 8,
+    "baseline" : 2.0,
+    "pctIncrease" : 300.0,
+    "level" : "RISING",
+    "note" : "Activity spike in the observed event sample.",
+    "detectedAt" : 1773144120000
+  }
+}, {
+  "name" : "warming-ratio-boundary",
+  "spike" : {
+    "repo" : "octo/hello",
+    "repoUrl" : "https://github.com/octo/hello",
+    "windowStart" : 1773144000000,
+    "windowMinutes" : 5,
+    "currentCount" : 9,
+    "baseline" : 3.0,
+    "pctIncrease" : 200.0,
+    "level" : "RISING",
+    "note" : "Activity spike in the observed event sample.",
+    "detectedAt" : 1773144120000
+  }
+}, {
+  "name" : "rising",
+  "spike" : {
+    "repo" : "octo/hello",
+    "repoUrl" : "https://github.com/octo/hello",
+    "windowStart" : 1773144000000,
+    "windowMinutes" : 5,
+    "currentCount" : 14,
+    "baseline" : 2.0,
+    "pctIncrease" : 600.0,
+    "level" : "SURGING",
+    "note" : "Activity spike in the observed event sample.",
+    "detectedAt" : 1773144120000
+  }
+}, {
+  "name" : "rising-boundary-200",
+  "spike" : {
+    "repo" : "octo/hello",
+    "repoUrl" : "https://github.com/octo/hello",
+    "windowStart" : 1773144000000,
+    "windowMinutes" : 5,
+    "currentCount" : 12,
+    "baseline" : 2.0,
+    "pctIncrease" : 500.0,
+    "level" : "SURGING",
+    "note" : "Activity spike in the observed event sample.",
+    "detectedAt" : 1773144120000
+  }
+}, {
+  "name" : "surging",
+  "spike" : {
+    "repo" : "octo/hello",
+    "repoUrl" : "https://github.com/octo/hello",
+    "windowStart" : 1773144000000,
+    "windowMinutes" : 5,
+    "currentCount" : 40,
+    "baseline" : 2.0,
+    "pctIncrease" : 1900.0,
+    "level" : "SURGING",
+    "note" : "Activity spike in the observed event sample.",
+    "detectedAt" : 1773144120000
+  }
+}, {
+  "name" : "surging-boundary-500",
+  "spike" : {
+    "repo" : "octo/hello",
+    "repoUrl" : "https://github.com/octo/hello",
+    "windowStart" : 1773144000000,
+    "windowMinutes" : 5,
+    "currentCount" : 12,
+    "baseline" : 2.0,
+    "pctIncrease" : 500.0,
+    "level" : "SURGING",
+    "note" : "Activity spike in the observed event sample.",
+    "detectedAt" : 1773144120000
+  }
+}, {
+  "name" : "burst-zero-baseline",
+  "spike" : {
+    "repo" : "octo/hello",
+    "repoUrl" : "https://github.com/octo/hello",
+    "windowStart" : 1773144000000,
+    "windowMinutes" : 5,
+    "currentCount" : 25,
+    "baseline" : 0.0,
+    "level" : "BURST",
+    "note" : "Almost no earlier activity in the observed sample, so no percentage is shown.",
+    "detectedAt" : 1773144120000
+  }
+}, {
+  "name" : "burst-tiny-baseline",
+  "spike" : {
+    "repo" : "octo/hello",
+    "repoUrl" : "https://github.com/octo/hello",
+    "windowStart" : 1773144000000,
+    "windowMinutes" : 5,
+    "currentCount" : 25,
+    "baseline" : 0.2,
+    "level" : "BURST",
+    "note" : "Almost no earlier activity in the observed sample, so no percentage is shown.",
+    "detectedAt" : 1773144120000
+  }
+}, {
+  "name" : "baseline-exactly-min",
+  "spike" : {
+    "repo" : "octo/hello",
+    "repoUrl" : "https://github.com/octo/hello",
+    "windowStart" : 1773144000000,
+    "windowMinutes" : 5,
+    "currentCount" : 25,
+    "baseline" : 1.0,
+    "pctIncrease" : 2400.0,
+    "level" : "SURGING",
+    "note" : "Activity spike in the observed event sample.",
+    "detectedAt" : 1773144120000
+  }
+}, {
+  "name" : "partial-baseline-windows",
+  "spike" : {
+    "repo" : "octo/hello",
+    "repoUrl" : "https://github.com/octo/hello",
+    "windowStart" : 1773144000000,
+    "windowMinutes" : 5,
+    "currentCount" : 30,
+    "baseline" : 3.0,
+    "pctIncrease" : 900.0,
+    "level" : "SURGING",
+    "note" : "Activity spike in the observed event sample.",
+    "detectedAt" : 1773144120000
+  }
+}, {
+  "name" : "sparse-history-gaps",
+  "spike" : {
+    "repo" : "octo/hello",
+    "repoUrl" : "https://github.com/octo/hello",
+    "windowStart" : 1773144000000,
+    "windowMinutes" : 5,
+    "currentCount" : 30,
+    "baseline" : 3.3,
+    "pctIncrease" : 800.0,
+    "level" : "SURGING",
+    "note" : "Activity spike in the observed event sample.",
+    "detectedAt" : 1773144120000
+  }
+}, {
+  "name" : "custom-config",
+  "spike" : {
+    "repo" : "octo/hello",
+    "repoUrl" : "https://github.com/octo/hello",
+    "windowStart" : 1773144000000,
+    "windowMinutes" : 5,
+    "currentCount" : 12,
+    "baseline" : 4.0,
+    "pctIncrease" : 200.0,
+    "level" : "RISING",
+    "note" : "Activity spike in the observed event sample.",
+    "detectedAt" : 1773144120000
+  }
+}, {
+  "name" : "fractional-baseline",
+  "spike" : {
+    "repo" : "octo/hello",
+    "repoUrl" : "https://github.com/octo/hello",
+    "windowStart" : 1773144000000,
+    "windowMinutes" : 5,
+    "currentCount" : 17,
+    "baseline" : 2.7,
+    "pctIncrease" : 537.5,
+    "level" : "SURGING",
+    "note" : "Activity spike in the observed event sample.",
+    "detectedAt" : 1773144120000
+  }
+}, {
+  "name" : "ratio-just-below"
+}, {
+  "name" : "warming-custom-ratio",
+  "spike" : {
+    "repo" : "octo/hello",
+    "repoUrl" : "https://github.com/octo/hello",
+    "windowStart" : 1773144000000,
+    "windowMinutes" : 5,
+    "currentCount" : 10,
+    "baseline" : 4.0,
+    "pctIncrease" : 150.0,
+    "level" : "WARMING",
+    "note" : "Activity spike in the observed event sample.",
+    "detectedAt" : 1773144120000
+  }
+} ]

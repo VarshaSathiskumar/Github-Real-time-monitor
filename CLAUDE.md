@@ -22,6 +22,8 @@ Project instructions for Github Real time monitor.
 ./gradlew :services:ingestion-service:bootRun      # gRPC on 9090
 ./gradlew :services:analytics-service:loadTest -Pargs="--events 20000"
 cd frontend && npm run dev | npm test | npm run typecheck | npm run build
+cd frontend && DATABASE_URL=... npm run db:migrate   # Neon schema for the serverless-lite deployment
+PARITY_UPDATE=1 ./gradlew :services:analytics-service:cleanTest :services:analytics-service:test --tests '*ServerlessParityTest'   # regenerate parity/*.expected.json from the Java code
 docker compose up --build                          # needs .env with POSTGRES_PASSWORD
 cd infrastructure/terraform && terraform fmt -check && terraform validate
 ```
@@ -29,5 +31,7 @@ cd infrastructure/terraform && terraform fmt -check && terraform validate
 ## Architecture
 
 Ingestion service polls GitHub and publishes to Kafka topic `github.events.raw` (key = event id). Analytics service runs the Kafka Streams topology in `stream/PulseTopology` (parse, dedup, persist, 1 min and 5 min windows), writes absolute window values to PostgreSQL and Redis, and serves REST (`api/`), WebSocket (`ws/`) and the demo simulator (`demo/`). `DashboardService` builds every view from a `DashboardSource` (live: Redis/PostgreSQL, demo: in-memory), so live and demo data never mix. Details in `docs/architecture.md`.
+
+The serverless-lite deployment (`frontend/api/`, Vercel Functions + Neon, `docs/serverless-lite.md`) is a separate TypeScript port with no Kafka or Redis; it must stay in step with the Java behaviour through the golden files in `parity/`, and its performance must never be described with the benchmark figures of the full stack.
 
 Facts that are easy to get wrong: windows use the Kafka record timestamp, not GitHub `created_at`; GitHub no longer reports commit counts in push events, so `commits` is nullable and the frontend has no Commits card; JSON omits nulls, so the frontend treats missing as null.

@@ -31,12 +31,18 @@ export function SystemPanel({ status, mode }: { status?: SystemStatus; mode: Mod
   const now = useNow(1000)
   const ing = status?.ingestion
   const an = status?.analytics
+  const lite = status?.architecture === 'serverless-lite'
+  const demoLite = lite && mode === 'demo'
   return (
     <section id="pipeline-health" aria-label="Pipeline health" className="glass scroll-mt-24 rounded-2xl p-5 sm:p-6">
       <div className="mb-4 flex flex-wrap items-baseline justify-between gap-2">
         <h2 className="font-display text-lg font-semibold text-slate-900">Pipeline Health</h2>
         <span className="text-xs text-muted-foreground">
-          {mode === 'demo' ? 'Showing the live pipeline' : 'Ingestion health arrives over gRPC'}
+          {lite
+            ? 'Serverless lite: ingestion runs on demand, no Kafka or Redis'
+            : mode === 'demo'
+              ? 'Showing the live pipeline'
+              : 'Ingestion health arrives over gRPC'}
         </span>
       </div>
       {!status ? (
@@ -47,12 +53,18 @@ export function SystemPanel({ status, mode }: { status?: SystemStatus; mode: Mod
         </div>
       ) : (
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
-          <Item icon={<Network className="h-4 w-4" />} label="Ingestion (gRPC)">
-            <span className="flex items-center gap-2">
-              <Dot ok={ing?.status === 'HEALTHY'} warn={ing?.status === 'STARTING' || ing?.status === 'DEGRADED'} />
-              {ing?.status.replace('_', ' ').toLowerCase()}
-            </span>
-            <span className="text-xs text-slate-500">polled {timeAgo(ing?.lastSuccessfulPoll, now)}</span>
+          <Item icon={<Network className="h-4 w-4" />} label={lite ? 'Ingestion (on demand)' : 'Ingestion (gRPC)'}>
+            {demoLite ? (
+              'not used for demo data'
+            ) : (
+              <>
+                <span className="flex items-center gap-2">
+                  <Dot ok={ing?.status === 'HEALTHY'} warn={ing?.status === 'STARTING' || ing?.status === 'DEGRADED'} />
+                  {ing?.status.replace('_', ' ').toLowerCase()}
+                </span>
+                <span className="text-xs text-slate-500">polled {timeAgo(ing?.lastSuccessfulPoll, now)}</span>
+              </>
+            )}
           </Item>
           <Item icon={<GitBranch className="h-4 w-4" />} label="Events ingested">
             <span className="num">{formatCount(ing?.eventsIngested ?? 0)}</span>
@@ -60,29 +72,47 @@ export function SystemPanel({ status, mode }: { status?: SystemStatus; mode: Mod
               {ing && ing.rateLimitRemaining >= 0 ? `${ing.rateLimitRemaining} API calls left` : 'rate limit unknown'}
             </span>
           </Item>
-          <Item icon={<Cpu className="h-4 w-4" />} label="Stream processor">
-            <span className="flex items-center gap-2">
-              <Dot ok={an?.streamsState === 'RUNNING'} warn={an?.streamsState === 'REBALANCING'} />
-              {an?.streamsState.toLowerCase()}
-            </span>
-            <span className="text-xs text-slate-500">
-              lag {an?.consumerLag === undefined || an?.consumerLag === null ? 'n/a' : formatCount(an.consumerLag)}
-            </span>
-          </Item>
-          <Item icon={<Layers className="h-4 w-4" />} label="Redis">
-            <span className="flex items-center gap-2">
-              <Dot ok={!!an?.redis} />
-              {an?.redis ? 'up' : 'down'}
-            </span>
-          </Item>
+          {lite ? (
+            <>
+              <Item icon={<Cpu className="h-4 w-4" />} label="Aggregation">
+                SQL in the function
+                <span className="block text-xs text-slate-500">no stream processor</span>
+              </Item>
+              <Item icon={<Layers className="h-4 w-4" />} label="Redis">
+                not used
+              </Item>
+            </>
+          ) : (
+            <>
+              <Item icon={<Cpu className="h-4 w-4" />} label="Stream processor">
+                <span className="flex items-center gap-2">
+                  <Dot ok={an?.streamsState === 'RUNNING'} warn={an?.streamsState === 'REBALANCING'} />
+                  {an?.streamsState.toLowerCase()}
+                </span>
+                <span className="text-xs text-slate-500">
+                  lag {an?.consumerLag === undefined || an?.consumerLag === null ? 'n/a' : formatCount(an.consumerLag)}
+                </span>
+              </Item>
+              <Item icon={<Layers className="h-4 w-4" />} label="Redis">
+                <span className="flex items-center gap-2">
+                  <Dot ok={!!an?.redis} />
+                  {an?.redis ? 'up' : 'down'}
+                </span>
+              </Item>
+            </>
+          )}
           <Item icon={<Database className="h-4 w-4" />} label="PostgreSQL">
-            <span className="flex items-center gap-2">
-              <Dot ok={!!an?.postgres} />
-              {an?.postgres ? 'up' : 'down'}
-            </span>
+            {demoLite ? (
+              'not used for demo data'
+            ) : (
+              <span className="flex items-center gap-2">
+                <Dot ok={!!an?.postgres} />
+                {an?.postgres ? 'up' : 'down'}
+              </span>
+            )}
           </Item>
           <Item icon={<HardDrive className="h-4 w-4" />} label="Last event observed">
-            {an?.lastEventObservedAt ? timeAgo(an.lastEventObservedAt, now) : 'none yet'}
+            {demoLite ? 'simulated' : an?.lastEventObservedAt ? timeAgo(an.lastEventObservedAt, now) : 'none yet'}
           </Item>
         </div>
       )}

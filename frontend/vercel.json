@@ -4,7 +4,8 @@
   "installCommand": "npm ci --no-audit --no-fund",
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
-  "rewrites": [{ "source": "/((?!assets/|favicon.svg).*)", "destination": "/index.html" }],
+  "rewrites": [{ "source": "/((?!api/|assets/|favicon.svg).*)", "destination": "/index.html" }],
+  "functions": { "api/snapshot.ts": { "maxDuration": 30 } },
   "headers": [
     {
       "source": "/assets/(.*)",

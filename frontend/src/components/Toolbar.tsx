@@ -1,4 +1,4 @@
-import { ArrowLeft, HeartPulse } from 'lucide-react'
+import { ArrowLeft, FlaskConical, HeartPulse } from 'lucide-react'
 import type { Mode, RangeCode } from '@/lib/types'
 import { cn } from '@/lib/utils'
 import { Button } from '@/components/ui/button'
@@ -48,10 +48,11 @@ interface Props {
   mode: Mode
   range: RangeCode
   onRange: (r: RangeCode) => void
+  onLaunchDemo: () => void
   onReturnToLive: () => void
 }
 
-export function Toolbar({ mode, range, onRange, onReturnToLive }: Props) {
+export function Toolbar({ mode, range, onRange, onLaunchDemo, onReturnToLive }: Props) {
   return (
     <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-end">
       <div className="flex flex-wrap items-center gap-3">
@@ -62,6 +63,12 @@ export function Toolbar({ mode, range, onRange, onReturnToLive }: Props) {
             Pipeline Health
           </a>
         </Button>
+        {mode === 'live' && (
+          <Button variant="outline" onClick={onLaunchDemo}>
+            <FlaskConical className="h-4 w-4" aria-hidden />
+            Launch Demo Activity
+          </Button>
+        )}
         {mode === 'demo' && (
           <Button variant="outline" onClick={onReturnToLive}>
             <ArrowLeft className="h-4 w-4" aria-hidden />

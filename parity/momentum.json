@@ -1,0 +1,460 @@
+{
+ "cases": [
+  {
+   "name": "steady-no-spike",
+   "cfg": {
+    "windowMinutes": 5,
+    "baselineWindows": 6,
+    "minHistoryWindows": 3,
+    "minEvents": 8,
+    "spikeRatio": 3.0,
+    "minBaseline": 1.0
+   },
+   "repo": "octo/hello",
+   "windowStart": 1773144000000,
+   "currentCount": 5,
+   "history": {
+    "1773143700000": 2,
+    "1773143400000": 2,
+    "1773143100000": 2,
+    "1773142800000": 2,
+    "1773142500000": 2,
+    "1773142200000": 2,
+    "1773144000000": 5
+   },
+   "firstWindowStart": 1773141000000,
+   "detectedAt": 1773144120000
+  },
+  {
+   "name": "below-min-events",
+   "cfg": {
+    "windowMinutes": 5,
+    "baselineWindows": 6,
+    "minHistoryWindows": 3,
+    "minEvents": 8,
+    "spikeRatio": 3.0,
+    "minBaseline": 1.0
+   },
+   "repo": "octo/hello",
+   "windowStart": 1773144000000,
+   "currentCount": 7,
+   "history": {
+    "1773143700000": 2,
+    "1773143400000": 2,
+    "1773143100000": 2,
+    "1773142800000": 2,
+    "1773142500000": 2,
+    "1773142200000": 2,
+    "1773144000000": 7
+   },
+   "firstWindowStart": 1773141000000,
+   "detectedAt": 1773144120000
+  },
+  {
+   "name": "not-enough-history",
+   "cfg": {
+    "windowMinutes": 5,
+    "baselineWindows": 6,
+    "minHistoryWindows": 3,
+    "minEvents": 8,
+    "spikeRatio": 3.0,
+    "minBaseline": 1.0
+   },
+   "repo": "octo/hello",
+   "windowStart": 1773144000000,
+   "currentCount": 20,
+   "history": {
+    "1773143700000": 2,
+    "1773143400000": 2,
+    "1773143100000": 2,
+    "1773142800000": 2,
+    "1773142500000": 2,
+    "1773142200000": 2,
+    "1773144000000": 20
+   },
+   "firstWindowStart": 1773143400000,
+   "detectedAt": 1773144120000
+  },
+  {
+   "name": "exactly-min-history",
+   "cfg": {
+    "windowMinutes": 5,
+    "baselineWindows": 6,
+    "minHistoryWindows": 3,
+    "minEvents": 8,
+    "spikeRatio": 3.0,
+    "minBaseline": 1.0
+   },
+   "repo": "octo/hello",
+   "windowStart": 1773144000000,
+   "currentCount": 20,
+   "history": {
+    "1773143700000": 2,
+    "1773143400000": 2,
+    "1773143100000": 2,
+    "1773144000000": 20
+   },
+   "firstWindowStart": 1773143100000,
+   "detectedAt": 1773144120000
+  },
+  {
+   "name": "warming",
+   "cfg": {
+    "windowMinutes": 5,
+    "baselineWindows": 6,
+    "minHistoryWindows": 3,
+    "minEvents": 8,
+    "spikeRatio": 3.0,
+    "minBaseline": 1.0
+   },
+   "repo": "octo/hello",
+   "windowStart": 1773144000000,
+   "currentCount": 8,
+   "history": {
+    "1773143700000": 2,
+    "1773143400000": 2,
+    "1773143100000": 2,
+    "1773142800000": 2,
+    "1773142500000": 2,
+    "1773142200000": 2,
+    "1773144000000": 8
+   },
+   "firstWindowStart": 1773141000000,
+   "detectedAt": 1773144120000
+  },
+  {
+   "name": "warming-ratio-boundary",
+   "cfg": {
+    "windowMinutes": 5,
+    "baselineWindows": 6,
+    "minHistoryWindows": 3,
+    "minEvents": 8,
+    "spikeRatio": 3.0,
+    "minBaseline": 1.0
+   },
+   "repo": "octo/hello",
+   "windowStart": 1773144000000,
+   "currentCount": 9,
+   "history": {
+    "1773143700000": 3,
+    "1773143400000": 3,
+    "1773143100000": 3,
+    "1773142800000": 3,
+    "1773142500000": 3,
+    "1773142200000": 3,
+    "1773144000000": 9
+   },
+   "firstWindowStart": 1773141000000,
+   "detectedAt": 1773144120000
+  },
+  {
+   "name": "rising",
+   "cfg": {
+    "windowMinutes": 5,
+    "baselineWindows": 6,
+    "minHistoryWindows": 3,
+    "minEvents": 8,
+    "spikeRatio": 3.0,
+    "minBaseline": 1.0
+   },
+   "repo": "octo/hello",
+   "windowStart": 1773144000000,
+   "currentCount": 14,
+   "history": {
+    "1773143700000": 2,
+    "1773143400000": 2,
+    "1773143100000": 2,
+    "1773142800000": 2,
+    "1773142500000": 2,
+    "1773142200000": 2,
+    "1773144000000": 14
+   },
+   "firstWindowStart": 1773141000000,
+   "detectedAt": 1773144120000
+  },
+  {
+   "name": "rising-boundary-200",
+   "cfg": {
+    "windowMinutes": 5,
+    "baselineWindows": 6,
+    "minHistoryWindows": 3,
+    "minEvents": 8,
+    "spikeRatio": 3.0,
+    "minBaseline": 1.0
+   },
+   "repo": "octo/hello",
+   "windowStart": 1773144000000,
+   "currentCount": 12,
+   "history": {
+    "1773143700000": 2,
+    "1773143400000": 2,
+    "1773143100000": 2,
+    "1773142800000": 2,
+    "1773142500000": 2,
+    "1773142200000": 2,
+    "1773144000000": 12
+   },
+   "firstWindowStart": 1773141000000,
+   "detectedAt": 1773144120000
+  },
+  {
+   "name": "surging",
+   "cfg": {
+    "windowMinutes": 5,
+    "baselineWindows": 6,
+    "minHistoryWindows": 3,
+    "minEvents": 8,
+    "spikeRatio": 3.0,
+    "minBaseline": 1.0
+   },
+   "repo": "octo/hello",
+   "windowStart": 1773144000000,
+   "currentCount": 40,
+   "history": {
+    "1773143700000": 2,
+    "1773143400000": 2,
+    "1773143100000": 2,
+    "1773142800000": 2,
+    "1773142500000": 2,
+    "1773142200000": 2,
+    "1773144000000": 40
+   },
+   "firstWindowStart": 1773141000000,
+   "detectedAt": 1773144120000
+  },
+  {
+   "name": "surging-boundary-500",
+   "cfg": {
+    "windowMinutes": 5,
+    "baselineWindows": 6,
+    "minHistoryWindows": 3,
+    "minEvents": 1,
+    "spikeRatio": 3.0,
+    "minBaseline": 1.0
+   },
+   "repo": "octo/hello",
+   "windowStart": 1773144000000,
+   "currentCount": 12,
+   "history": {
+    "1773143700000": 2,
+    "1773143400000": 2,
+    "1773143100000": 2,
+    "1773142800000": 2,
+    "1773142500000": 2,
+    "1773142200000": 2,
+    "1773144000000": 12
+   },
+   "firstWindowStart": 1773141000000,
+   "detectedAt": 1773144120000
+  },
+  {
+   "name": "burst-zero-baseline",
+   "cfg": {
+    "windowMinutes": 5,
+    "baselineWindows": 6,
+    "minHistoryWindows": 3,
+    "minEvents": 8,
+    "spikeRatio": 3.0,
+    "minBaseline": 1.0
+   },
+   "repo": "octo/hello",
+   "windowStart": 1773144000000,
+   "currentCount": 25,
+   "history": {
+    "1773144000000": 25
+   },
+   "firstWindowStart": 1773141000000,
+   "detectedAt": 1773144120000
+  },
+  {
+   "name": "burst-tiny-baseline",
+   "cfg": {
+    "windowMinutes": 5,
+    "baselineWindows": 6,
+    "minHistoryWindows": 3,
+    "minEvents": 8,
+    "spikeRatio": 3.0,
+    "minBaseline": 1.0
+   },
+   "repo": "octo/hello",
+   "windowStart": 1773144000000,
+   "currentCount": 25,
+   "history": {
+    "1773143700000": 1,
+    "1773143400000": 0,
+    "1773143100000": 0,
+    "1773142800000": 0,
+    "1773142500000": 0,
+    "1773142200000": 0,
+    "1773144000000": 25
+   },
+   "firstWindowStart": 1773141000000,
+   "detectedAt": 1773144120000
+  },
+  {
+   "name": "baseline-exactly-min",
+   "cfg": {
+    "windowMinutes": 5,
+    "baselineWindows": 6,
+    "minHistoryWindows": 3,
+    "minEvents": 8,
+    "spikeRatio": 3.0,
+    "minBaseline": 1.0
+   },
+   "repo": "octo/hello",
+   "windowStart": 1773144000000,
+   "currentCount": 25,
+   "history": {
+    "1773143700000": 6,
+    "1773143400000": 0,
+    "1773143100000": 0,
+    "1773142800000": 0,
+    "1773142500000": 0,
+    "1773142200000": 0,
+    "1773144000000": 25
+   },
+   "firstWindowStart": 1773141000000,
+   "detectedAt": 1773144120000
+  },
+  {
+   "name": "partial-baseline-windows",
+   "cfg": {
+    "windowMinutes": 5,
+    "baselineWindows": 6,
+    "minHistoryWindows": 3,
+    "minEvents": 8,
+    "spikeRatio": 3.0,
+    "minBaseline": 1.0
+   },
+   "repo": "octo/hello",
+   "windowStart": 1773144000000,
+   "currentCount": 30,
+   "history": {
+    "1773143700000": 4,
+    "1773143400000": 4,
+    "1773143100000": 4,
+    "1773144000000": 30
+   },
+   "firstWindowStart": 1773142800000,
+   "detectedAt": 1773144120000
+  },
+  {
+   "name": "sparse-history-gaps",
+   "cfg": {
+    "windowMinutes": 5,
+    "baselineWindows": 6,
+    "minHistoryWindows": 3,
+    "minEvents": 8,
+    "spikeRatio": 3.0,
+    "minBaseline": 1.0
+   },
+   "repo": "octo/hello",
+   "windowStart": 1773144000000,
+   "currentCount": 30,
+   "history": {
+    "1773143400000": 10,
+    "1773142500000": 10,
+    "1773144000000": 30
+   },
+   "firstWindowStart": 1773141000000,
+   "detectedAt": 1773144120000
+  },
+  {
+   "name": "custom-config",
+   "cfg": {
+    "windowMinutes": 5,
+    "baselineWindows": 3,
+    "minHistoryWindows": 1,
+    "minEvents": 3,
+    "spikeRatio": 2.0,
+    "minBaseline": 0.5
+   },
+   "repo": "octo/hello",
+   "windowStart": 1773144000000,
+   "currentCount": 12,
+   "history": {
+    "1773143700000": 4,
+    "1773143400000": 4,
+    "1773143100000": 4,
+    "1773144000000": 12
+   },
+   "firstWindowStart": 1773142200000,
+   "detectedAt": 1773144120000
+  },
+  {
+   "name": "fractional-baseline",
+   "cfg": {
+    "windowMinutes": 5,
+    "baselineWindows": 6,
+    "minHistoryWindows": 3,
+    "minEvents": 8,
+    "spikeRatio": 3.0,
+    "minBaseline": 1.0
+   },
+   "repo": "octo/hello",
+   "windowStart": 1773144000000,
+   "currentCount": 17,
+   "history": {
+    "1773143700000": 3,
+    "1773143400000": 2,
+    "1773143100000": 3,
+    "1773142800000": 2,
+    "1773142500000": 3,
+    "1773142200000": 3,
+    "1773144000000": 17
+   },
+   "firstWindowStart": 1773141000000,
+   "detectedAt": 1773144120000
+  },
+  {
+   "name": "ratio-just-below",
+   "cfg": {
+    "windowMinutes": 5,
+    "baselineWindows": 6,
+    "minHistoryWindows": 3,
+    "minEvents": 8,
+    "spikeRatio": 3.0,
+    "minBaseline": 1.0
+   },
+   "repo": "octo/hello",
+   "windowStart": 1773144000000,
+   "currentCount": 8,
+   "history": {
+    "1773143700000": 3,
+    "1773143400000": 3,
+    "1773143100000": 3,
+    "1773142800000": 3,
+    "1773142500000": 3,
+    "1773142200000": 3,
+    "1773144000000": 8
+   },
+   "firstWindowStart": 1773141000000,
+   "detectedAt": 1773144120000
+  },
+  {
+   "name": "warming-custom-ratio",
+   "cfg": {
+    "windowMinutes": 5,
+    "baselineWindows": 6,
+    "minHistoryWindows": 3,
+    "minEvents": 8,
+    "spikeRatio": 1.5,
+    "minBaseline": 1.0
+   },
+   "repo": "octo/hello",
+   "windowStart": 1773144000000,
+   "currentCount": 10,
+   "history": {
+    "1773143700000": 4,
+    "1773143400000": 4,
+    "1773143100000": 4,
+    "1773142800000": 4,
+    "1773142500000": 4,
+    "1773142200000": 4,
+    "1773144000000": 10
+   },
+   "firstWindowStart": 1773141000000,
+   "detectedAt": 1773144120000
+  }
+ ]
+}

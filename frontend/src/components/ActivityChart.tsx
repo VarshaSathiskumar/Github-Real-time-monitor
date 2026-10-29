@@ -1,6 +1,7 @@
 import { LineChart as ChartIcon } from 'lucide-react'
 import { useMemo, useState } from 'react'
 import { Area, AreaChart, CartesianGrid, ResponsiveContainer, Tooltip as ChartTooltip, XAxis, YAxis } from 'recharts'
+import { LITE_MODE } from '@/lib/config'
 import { formatClock } from '@/lib/format'
 import type { Activity, Mode, RangeCode } from '@/lib/types'
 import { cn } from '@/lib/utils'
@@ -81,7 +82,7 @@ export function ActivityChart({ activity, mode, range, onRange }: Props) {
       <SectionHeader
         title="GitHub Activity Over Time"
         mode={mode}
-        description={`Average events per minute${bucket > 1 ? ` in ${bucket} minute buckets` : ''}. Live window from Redis counters, longer ranges from PostgreSQL aggregates.`}
+        description={`Average events per minute${bucket > 1 ? ` in ${bucket} minute buckets` : ''}. ${LITE_MODE ? (mode === 'demo' ? 'Simulated activity generated in the function.' : 'All ranges from PostgreSQL aggregates.') : 'Live window from Redis counters, longer ranges from PostgreSQL aggregates.'}`}
         actions={<RangeSelector value={range} onChange={onRange} />}
       />
       <CardContent>

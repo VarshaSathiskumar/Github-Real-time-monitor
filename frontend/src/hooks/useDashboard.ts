@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useReducer, useRef, useState } from 'react'
 import { api } from '@/lib/api'
-import { POLLING_MODE, POLL_INTERVAL_MS, wsUrl } from '@/lib/config'
+import { LITE_MODE, POLLING_MODE, POLL_INTERVAL_MS, wsUrl } from '@/lib/config'
+import { useActivity } from '@/hooks/useActivity'
 import { mergeEvents } from '@/lib/feed'
 import type {
   Activity,
@@ -128,25 +129,45 @@ export function useDashboard() {
       (key: 'metrics' | 'activity' | 'trending' | 'breakdown' | 'rising' | 'status') => (value: unknown) => {
         if (current()) dispatch({ type: 'data', key, value })
       }
-    const results = await Promise.allSettled([
-      api.metrics(mode, range).then(put('metrics')),
-      api.activity(mode, range).then(put('activity')),
-      api.trending(mode, range).then(put('trending')),
-      api.breakdown(mode, range).then(put('breakdown')),
-      api.rising(mode).then(put('rising')),
-      api.status(mode).then(put('status')),
-      api.events(mode).then((events) => {
-        if (!current()) return
-        publish(events, mode)
-        if (background && pausedRef.current) {
-          // Polling while the feed is paused: hold new events back like the WebSocket path does.
-          pending.current = mergeEvents(pending.current, events)
-          setPendingCount(pending.current.length)
-          return
-        }
-        dispatch({ type: 'events', events, replace: true })
-      }),
-    ])
+    const onEvents = (events: FeedEvent[]) => {
+      if (!current()) return
+      publish(events, mode)
+      if (background && pausedRef.current) {
+        // Polling while the feed is paused: hold new events back like the WebSocket path does.
+        pending.current = mergeEvents(pending.current, events)
+        setPendingCount(pending.current.length)
+        return
+      }
+      dispatch({ type: 'events', events, replace: true })
+    }
+    const results = LITE_MODE
+      ? // One request carries every view; a failed request fails them all.
+        [
+          await api
+            .snapshot(mode, range)
+            .then((snap) => {
+              put('metrics')(snap.metrics)
+              put('activity')(snap.activity)
+              put('trending')(snap.trending)
+              put('breakdown')(snap.breakdown)
+              put('rising')(snap.rising)
+              put('status')(snap.status)
+              onEvents(snap.events)
+            })
+            .then(
+              () => ({ status: 'fulfilled' }) as const,
+              () => ({ status: 'rejected' }) as const,
+            ),
+        ]
+      : await Promise.allSettled([
+          api.metrics(mode, range).then(put('metrics')),
+          api.activity(mode, range).then(put('activity')),
+          api.trending(mode, range).then(put('trending')),
+          api.breakdown(mode, range).then(put('breakdown')),
+          api.rising(mode).then(put('rising')),
+          api.status(mode).then(put('status')),
+          api.events(mode).then(onEvents),
+        ])
     const failed = results.every((r) => r.status === 'rejected')
     if (current() && failed) dispatch({ type: 'failed', value: true })
     if (POLLING_MODE && background) dispatch({ type: 'connection', value: failed ? 'reconnecting' : 'open' })
@@ -245,19 +266,24 @@ export function useDashboard() {
     }
   }, [loadSnapshot, subscribe, publish])
 
+  // Lite deployment: skip refreshes while the tab is hidden or unused, and refresh right away when it comes back.
+  const { idle, paused: isPaused } = useActivity(LITE_MODE, () => void loadSnapshot(true))
+
   // REST polling: the only refresh path on the deployed site, a slower fallback while the socket is down elsewhere.
   useEffect(() => {
     if (!POLLING_MODE && state.connection === 'open') return
     const id = window.setInterval(
       () => {
+        if (LITE_MODE && isPaused()) return
         // Demo data only lives while the simulator lease is renewed, which the WebSocket subscribe does otherwise.
-        if (POLLING_MODE && ctx.current.mode === 'demo') void api.startDemo().catch(() => undefined)
+        // The lite deployment generates demo data statelessly, so there is no lease to renew.
+        if (POLLING_MODE && !LITE_MODE && ctx.current.mode === 'demo') void api.startDemo().catch(() => undefined)
         void loadSnapshot(true)
       },
       POLLING_MODE ? POLL_INTERVAL_MS : 10_000,
     )
     return () => window.clearInterval(id)
-  }, [state.connection, loadSnapshot])
+  }, [state.connection, loadSnapshot, isPaused])
 
   const setPaused = useCallback((value: boolean) => {
     pausedRef.current = value
@@ -274,10 +300,12 @@ export function useDashboard() {
   }, [])
 
   const launchDemo = useCallback(async () => {
-    try {
-      await api.startDemo()
-    } catch {
-      /* the WebSocket subscribe also starts the simulator */
+    if (!LITE_MODE) {
+      try {
+        await api.startDemo()
+      } catch {
+        /* the WebSocket subscribe also starts the simulator */
+      }
     }
     dispatch({ type: 'context', mode: 'demo', range: ctx.current.range })
   }, [])
@@ -288,5 +316,5 @@ export function useDashboard() {
 
   const dismissAlert = useCallback(() => dispatch({ type: 'alert', value: undefined }), [])
 
-  return { state, paused, pendingCount, setPaused, setRange, launchDemo, returnToLive, dismissAlert, subscribeEvents }
+  return { state, paused, idle, pendingCount, setPaused, setRange, launchDemo, returnToLive, dismissAlert, subscribeEvents }
 }

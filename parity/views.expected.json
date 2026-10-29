@@ -1,0 +1,5597 @@
+{
+  "busy-two-days" : {
+    "15m" : {
+      "metrics" : {
+        "mode" : "live",
+        "range" : "15m",
+        "windowStart" : "2026-03-10T11:46:00Z",
+        "windowEnd" : "2026-03-10T12:01:00Z",
+        "totalEvents" : {
+          "value" : 6,
+          "changePct" : -76.9,
+          "sparkline" : [ 0, 0, 0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0 ],
+          "changeBasis" : "Compared with the previous 15m window"
+        },
+        "activeRepositories" : {
+          "value" : 5,
+          "changePct" : -44.4,
+          "sparkline" : [ 0, 0, 0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0 ],
+          "changeBasis" : "Compared with the previous 15m window"
+        },
+        "pushEvents" : {
+          "value" : 2,
+          "changePct" : -88.2,
+          "sparkline" : [ 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0 ],
+          "changeBasis" : "Compared with the previous 15m window"
+        },
+        "commits" : {
+          "value" : 4,
+          "changePct" : -84.0,
+          "sparkline" : [ 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+          "note" : "Based on 1 of 2 push events that reported a commit count.",
+          "changeBasis" : "Compared with the previous 15m window"
+        },
+        "pullRequests" : {
+          "value" : 1,
+          "changePct" : 0.0,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0 ],
+          "changeBasis" : "Compared with the previous 15m window"
+        },
+        "forks" : {
+          "value" : 1,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        }
+      },
+      "activity" : {
+        "mode" : "live",
+        "range" : "15m",
+        "bucketMinutes" : 1,
+        "points" : [ {
+          "t" : "2026-03-10T11:45:00Z",
+          "total" : 1.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:46:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:47:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:48:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:49:00Z",
+          "total" : 1.0,
+          "push" : 1.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:50:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:51:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:52:00Z",
+          "total" : 1.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:53:00Z",
+          "total" : 1.0,
+          "push" : 1.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:54:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:55:00Z",
+          "total" : 1.0,
+          "push" : 0.0,
+          "pullRequest" : 1.0
+        }, {
+          "t" : "2026-03-10T11:56:00Z",
+          "total" : 1.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:57:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:58:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:59:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        } ]
+      },
+      "trending" : {
+        "mode" : "live",
+        "range" : "15m",
+        "scoreFormula" : "Activity Score = Push x 2 + Pull Request x 3 + Fork x 2 + Other x 1",
+        "weights" : {
+          "push" : 2.0,
+          "pullRequest" : 3.0,
+          "fork" : 2.0,
+          "other" : 1.0
+        },
+        "disclaimer" : "Most active repositories in the observed GitHub event sample, ranked by activity score. This is not a ranking of GitHub's most popular repositories.",
+        "repositories" : [ {
+          "rank" : 1,
+          "name" : "octo/hello",
+          "owner" : "octo",
+          "url" : "https://github.com/octo/hello",
+          "score" : 4.0,
+          "share" : 1.0,
+          "totalEvents" : 2,
+          "pushEvents" : 2,
+          "pullRequestEvents" : 0,
+          "forkEvents" : 0,
+          "otherEvents" : 0,
+          "sparkline" : [ 0, 1, 0, 1, 0, 0, 0, 0 ]
+        }, {
+          "rank" : 2,
+          "name" : "denoland/deno",
+          "owner" : "denoland",
+          "url" : "https://github.com/denoland/deno",
+          "score" : 3.0,
+          "share" : 0.8,
+          "totalEvents" : 1,
+          "pushEvents" : 0,
+          "pullRequestEvents" : 1,
+          "forkEvents" : 0,
+          "otherEvents" : 0,
+          "sparkline" : [ 0, 0, 0, 0, 1, 0, 0, 0 ]
+        }, {
+          "rank" : 3,
+          "name" : "torvalds/linux",
+          "owner" : "torvalds",
+          "url" : "https://github.com/torvalds/linux",
+          "score" : 2.0,
+          "share" : 0.5,
+          "totalEvents" : 1,
+          "pushEvents" : 0,
+          "pullRequestEvents" : 0,
+          "forkEvents" : 1,
+          "otherEvents" : 0,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 1 ]
+        }, {
+          "rank" : 4,
+          "name" : "facebook/react",
+          "owner" : "facebook",
+          "url" : "https://github.com/facebook/react",
+          "score" : 1.0,
+          "share" : 0.3,
+          "totalEvents" : 1,
+          "pushEvents" : 0,
+          "pullRequestEvents" : 0,
+          "forkEvents" : 0,
+          "otherEvents" : 1,
+          "sparkline" : [ 0, 0, 0, 0, 0, 1, 0, 0 ]
+        }, {
+          "rank" : 5,
+          "name" : "kubernetes/kubernetes",
+          "owner" : "kubernetes",
+          "url" : "https://github.com/kubernetes/kubernetes",
+          "score" : 1.0,
+          "share" : 0.3,
+          "totalEvents" : 1,
+          "pushEvents" : 0,
+          "pullRequestEvents" : 0,
+          "forkEvents" : 0,
+          "otherEvents" : 1,
+          "sparkline" : [ 0, 0, 0, 1, 0, 0, 0, 0 ]
+        } ]
+      },
+      "breakdown" : {
+        "mode" : "live",
+        "range" : "15m",
+        "total" : 6,
+        "items" : [ {
+          "kind" : "PUSH",
+          "label" : "Push events",
+          "count" : 2,
+          "percent" : 33.3
+        }, {
+          "kind" : "PULL_REQUEST",
+          "label" : "Pull requests",
+          "count" : 1,
+          "percent" : 16.7
+        }, {
+          "kind" : "FORK",
+          "label" : "Forks",
+          "count" : 1,
+          "percent" : 16.7
+        }, {
+          "kind" : "WATCH",
+          "label" : "Stars",
+          "count" : 2,
+          "percent" : 33.3
+        }, {
+          "kind" : "ISSUES",
+          "label" : "Issues",
+          "count" : 0,
+          "percent" : 0.0
+        }, {
+          "kind" : "ISSUE_COMMENT",
+          "label" : "Issue comments",
+          "count" : 0,
+          "percent" : 0.0
+        }, {
+          "kind" : "OTHER",
+          "label" : "Other events",
+          "count" : 0,
+          "percent" : 0.0
+        } ]
+      }
+    },
+    "1h" : {
+      "metrics" : {
+        "mode" : "live",
+        "range" : "1h",
+        "windowStart" : "2026-03-10T11:01:00Z",
+        "windowEnd" : "2026-03-10T12:01:00Z",
+        "totalEvents" : {
+          "value" : 91,
+          "changePct" : 106.8,
+          "sparkline" : [ 1, 2, 1, 1, 2, 2, 3, 1, 3, 1, 9, 6, 7, 8, 9, 7, 7, 6, 2, 2, 2, 1, 2, 0, 1, 0, 2, 1, 1, 0 ],
+          "changeBasis" : "Compared with the previous 1h window"
+        },
+        "activeRepositories" : {
+          "value" : 12,
+          "changePct" : 0.0,
+          "sparkline" : [ 1, 2, 1, 1, 2, 2, 3, 1, 3, 1, 4, 1, 3, 2, 4, 2, 2, 3, 2, 1, 2, 1, 2, 0, 1, 0, 2, 1, 1, 0 ],
+          "changeBasis" : "Compared with the previous 1h window"
+        },
+        "pushEvents" : {
+          "value" : 60,
+          "changePct" : 275.0,
+          "sparkline" : [ 1, 1, 0, 1, 0, 2, 0, 0, 2, 0, 6, 6, 5, 7, 7, 6, 7, 4, 0, 0, 1, 1, 1, 0, 1, 0, 1, 0, 0, 0 ],
+          "changeBasis" : "Compared with the previous 1h window"
+        },
+        "commits" : {
+          "value" : 106,
+          "changePct" : 241.9,
+          "sparkline" : [ 0, 5, 0, 0, 0, 4, 0, 0, 3, 0, 12, 9, 9, 13, 15, 14, 8, 7, 0, 0, 0, 1, 2, 0, 4, 0, 0, 0, 0, 0 ],
+          "note" : "Based on 53 of 60 push events that reported a commit count.",
+          "changeBasis" : "Compared with the previous 1h window"
+        },
+        "pullRequests" : {
+          "value" : 7,
+          "changePct" : -12.5,
+          "sparkline" : [ 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0 ],
+          "changeBasis" : "Compared with the previous 1h window"
+        },
+        "forks" : {
+          "value" : 5,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        }
+      },
+      "activity" : {
+        "mode" : "live",
+        "range" : "1h",
+        "bucketMinutes" : 1,
+        "points" : [ {
+          "t" : "2026-03-10T11:00:00Z",
+          "total" : 1.0,
+          "push" : 1.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:01:00Z",
+          "total" : 1.0,
+          "push" : 1.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:02:00Z",
+          "total" : 1.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:03:00Z",
+          "total" : 1.0,
+          "push" : 1.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:04:00Z",
+          "total" : 1.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:05:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:06:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:07:00Z",
+          "total" : 1.0,
+          "push" : 1.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:08:00Z",
+          "total" : 1.0,
+          "push" : 0.0,
+          "pullRequest" : 1.0
+        }, {
+          "t" : "2026-03-10T11:09:00Z",
+          "total" : 1.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:10:00Z",
+          "total" : 2.0,
+          "push" : 2.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:11:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:12:00Z",
+          "total" : 1.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:13:00Z",
+          "total" : 2.0,
+          "push" : 0.0,
+          "pullRequest" : 1.0
+        }, {
+          "t" : "2026-03-10T11:14:00Z",
+          "total" : 1.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:15:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:16:00Z",
+          "total" : 1.0,
+          "push" : 1.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:17:00Z",
+          "total" : 2.0,
+          "push" : 1.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:18:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:19:00Z",
+          "total" : 1.0,
+          "push" : 0.0,
+          "pullRequest" : 1.0
+        }, {
+          "t" : "2026-03-10T11:20:00Z",
+          "total" : 4.0,
+          "push" : 2.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:21:00Z",
+          "total" : 5.0,
+          "push" : 4.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:22:00Z",
+          "total" : 1.0,
+          "push" : 1.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:23:00Z",
+          "total" : 5.0,
+          "push" : 5.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:24:00Z",
+          "total" : 4.0,
+          "push" : 3.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:25:00Z",
+          "total" : 3.0,
+          "push" : 2.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:26:00Z",
+          "total" : 2.0,
+          "push" : 2.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:27:00Z",
+          "total" : 6.0,
+          "push" : 5.0,
+          "pullRequest" : 1.0
+        }, {
+          "t" : "2026-03-10T11:28:00Z",
+          "total" : 5.0,
+          "push" : 4.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:29:00Z",
+          "total" : 4.0,
+          "push" : 3.0,
+          "pullRequest" : 1.0
+        }, {
+          "t" : "2026-03-10T11:30:00Z",
+          "total" : 3.0,
+          "push" : 3.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:31:00Z",
+          "total" : 4.0,
+          "push" : 3.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:32:00Z",
+          "total" : 4.0,
+          "push" : 4.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:33:00Z",
+          "total" : 3.0,
+          "push" : 3.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:34:00Z",
+          "total" : 4.0,
+          "push" : 3.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:35:00Z",
+          "total" : 2.0,
+          "push" : 1.0,
+          "pullRequest" : 1.0
+        }, {
+          "t" : "2026-03-10T11:36:00Z",
+          "total" : 1.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:37:00Z",
+          "total" : 1.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:38:00Z",
+          "total" : 2.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:39:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:40:00Z",
+          "total" : 1.0,
+          "push" : 1.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:41:00Z",
+          "total" : 1.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:42:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:43:00Z",
+          "total" : 1.0,
+          "push" : 1.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:44:00Z",
+          "total" : 1.0,
+          "push" : 1.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:45:00Z",
+          "total" : 1.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:46:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:47:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:48:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:49:00Z",
+          "total" : 1.0,
+          "push" : 1.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:50:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:51:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:52:00Z",
+          "total" : 1.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:53:00Z",
+          "total" : 1.0,
+          "push" : 1.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:54:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:55:00Z",
+          "total" : 1.0,
+          "push" : 0.0,
+          "pullRequest" : 1.0
+        }, {
+          "t" : "2026-03-10T11:56:00Z",
+          "total" : 1.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:57:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:58:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:59:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        } ]
+      },
+      "trending" : {
+        "mode" : "live",
+        "range" : "1h",
+        "scoreFormula" : "Activity Score = Push x 2 + Pull Request x 3 + Fork x 2 + Other x 1",
+        "weights" : {
+          "push" : 2.0,
+          "pullRequest" : 3.0,
+          "fork" : 2.0,
+          "other" : 1.0
+        },
+        "disclaimer" : "Most active repositories in the observed GitHub event sample, ranked by activity score. This is not a ranking of GitHub's most popular repositories.",
+        "repositories" : [ {
+          "rank" : 1,
+          "name" : "octo/hello",
+          "owner" : "octo",
+          "url" : "https://github.com/octo/hello",
+          "score" : 95.0,
+          "share" : 1.0,
+          "totalEvents" : 48,
+          "pushEvents" : 47,
+          "pullRequestEvents" : 0,
+          "forkEvents" : 0,
+          "otherEvents" : 1,
+          "sparkline" : [ 0, 0, 1, 0, 14, 15, 15, 1, 0, 1, 1, 0, 0 ]
+        }, {
+          "rank" : 2,
+          "name" : "facebook/react",
+          "owner" : "facebook",
+          "url" : "https://github.com/facebook/react",
+          "score" : 21.0,
+          "share" : 0.2,
+          "totalEvents" : 13,
+          "pushEvents" : 4,
+          "pullRequestEvents" : 2,
+          "forkEvents" : 0,
+          "otherEvents" : 7,
+          "sparkline" : [ 1, 2, 1, 2, 1, 2, 1, 2, 0, 0, 0, 1, 0 ]
+        }, {
+          "rank" : 3,
+          "name" : "vercel/next.js",
+          "owner" : "vercel",
+          "url" : "https://github.com/vercel/next.js",
+          "score" : 13.0,
+          "share" : 0.1,
+          "totalEvents" : 6,
+          "pushEvents" : 1,
+          "pullRequestEvents" : 2,
+          "forkEvents" : 2,
+          "otherEvents" : 1,
+          "sparkline" : [ 1, 1, 1, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0 ]
+        }, {
+          "rank" : 4,
+          "name" : "denoland/deno",
+          "owner" : "denoland",
+          "url" : "https://github.com/denoland/deno",
+          "score" : 11.0,
+          "share" : 0.1,
+          "totalEvents" : 5,
+          "pushEvents" : 2,
+          "pullRequestEvents" : 2,
+          "forkEvents" : 0,
+          "otherEvents" : 1,
+          "sparkline" : [ 1, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0 ]
+        }, {
+          "rank" : 5,
+          "name" : "apache/kafka",
+          "owner" : "apache",
+          "url" : "https://github.com/apache/kafka",
+          "score" : 10.0,
+          "share" : 0.1,
+          "totalEvents" : 5,
+          "pushEvents" : 4,
+          "pullRequestEvents" : 0,
+          "forkEvents" : 1,
+          "otherEvents" : 0,
+          "sparkline" : [ 1, 0, 1, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0 ]
+        } ]
+      },
+      "breakdown" : {
+        "mode" : "live",
+        "range" : "1h",
+        "total" : 91,
+        "items" : [ {
+          "kind" : "PUSH",
+          "label" : "Push events",
+          "count" : 60,
+          "percent" : 65.9
+        }, {
+          "kind" : "PULL_REQUEST",
+          "label" : "Pull requests",
+          "count" : 7,
+          "percent" : 7.7
+        }, {
+          "kind" : "FORK",
+          "label" : "Forks",
+          "count" : 5,
+          "percent" : 5.5
+        }, {
+          "kind" : "WATCH",
+          "label" : "Stars",
+          "count" : 11,
+          "percent" : 12.1
+        }, {
+          "kind" : "ISSUES",
+          "label" : "Issues",
+          "count" : 2,
+          "percent" : 2.2
+        }, {
+          "kind" : "ISSUE_COMMENT",
+          "label" : "Issue comments",
+          "count" : 5,
+          "percent" : 5.5
+        }, {
+          "kind" : "OTHER",
+          "label" : "Other events",
+          "count" : 1,
+          "percent" : 1.1
+        } ]
+      }
+    },
+    "6h" : {
+      "metrics" : {
+        "mode" : "live",
+        "range" : "6h",
+        "windowStart" : "2026-03-10T06:01:00Z",
+        "windowEnd" : "2026-03-10T12:01:00Z",
+        "totalEvents" : {
+          "value" : 318,
+          "changePct" : 23.7,
+          "sparkline" : [ 9, 8, 10, 9, 9, 11, 9, 7, 9, 7, 9, 7, 11, 8, 12, 10, 8, 9, 9, 12, 7, 7, 9, 12, 8, 10, 23, 44, 9, 5 ],
+          "changeBasis" : "Compared with the previous 6h window"
+        },
+        "activeRepositories" : {
+          "value" : 12,
+          "changePct" : 0.0,
+          "sparkline" : [ 6, 4, 5, 7, 6, 7, 6, 6, 5, 4, 5, 6, 7, 6, 8, 5, 4, 6, 5, 7, 4, 6, 7, 7, 5, 6, 8, 8, 7, 4 ],
+          "changeBasis" : "Compared with the previous 6h window"
+        },
+        "pushEvents" : {
+          "value" : 165,
+          "changePct" : 48.6,
+          "sparkline" : [ 5, 4, 7, 5, 2, 3, 4, 3, 6, 5, 7, 3, 5, 2, 10, 5, 1, 3, 4, 5, 3, 3, 1, 4, 4, 6, 14, 36, 3, 2 ],
+          "changeBasis" : "Compared with the previous 6h window"
+        },
+        "commits" : {
+          "value" : 294,
+          "changePct" : 61.5,
+          "sparkline" : [ 7, 8, 13, 14, 3, 6, 2, 0, 12, 5, 18, 4, 14, 1, 10, 5, 0, 4, 14, 17, 6, 9, 2, 7, 7, 9, 24, 66, 3, 4 ],
+          "note" : "Based on 108 of 165 push events that reported a commit count.",
+          "changeBasis" : "Compared with the previous 6h window"
+        },
+        "pullRequests" : {
+          "value" : 29,
+          "changePct" : 20.8,
+          "sparkline" : [ 0, 1, 0, 1, 1, 2, 1, 1, 0, 0, 1, 0, 2, 1, 1, 1, 0, 0, 0, 1, 2, 2, 2, 1, 1, 1, 2, 3, 0, 1 ],
+          "changeBasis" : "Compared with the previous 6h window"
+        },
+        "forks" : {
+          "value" : 16,
+          "changePct" : 0.0,
+          "sparkline" : [ 2, 0, 1, 0, 0, 1, 1, 1, 0, 0, 1, 0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 3, 1, 0, 0 ],
+          "changeBasis" : "Compared with the previous 6h window"
+        }
+      },
+      "activity" : {
+        "mode" : "live",
+        "range" : "6h",
+        "bucketMinutes" : 5,
+        "points" : [ {
+          "t" : "2026-03-10T06:00:00Z",
+          "total" : 0.6,
+          "push" : 0.2,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T06:05:00Z",
+          "total" : 1.2,
+          "push" : 0.6,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T06:10:00Z",
+          "total" : 0.6,
+          "push" : 0.6,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T06:15:00Z",
+          "total" : 0.8,
+          "push" : 0.4,
+          "pullRequest" : 0.2
+        }, {
+          "t" : "2026-03-10T06:20:00Z",
+          "total" : 0.4,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T06:25:00Z",
+          "total" : 0.8,
+          "push" : 0.8,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T06:30:00Z",
+          "total" : 1.0,
+          "push" : 0.6,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T06:35:00Z",
+          "total" : 0.8,
+          "push" : 0.4,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T06:40:00Z",
+          "total" : 0.8,
+          "push" : 0.4,
+          "pullRequest" : 0.2
+        }, {
+          "t" : "2026-03-10T06:45:00Z",
+          "total" : 0.6,
+          "push" : 0.4,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T06:50:00Z",
+          "total" : 0.6,
+          "push" : 0.0,
+          "pullRequest" : 0.2
+        }, {
+          "t" : "2026-03-10T06:55:00Z",
+          "total" : 1.0,
+          "push" : 0.2,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T07:00:00Z",
+          "total" : 1.2,
+          "push" : 0.4,
+          "pullRequest" : 0.2
+        }, {
+          "t" : "2026-03-10T07:05:00Z",
+          "total" : 0.8,
+          "push" : 0.2,
+          "pullRequest" : 0.2
+        }, {
+          "t" : "2026-03-10T07:10:00Z",
+          "total" : 0.8,
+          "push" : 0.4,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T07:15:00Z",
+          "total" : 0.6,
+          "push" : 0.2,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T07:20:00Z",
+          "total" : 0.8,
+          "push" : 0.2,
+          "pullRequest" : 0.4
+        }, {
+          "t" : "2026-03-10T07:25:00Z",
+          "total" : 0.8,
+          "push" : 0.2,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T07:30:00Z",
+          "total" : 0.2,
+          "push" : 0.2,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T07:35:00Z",
+          "total" : 0.6,
+          "push" : 0.6,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T07:40:00Z",
+          "total" : 1.0,
+          "push" : 0.6,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T07:45:00Z",
+          "total" : 0.6,
+          "push" : 0.2,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T07:50:00Z",
+          "total" : 0.6,
+          "push" : 0.4,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T07:55:00Z",
+          "total" : 0.6,
+          "push" : 0.6,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T08:00:00Z",
+          "total" : 1.0,
+          "push" : 0.8,
+          "pullRequest" : 0.2
+        }, {
+          "t" : "2026-03-10T08:05:00Z",
+          "total" : 0.4,
+          "push" : 0.4,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T08:10:00Z",
+          "total" : 0.8,
+          "push" : 0.2,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T08:15:00Z",
+          "total" : 0.6,
+          "push" : 0.4,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T08:20:00Z",
+          "total" : 0.6,
+          "push" : 0.2,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T08:25:00Z",
+          "total" : 0.8,
+          "push" : 0.0,
+          "pullRequest" : 0.2
+        }, {
+          "t" : "2026-03-10T08:30:00Z",
+          "total" : 1.0,
+          "push" : 0.8,
+          "pullRequest" : 0.2
+        }, {
+          "t" : "2026-03-10T08:35:00Z",
+          "total" : 0.6,
+          "push" : 0.2,
+          "pullRequest" : 0.2
+        }, {
+          "t" : "2026-03-10T08:40:00Z",
+          "total" : 0.8,
+          "push" : 0.2,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T08:45:00Z",
+          "total" : 1.0,
+          "push" : 0.8,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T08:50:00Z",
+          "total" : 1.0,
+          "push" : 1.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T08:55:00Z",
+          "total" : 0.8,
+          "push" : 0.4,
+          "pullRequest" : 0.2
+        }, {
+          "t" : "2026-03-10T09:00:00Z",
+          "total" : 0.6,
+          "push" : 0.2,
+          "pullRequest" : 0.2
+        }, {
+          "t" : "2026-03-10T09:05:00Z",
+          "total" : 1.0,
+          "push" : 0.8,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T09:10:00Z",
+          "total" : 1.0,
+          "push" : 0.2,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T09:15:00Z",
+          "total" : 0.4,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T09:20:00Z",
+          "total" : 0.6,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T09:25:00Z",
+          "total" : 0.8,
+          "push" : 0.2,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T09:30:00Z",
+          "total" : 0.8,
+          "push" : 0.4,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T09:35:00Z",
+          "total" : 0.8,
+          "push" : 0.6,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T09:40:00Z",
+          "total" : 0.8,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T09:45:00Z",
+          "total" : 0.8,
+          "push" : 0.2,
+          "pullRequest" : 0.2
+        }, {
+          "t" : "2026-03-10T09:50:00Z",
+          "total" : 1.0,
+          "push" : 0.6,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T09:55:00Z",
+          "total" : 1.0,
+          "push" : 0.4,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T10:00:00Z",
+          "total" : 0.4,
+          "push" : 0.2,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T10:05:00Z",
+          "total" : 0.6,
+          "push" : 0.0,
+          "pullRequest" : 0.4
+        }, {
+          "t" : "2026-03-10T10:10:00Z",
+          "total" : 0.8,
+          "push" : 0.6,
+          "pullRequest" : 0.2
+        }, {
+          "t" : "2026-03-10T10:15:00Z",
+          "total" : 0.6,
+          "push" : 0.4,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T10:20:00Z",
+          "total" : 0.6,
+          "push" : 0.0,
+          "pullRequest" : 0.2
+        }, {
+          "t" : "2026-03-10T10:25:00Z",
+          "total" : 0.8,
+          "push" : 0.0,
+          "pullRequest" : 0.4
+        }, {
+          "t" : "2026-03-10T10:30:00Z",
+          "total" : 0.8,
+          "push" : 0.2,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T10:35:00Z",
+          "total" : 0.8,
+          "push" : 0.2,
+          "pullRequest" : 0.2
+        }, {
+          "t" : "2026-03-10T10:40:00Z",
+          "total" : 0.8,
+          "push" : 0.4,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T10:45:00Z",
+          "total" : 1.2,
+          "push" : 0.4,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T10:50:00Z",
+          "total" : 0.6,
+          "push" : 0.4,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T10:55:00Z",
+          "total" : 0.6,
+          "push" : 0.2,
+          "pullRequest" : 0.2
+        }, {
+          "t" : "2026-03-10T11:00:00Z",
+          "total" : 1.0,
+          "push" : 0.6,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:05:00Z",
+          "total" : 0.6,
+          "push" : 0.2,
+          "pullRequest" : 0.2
+        }, {
+          "t" : "2026-03-10T11:10:00Z",
+          "total" : 1.2,
+          "push" : 0.4,
+          "pullRequest" : 0.2
+        }, {
+          "t" : "2026-03-10T11:15:00Z",
+          "total" : 0.8,
+          "push" : 0.4,
+          "pullRequest" : 0.2
+        }, {
+          "t" : "2026-03-10T11:20:00Z",
+          "total" : 3.8,
+          "push" : 3.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:25:00Z",
+          "total" : 4.0,
+          "push" : 3.2,
+          "pullRequest" : 0.4
+        }, {
+          "t" : "2026-03-10T11:30:00Z",
+          "total" : 3.6,
+          "push" : 3.2,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:35:00Z",
+          "total" : 1.2,
+          "push" : 0.2,
+          "pullRequest" : 0.2
+        }, {
+          "t" : "2026-03-10T11:40:00Z",
+          "total" : 0.8,
+          "push" : 0.6,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:45:00Z",
+          "total" : 0.4,
+          "push" : 0.2,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:50:00Z",
+          "total" : 0.4,
+          "push" : 0.2,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:55:00Z",
+          "total" : 0.4,
+          "push" : 0.0,
+          "pullRequest" : 0.2
+        } ]
+      },
+      "trending" : {
+        "mode" : "live",
+        "range" : "6h",
+        "scoreFormula" : "Activity Score = Push x 2 + Pull Request x 3 + Fork x 2 + Other x 1",
+        "weights" : {
+          "push" : 2.0,
+          "pullRequest" : 3.0,
+          "fork" : 2.0,
+          "other" : 1.0
+        },
+        "disclaimer" : "Most active repositories in the observed GitHub event sample, ranked by activity score. This is not a ranking of GitHub's most popular repositories.",
+        "repositories" : [ {
+          "rank" : 1,
+          "name" : "octo/hello",
+          "owner" : "octo",
+          "url" : "https://github.com/octo/hello",
+          "score" : 124.0,
+          "share" : 1.0,
+          "totalEvents" : 68,
+          "pushEvents" : 52,
+          "pullRequestEvents" : 1,
+          "forkEvents" : 2,
+          "otherEvents" : 13,
+          "sparkline" : [ 3, 4, 1, 0, 1, 2, 4, 1, 1, 3, 30, 18, 0 ]
+        }, {
+          "rank" : 2,
+          "name" : "facebook/react",
+          "owner" : "facebook",
+          "url" : "https://github.com/facebook/react",
+          "score" : 100.0,
+          "share" : 0.8,
+          "totalEvents" : 60,
+          "pushEvents" : 25,
+          "pullRequestEvents" : 6,
+          "forkEvents" : 3,
+          "otherEvents" : 26,
+          "sparkline" : [ 7, 4, 6, 3, 5, 4, 8, 4, 4, 2, 9, 4, 0 ]
+        }, {
+          "rank" : 3,
+          "name" : "vercel/next.js",
+          "owner" : "vercel",
+          "url" : "https://github.com/vercel/next.js",
+          "score" : 83.0,
+          "share" : 0.7,
+          "totalEvents" : 48,
+          "pushEvents" : 22,
+          "pullRequestEvents" : 5,
+          "forkEvents" : 3,
+          "otherEvents" : 18,
+          "sparkline" : [ 3, 8, 2, 4, 4, 3, 4, 7, 3, 4, 5, 1, 0 ]
+        }, {
+          "rank" : 4,
+          "name" : "apache/kafka",
+          "owner" : "apache",
+          "url" : "https://github.com/apache/kafka",
+          "score" : 54.0,
+          "share" : 0.4,
+          "totalEvents" : 29,
+          "pushEvents" : 16,
+          "pullRequestEvents" : 4,
+          "forkEvents" : 1,
+          "otherEvents" : 8,
+          "sparkline" : [ 0, 1, 1, 3, 4, 2, 2, 2, 4, 5, 4, 1, 0 ]
+        }, {
+          "rank" : 5,
+          "name" : "torvalds/linux",
+          "owner" : "torvalds",
+          "url" : "https://github.com/torvalds/linux",
+          "score" : 50.0,
+          "share" : 0.4,
+          "totalEvents" : 33,
+          "pushEvents" : 16,
+          "pullRequestEvents" : 0,
+          "forkEvents" : 1,
+          "otherEvents" : 16,
+          "sparkline" : [ 1, 2, 3, 0, 2, 5, 3, 6, 1, 5, 1, 3, 1 ]
+        } ]
+      },
+      "breakdown" : {
+        "mode" : "live",
+        "range" : "6h",
+        "total" : 318,
+        "items" : [ {
+          "kind" : "PUSH",
+          "label" : "Push events",
+          "count" : 165,
+          "percent" : 51.9
+        }, {
+          "kind" : "PULL_REQUEST",
+          "label" : "Pull requests",
+          "count" : 29,
+          "percent" : 9.1
+        }, {
+          "kind" : "FORK",
+          "label" : "Forks",
+          "count" : 16,
+          "percent" : 5.0
+        }, {
+          "kind" : "WATCH",
+          "label" : "Stars",
+          "count" : 71,
+          "percent" : 22.3
+        }, {
+          "kind" : "ISSUES",
+          "label" : "Issues",
+          "count" : 12,
+          "percent" : 3.8
+        }, {
+          "kind" : "ISSUE_COMMENT",
+          "label" : "Issue comments",
+          "count" : 15,
+          "percent" : 4.7
+        }, {
+          "kind" : "OTHER",
+          "label" : "Other events",
+          "count" : 10,
+          "percent" : 3.1
+        } ]
+      }
+    },
+    "24h" : {
+      "metrics" : {
+        "mode" : "live",
+        "range" : "24h",
+        "windowStart" : "2026-03-09T12:01:00Z",
+        "windowEnd" : "2026-03-10T12:01:00Z",
+        "totalEvents" : {
+          "value" : 1058,
+          "changePct" : 3.4,
+          "sparkline" : [ 36, 31, 30, 30, 34, 35, 35, 27, 33, 33, 31, 35, 33, 29, 31, 29, 34, 34, 37, 32, 32, 39, 37, 39, 32, 35, 39, 35, 39, 81 ],
+          "changeBasis" : "Compared with the previous 24h window"
+        },
+        "activeRepositories" : {
+          "value" : 12,
+          "changePct" : 0.0,
+          "sparkline" : [ 11, 9, 8, 11, 9, 9, 11, 11, 10, 8, 10, 10, 12, 11, 11, 7, 7, 10, 9, 8, 7, 11, 11, 11, 10, 10, 9, 11, 11, 12 ],
+          "changeBasis" : "Compared with the previous 24h window"
+        },
+        "pushEvents" : {
+          "value" : 518,
+          "changePct" : -0.4,
+          "sparkline" : [ 19, 17, 12, 15, 17, 19, 14, 14, 14, 17, 16, 24, 10, 17, 17, 13, 16, 17, 14, 15, 11, 17, 17, 17, 18, 17, 19, 15, 15, 55 ],
+          "changeBasis" : "Compared with the previous 24h window"
+        },
+        "commits" : {
+          "value" : 900,
+          "changePct" : 5.6,
+          "sparkline" : [ 29, 29, 24, 25, 44, 24, 20, 41, 25, 12, 34, 47, 22, 27, 21, 23, 18, 25, 29, 33, 25, 13, 31, 36, 19, 37, 19, 46, 25, 97 ],
+          "note" : "Based on 291 of 518 push events that reported a commit count.",
+          "changeBasis" : "Compared with the previous 24h window"
+        },
+        "pullRequests" : {
+          "value" : 97,
+          "changePct" : 5.4,
+          "sparkline" : [ 4, 2, 6, 2, 6, 4, 4, 0, 4, 1, 2, 1, 4, 2, 2, 2, 1, 3, 4, 4, 2, 4, 5, 4, 2, 4, 2, 5, 5, 6 ],
+          "changeBasis" : "Compared with the previous 24h window"
+        },
+        "forks" : {
+          "value" : 59,
+          "changePct" : 31.1,
+          "sparkline" : [ 1, 1, 2, 0, 3, 2, 4, 1, 2, 1, 2, 0, 3, 1, 4, 1, 2, 3, 3, 3, 4, 0, 2, 2, 2, 3, 1, 1, 0, 4 ],
+          "changeBasis" : "Compared with the previous 24h window"
+        }
+      },
+      "activity" : {
+        "mode" : "live",
+        "range" : "24h",
+        "bucketMinutes" : 15,
+        "points" : [ {
+          "t" : "2026-03-09T12:00:00Z",
+          "total" : 0.7,
+          "push" : 0.4,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-09T12:15:00Z",
+          "total" : 0.9,
+          "push" : 0.5,
+          "pullRequest" : 0.1
+        }, {
+          "t" : "2026-03-09T12:30:00Z",
+          "total" : 0.8,
+          "push" : 0.3,
+          "pullRequest" : 0.2
+        }, {
+          "t" : "2026-03-09T12:45:00Z",
+          "total" : 0.7,
+          "push" : 0.5,
+          "pullRequest" : 0.1
+        }, {
+          "t" : "2026-03-09T13:00:00Z",
+          "total" : 0.7,
+          "push" : 0.3,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-09T13:15:00Z",
+          "total" : 0.7,
+          "push" : 0.4,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-09T13:30:00Z",
+          "total" : 0.7,
+          "push" : 0.4,
+          "pullRequest" : 0.1
+        }, {
+          "t" : "2026-03-09T13:45:00Z",
+          "total" : 0.5,
+          "push" : 0.1,
+          "pullRequest" : 0.1
+        }, {
+          "t" : "2026-03-09T14:00:00Z",
+          "total" : 0.6,
+          "push" : 0.4,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-09T14:15:00Z",
+          "total" : 0.6,
+          "push" : 0.2,
+          "pullRequest" : 0.2
+        }, {
+          "t" : "2026-03-09T14:30:00Z",
+          "total" : 0.6,
+          "push" : 0.2,
+          "pullRequest" : 0.1
+        }, {
+          "t" : "2026-03-09T14:45:00Z",
+          "total" : 0.5,
+          "push" : 0.3,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-09T15:00:00Z",
+          "total" : 0.7,
+          "push" : 0.4,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-09T15:15:00Z",
+          "total" : 0.7,
+          "push" : 0.3,
+          "pullRequest" : 0.1
+        }, {
+          "t" : "2026-03-09T15:30:00Z",
+          "total" : 0.7,
+          "push" : 0.4,
+          "pullRequest" : 0.1
+        }, {
+          "t" : "2026-03-09T15:45:00Z",
+          "total" : 0.7,
+          "push" : 0.3,
+          "pullRequest" : 0.2
+        }, {
+          "t" : "2026-03-09T16:00:00Z",
+          "total" : 0.9,
+          "push" : 0.5,
+          "pullRequest" : 0.1
+        }, {
+          "t" : "2026-03-09T16:15:00Z",
+          "total" : 0.5,
+          "push" : 0.3,
+          "pullRequest" : 0.1
+        }, {
+          "t" : "2026-03-09T16:30:00Z",
+          "total" : 0.8,
+          "push" : 0.4,
+          "pullRequest" : 0.1
+        }, {
+          "t" : "2026-03-09T16:45:00Z",
+          "total" : 0.9,
+          "push" : 0.5,
+          "pullRequest" : 0.1
+        }, {
+          "t" : "2026-03-09T17:00:00Z",
+          "total" : 0.7,
+          "push" : 0.3,
+          "pullRequest" : 0.1
+        }, {
+          "t" : "2026-03-09T17:15:00Z",
+          "total" : 0.7,
+          "push" : 0.3,
+          "pullRequest" : 0.1
+        }, {
+          "t" : "2026-03-09T17:30:00Z",
+          "total" : 0.6,
+          "push" : 0.3,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-09T17:45:00Z",
+          "total" : 0.4,
+          "push" : 0.2,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-09T18:00:00Z",
+          "total" : 0.6,
+          "push" : 0.2,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-09T18:15:00Z",
+          "total" : 0.6,
+          "push" : 0.3,
+          "pullRequest" : 0.1
+        }, {
+          "t" : "2026-03-09T18:30:00Z",
+          "total" : 0.6,
+          "push" : 0.3,
+          "pullRequest" : 0.1
+        }, {
+          "t" : "2026-03-09T18:45:00Z",
+          "total" : 0.8,
+          "push" : 0.3,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-09T19:00:00Z",
+          "total" : 0.7,
+          "push" : 0.4,
+          "pullRequest" : 0.1
+        }, {
+          "t" : "2026-03-09T19:15:00Z",
+          "total" : 0.7,
+          "push" : 0.4,
+          "pullRequest" : 0.1
+        }, {
+          "t" : "2026-03-09T19:30:00Z",
+          "total" : 0.8,
+          "push" : 0.4,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-09T19:45:00Z",
+          "total" : 0.6,
+          "push" : 0.2,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-09T20:00:00Z",
+          "total" : 0.7,
+          "push" : 0.3,
+          "pullRequest" : 0.1
+        }, {
+          "t" : "2026-03-09T20:15:00Z",
+          "total" : 0.6,
+          "push" : 0.3,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-09T20:30:00Z",
+          "total" : 0.6,
+          "push" : 0.3,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-09T20:45:00Z",
+          "total" : 0.7,
+          "push" : 0.5,
+          "pullRequest" : 0.1
+        }, {
+          "t" : "2026-03-09T21:00:00Z",
+          "total" : 0.6,
+          "push" : 0.4,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-09T21:15:00Z",
+          "total" : 0.9,
+          "push" : 0.5,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-09T21:30:00Z",
+          "total" : 0.6,
+          "push" : 0.3,
+          "pullRequest" : 0.1
+        }, {
+          "t" : "2026-03-09T21:45:00Z",
+          "total" : 0.5,
+          "push" : 0.2,
+          "pullRequest" : 0.1
+        }, {
+          "t" : "2026-03-09T22:00:00Z",
+          "total" : 0.9,
+          "push" : 0.1,
+          "pullRequest" : 0.1
+        }, {
+          "t" : "2026-03-09T22:15:00Z",
+          "total" : 0.7,
+          "push" : 0.5,
+          "pullRequest" : 0.1
+        }, {
+          "t" : "2026-03-09T22:30:00Z",
+          "total" : 0.6,
+          "push" : 0.2,
+          "pullRequest" : 0.1
+        }, {
+          "t" : "2026-03-09T22:45:00Z",
+          "total" : 0.6,
+          "push" : 0.4,
+          "pullRequest" : 0.1
+        }, {
+          "t" : "2026-03-09T23:00:00Z",
+          "total" : 0.4,
+          "push" : 0.3,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-09T23:15:00Z",
+          "total" : 0.7,
+          "push" : 0.4,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-09T23:30:00Z",
+          "total" : 0.7,
+          "push" : 0.3,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-09T23:45:00Z",
+          "total" : 0.7,
+          "push" : 0.3,
+          "pullRequest" : 0.1
+        }, {
+          "t" : "2026-03-10T00:00:00Z",
+          "total" : 0.5,
+          "push" : 0.2,
+          "pullRequest" : 0.1
+        }, {
+          "t" : "2026-03-10T00:15:00Z",
+          "total" : 0.7,
+          "push" : 0.3,
+          "pullRequest" : 0.1
+        }, {
+          "t" : "2026-03-10T00:30:00Z",
+          "total" : 0.6,
+          "push" : 0.3,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T00:45:00Z",
+          "total" : 0.8,
+          "push" : 0.3,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T01:00:00Z",
+          "total" : 0.8,
+          "push" : 0.4,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T01:15:00Z",
+          "total" : 0.5,
+          "push" : 0.3,
+          "pullRequest" : 0.1
+        }, {
+          "t" : "2026-03-10T01:30:00Z",
+          "total" : 0.9,
+          "push" : 0.3,
+          "pullRequest" : 0.1
+        }, {
+          "t" : "2026-03-10T01:45:00Z",
+          "total" : 0.5,
+          "push" : 0.3,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T02:00:00Z",
+          "total" : 0.7,
+          "push" : 0.4,
+          "pullRequest" : 0.1
+        }, {
+          "t" : "2026-03-10T02:15:00Z",
+          "total" : 0.9,
+          "push" : 0.5,
+          "pullRequest" : 0.1
+        }, {
+          "t" : "2026-03-10T02:30:00Z",
+          "total" : 0.7,
+          "push" : 0.2,
+          "pullRequest" : 0.1
+        }, {
+          "t" : "2026-03-10T02:45:00Z",
+          "total" : 0.8,
+          "push" : 0.4,
+          "pullRequest" : 0.1
+        }, {
+          "t" : "2026-03-10T03:00:00Z",
+          "total" : 0.8,
+          "push" : 0.3,
+          "pullRequest" : 0.1
+        }, {
+          "t" : "2026-03-10T03:15:00Z",
+          "total" : 0.7,
+          "push" : 0.2,
+          "pullRequest" : 0.1
+        }, {
+          "t" : "2026-03-10T03:30:00Z",
+          "total" : 0.7,
+          "push" : 0.4,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T03:45:00Z",
+          "total" : 0.6,
+          "push" : 0.3,
+          "pullRequest" : 0.1
+        }, {
+          "t" : "2026-03-10T04:00:00Z",
+          "total" : 0.7,
+          "push" : 0.2,
+          "pullRequest" : 0.1
+        }, {
+          "t" : "2026-03-10T04:15:00Z",
+          "total" : 0.7,
+          "push" : 0.2,
+          "pullRequest" : 0.1
+        }, {
+          "t" : "2026-03-10T04:30:00Z",
+          "total" : 0.7,
+          "push" : 0.3,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T04:45:00Z",
+          "total" : 0.7,
+          "push" : 0.3,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T05:00:00Z",
+          "total" : 0.7,
+          "push" : 0.1,
+          "pullRequest" : 0.3
+        }, {
+          "t" : "2026-03-10T05:15:00Z",
+          "total" : 0.8,
+          "push" : 0.4,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T05:30:00Z",
+          "total" : 0.9,
+          "push" : 0.4,
+          "pullRequest" : 0.1
+        }, {
+          "t" : "2026-03-10T05:45:00Z",
+          "total" : 0.8,
+          "push" : 0.4,
+          "pullRequest" : 0.2
+        }, {
+          "t" : "2026-03-10T06:00:00Z",
+          "total" : 0.8,
+          "push" : 0.5,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T06:15:00Z",
+          "total" : 0.7,
+          "push" : 0.4,
+          "pullRequest" : 0.1
+        }, {
+          "t" : "2026-03-10T06:30:00Z",
+          "total" : 0.9,
+          "push" : 0.5,
+          "pullRequest" : 0.1
+        }, {
+          "t" : "2026-03-10T06:45:00Z",
+          "total" : 0.7,
+          "push" : 0.2,
+          "pullRequest" : 0.1
+        }, {
+          "t" : "2026-03-10T07:00:00Z",
+          "total" : 0.9,
+          "push" : 0.3,
+          "pullRequest" : 0.1
+        }, {
+          "t" : "2026-03-10T07:15:00Z",
+          "total" : 0.7,
+          "push" : 0.2,
+          "pullRequest" : 0.1
+        }, {
+          "t" : "2026-03-10T07:30:00Z",
+          "total" : 0.6,
+          "push" : 0.5,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T07:45:00Z",
+          "total" : 0.6,
+          "push" : 0.4,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T08:00:00Z",
+          "total" : 0.7,
+          "push" : 0.5,
+          "pullRequest" : 0.1
+        }, {
+          "t" : "2026-03-10T08:15:00Z",
+          "total" : 0.7,
+          "push" : 0.2,
+          "pullRequest" : 0.1
+        }, {
+          "t" : "2026-03-10T08:30:00Z",
+          "total" : 0.8,
+          "push" : 0.4,
+          "pullRequest" : 0.1
+        }, {
+          "t" : "2026-03-10T08:45:00Z",
+          "total" : 0.9,
+          "push" : 0.7,
+          "pullRequest" : 0.1
+        }, {
+          "t" : "2026-03-10T09:00:00Z",
+          "total" : 0.9,
+          "push" : 0.4,
+          "pullRequest" : 0.1
+        }, {
+          "t" : "2026-03-10T09:15:00Z",
+          "total" : 0.6,
+          "push" : 0.1,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T09:30:00Z",
+          "total" : 0.8,
+          "push" : 0.3,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T09:45:00Z",
+          "total" : 0.9,
+          "push" : 0.4,
+          "pullRequest" : 0.1
+        }, {
+          "t" : "2026-03-10T10:00:00Z",
+          "total" : 0.6,
+          "push" : 0.3,
+          "pullRequest" : 0.2
+        }, {
+          "t" : "2026-03-10T10:15:00Z",
+          "total" : 0.7,
+          "push" : 0.1,
+          "pullRequest" : 0.2
+        }, {
+          "t" : "2026-03-10T10:30:00Z",
+          "total" : 0.8,
+          "push" : 0.3,
+          "pullRequest" : 0.1
+        }, {
+          "t" : "2026-03-10T10:45:00Z",
+          "total" : 0.8,
+          "push" : 0.3,
+          "pullRequest" : 0.1
+        }, {
+          "t" : "2026-03-10T11:00:00Z",
+          "total" : 0.9,
+          "push" : 0.4,
+          "pullRequest" : 0.1
+        }, {
+          "t" : "2026-03-10T11:15:00Z",
+          "total" : 2.9,
+          "push" : 2.2,
+          "pullRequest" : 0.2
+        }, {
+          "t" : "2026-03-10T11:30:00Z",
+          "total" : 1.9,
+          "push" : 1.3,
+          "pullRequest" : 0.1
+        }, {
+          "t" : "2026-03-10T11:45:00Z",
+          "total" : 0.4,
+          "push" : 0.1,
+          "pullRequest" : 0.1
+        } ]
+      },
+      "trending" : {
+        "mode" : "live",
+        "range" : "24h",
+        "scoreFormula" : "Activity Score = Push x 2 + Pull Request x 3 + Fork x 2 + Other x 1",
+        "weights" : {
+          "push" : 2.0,
+          "pullRequest" : 3.0,
+          "fork" : 2.0,
+          "other" : 1.0
+        },
+        "disclaimer" : "Most active repositories in the observed GitHub event sample, ranked by activity score. This is not a ranking of GitHub's most popular repositories.",
+        "repositories" : [ {
+          "rank" : 1,
+          "name" : "facebook/react",
+          "owner" : "facebook",
+          "url" : "https://github.com/facebook/react",
+          "score" : 399.0,
+          "share" : 1.0,
+          "totalEvents" : 234,
+          "pushEvents" : 119,
+          "pullRequestEvents" : 15,
+          "forkEvents" : 16,
+          "otherEvents" : 84,
+          "sparkline" : [ 24, 13, 18, 21, 17, 10, 26, 25, 20, 20, 21, 19, 0 ]
+        }, {
+          "rank" : 2,
+          "name" : "vercel/next.js",
+          "owner" : "vercel",
+          "url" : "https://github.com/vercel/next.js",
+          "score" : 258.0,
+          "share" : 0.6,
+          "totalEvents" : 153,
+          "pushEvents" : 62,
+          "pullRequestEvents" : 18,
+          "forkEvents" : 7,
+          "otherEvents" : 66,
+          "sparkline" : [ 14, 8, 14, 8, 10, 13, 11, 9, 18, 17, 18, 13, 0 ]
+        }, {
+          "rank" : 3,
+          "name" : "torvalds/linux",
+          "owner" : "torvalds",
+          "url" : "https://github.com/torvalds/linux",
+          "score" : 231.0,
+          "share" : 0.6,
+          "totalEvents" : 145,
+          "pushEvents" : 68,
+          "pullRequestEvents" : 5,
+          "forkEvents" : 8,
+          "otherEvents" : 64,
+          "sparkline" : [ 11, 14, 11, 11, 12, 15, 13, 11, 14, 6, 16, 10, 1 ]
+        }, {
+          "rank" : 4,
+          "name" : "octo/hello",
+          "owner" : "octo",
+          "url" : "https://github.com/octo/hello",
+          "score" : 211.0,
+          "share" : 0.5,
+          "totalEvents" : 120,
+          "pushEvents" : 76,
+          "pullRequestEvents" : 5,
+          "forkEvents" : 5,
+          "otherEvents" : 34,
+          "sparkline" : [ 10, 8, 3, 5, 2, 5, 3, 7, 9, 8, 8, 52, 0 ]
+        }, {
+          "rank" : 5,
+          "name" : "rust-lang/rust",
+          "owner" : "rust-lang",
+          "url" : "https://github.com/rust-lang/rust",
+          "score" : 205.0,
+          "share" : 0.5,
+          "totalEvents" : 115,
+          "pushEvents" : 56,
+          "pullRequestEvents" : 12,
+          "forkEvents" : 10,
+          "otherEvents" : 37,
+          "sparkline" : [ 5, 12, 10, 16, 13, 7, 11, 12, 10, 7, 6, 6, 0 ]
+        } ]
+      },
+      "breakdown" : {
+        "mode" : "live",
+        "range" : "24h",
+        "total" : 1058,
+        "items" : [ {
+          "kind" : "PUSH",
+          "label" : "Push events",
+          "count" : 518,
+          "percent" : 49.0
+        }, {
+          "kind" : "PULL_REQUEST",
+          "label" : "Pull requests",
+          "count" : 97,
+          "percent" : 9.2
+        }, {
+          "kind" : "FORK",
+          "label" : "Forks",
+          "count" : 59,
+          "percent" : 5.6
+        }, {
+          "kind" : "WATCH",
+          "label" : "Stars",
+          "count" : 243,
+          "percent" : 23.0
+        }, {
+          "kind" : "ISSUES",
+          "label" : "Issues",
+          "count" : 45,
+          "percent" : 4.3
+        }, {
+          "kind" : "ISSUE_COMMENT",
+          "label" : "Issue comments",
+          "count" : 53,
+          "percent" : 5.0
+        }, {
+          "kind" : "OTHER",
+          "label" : "Other events",
+          "count" : 43,
+          "percent" : 4.1
+        } ]
+      }
+    }
+  },
+  "fresh-twelve-minutes" : {
+    "15m" : {
+      "metrics" : {
+        "mode" : "live",
+        "range" : "15m",
+        "windowStart" : "2026-03-10T11:46:00Z",
+        "windowEnd" : "2026-03-10T12:01:00Z",
+        "totalEvents" : {
+          "value" : 18,
+          "changePct" : 25.0,
+          "sparkline" : [ 0, 0, 2, 1, 1, 1, 1, 2, 1, 1, 1, 3, 1, 3 ],
+          "changeBasis" : "Only 12 minutes of data observed so far: last 6 min compared with the 6 min before"
+        },
+        "activeRepositories" : {
+          "value" : 8,
+          "changePct" : 40.0,
+          "sparkline" : [ 0, 0, 2, 1, 1, 1, 1, 2, 1, 1, 1, 3, 1, 3 ],
+          "changeBasis" : "Only 12 minutes of data observed so far: last 6 min compared with the 6 min before"
+        },
+        "pushEvents" : {
+          "value" : 6,
+          "changePct" : 100.0,
+          "sparkline" : [ 0, 0, 2, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 2 ],
+          "changeBasis" : "Only 12 minutes of data observed so far: last 6 min compared with the 6 min before"
+        },
+        "commits" : {
+          "value" : 15,
+          "changePct" : 100.0,
+          "sparkline" : [ 0, 0, 5, 0, 0, 0, 0, 0, 0, 3, 0, 0, 2, 5 ],
+          "changeBasis" : "Only 12 minutes of data observed so far: last 6 min compared with the 6 min before"
+        },
+        "pullRequests" : {
+          "value" : 4,
+          "changePct" : 0.0,
+          "sparkline" : [ 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0 ],
+          "changeBasis" : "Only 12 minutes of data observed so far: last 6 min compared with the 6 min before"
+        },
+        "forks" : {
+          "value" : 0,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        }
+      },
+      "activity" : {
+        "mode" : "live",
+        "range" : "15m",
+        "bucketMinutes" : 1,
+        "points" : [ {
+          "t" : "2026-03-10T11:47:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:48:00Z",
+          "total" : 2.0,
+          "push" : 2.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:49:00Z",
+          "total" : 1.0,
+          "push" : 0.0,
+          "pullRequest" : 1.0
+        }, {
+          "t" : "2026-03-10T11:50:00Z",
+          "total" : 1.0,
+          "push" : 0.0,
+          "pullRequest" : 1.0
+        }, {
+          "t" : "2026-03-10T11:51:00Z",
+          "total" : 1.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:52:00Z",
+          "total" : 1.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:53:00Z",
+          "total" : 2.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:54:00Z",
+          "total" : 1.0,
+          "push" : 0.0,
+          "pullRequest" : 1.0
+        }, {
+          "t" : "2026-03-10T11:55:00Z",
+          "total" : 1.0,
+          "push" : 1.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:56:00Z",
+          "total" : 1.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:57:00Z",
+          "total" : 3.0,
+          "push" : 0.0,
+          "pullRequest" : 1.0
+        }, {
+          "t" : "2026-03-10T11:58:00Z",
+          "total" : 1.0,
+          "push" : 1.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:59:00Z",
+          "total" : 3.0,
+          "push" : 2.0,
+          "pullRequest" : 0.0
+        } ]
+      },
+      "trending" : {
+        "mode" : "live",
+        "range" : "15m",
+        "scoreFormula" : "Activity Score = Push x 2 + Pull Request x 3 + Fork x 2 + Other x 1",
+        "weights" : {
+          "push" : 2.0,
+          "pullRequest" : 3.0,
+          "fork" : 2.0,
+          "other" : 1.0
+        },
+        "disclaimer" : "Most active repositories in the observed GitHub event sample, ranked by activity score. This is not a ranking of GitHub's most popular repositories.",
+        "repositories" : [ {
+          "rank" : 1,
+          "name" : "vercel/next.js",
+          "owner" : "vercel",
+          "url" : "https://github.com/vercel/next.js",
+          "score" : 9.0,
+          "share" : 1.0,
+          "totalEvents" : 3,
+          "pushEvents" : 0,
+          "pullRequestEvents" : 3,
+          "forkEvents" : 0,
+          "otherEvents" : 0,
+          "sparkline" : [ 0, 1, 1, 0, 0, 1, 0, 0 ]
+        }, {
+          "rank" : 2,
+          "name" : "facebook/react",
+          "owner" : "facebook",
+          "url" : "https://github.com/facebook/react",
+          "score" : 6.0,
+          "share" : 0.7,
+          "totalEvents" : 4,
+          "pushEvents" : 2,
+          "pullRequestEvents" : 0,
+          "forkEvents" : 0,
+          "otherEvents" : 2,
+          "sparkline" : [ 0, 1, 0, 1, 0, 1, 1, 0 ]
+        }, {
+          "rank" : 3,
+          "name" : "octo/hello",
+          "owner" : "octo",
+          "url" : "https://github.com/octo/hello",
+          "score" : 4.0,
+          "share" : 0.4,
+          "totalEvents" : 2,
+          "pushEvents" : 0,
+          "pullRequestEvents" : 1,
+          "forkEvents" : 0,
+          "otherEvents" : 1,
+          "sparkline" : [ 0, 0, 0, 0, 1, 1, 0, 0 ]
+        }, {
+          "rank" : 4,
+          "name" : "apache/kafka",
+          "owner" : "apache",
+          "url" : "https://github.com/apache/kafka",
+          "score" : 3.0,
+          "share" : 0.3,
+          "totalEvents" : 2,
+          "pushEvents" : 1,
+          "pullRequestEvents" : 0,
+          "forkEvents" : 0,
+          "otherEvents" : 1,
+          "sparkline" : [ 0, 1, 1, 0, 0, 0, 0, 0 ]
+        }, {
+          "rank" : 5,
+          "name" : "rust-lang/rust",
+          "owner" : "rust-lang",
+          "url" : "https://github.com/rust-lang/rust",
+          "score" : 3.0,
+          "share" : 0.3,
+          "totalEvents" : 2,
+          "pushEvents" : 1,
+          "pullRequestEvents" : 0,
+          "forkEvents" : 0,
+          "otherEvents" : 1,
+          "sparkline" : [ 0, 0, 0, 0, 0, 1, 1, 0 ]
+        } ]
+      },
+      "breakdown" : {
+        "mode" : "live",
+        "range" : "15m",
+        "total" : 18,
+        "items" : [ {
+          "kind" : "PUSH",
+          "label" : "Push events",
+          "count" : 6,
+          "percent" : 33.3
+        }, {
+          "kind" : "PULL_REQUEST",
+          "label" : "Pull requests",
+          "count" : 4,
+          "percent" : 22.2
+        }, {
+          "kind" : "FORK",
+          "label" : "Forks",
+          "count" : 0,
+          "percent" : 0.0
+        }, {
+          "kind" : "WATCH",
+          "label" : "Stars",
+          "count" : 4,
+          "percent" : 22.2
+        }, {
+          "kind" : "ISSUES",
+          "label" : "Issues",
+          "count" : 3,
+          "percent" : 16.7
+        }, {
+          "kind" : "ISSUE_COMMENT",
+          "label" : "Issue comments",
+          "count" : 1,
+          "percent" : 5.6
+        }, {
+          "kind" : "OTHER",
+          "label" : "Other events",
+          "count" : 0,
+          "percent" : 0.0
+        } ]
+      }
+    },
+    "1h" : {
+      "metrics" : {
+        "mode" : "live",
+        "range" : "1h",
+        "windowStart" : "2026-03-10T11:01:00Z",
+        "windowEnd" : "2026-03-10T12:01:00Z",
+        "totalEvents" : {
+          "value" : 18,
+          "changePct" : 25.0,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 2, 3, 2, 4, 4 ],
+          "changeBasis" : "Only 12 minutes of data observed so far: last 6 min compared with the 6 min before"
+        },
+        "activeRepositories" : {
+          "value" : 8,
+          "changePct" : 40.0,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 2, 3, 2, 4, 4 ],
+          "changeBasis" : "Only 12 minutes of data observed so far: last 6 min compared with the 6 min before"
+        },
+        "pushEvents" : {
+          "value" : 6,
+          "changePct" : 100.0,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 1, 0, 3 ],
+          "changeBasis" : "Only 12 minutes of data observed so far: last 6 min compared with the 6 min before"
+        },
+        "commits" : {
+          "value" : 15,
+          "changePct" : 100.0,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 0, 3, 0, 7 ],
+          "changeBasis" : "Only 12 minutes of data observed so far: last 6 min compared with the 6 min before"
+        },
+        "pullRequests" : {
+          "value" : 4,
+          "changePct" : 0.0,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0 ],
+          "changeBasis" : "Only 12 minutes of data observed so far: last 6 min compared with the 6 min before"
+        },
+        "forks" : {
+          "value" : 0,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        }
+      },
+      "activity" : {
+        "mode" : "live",
+        "range" : "1h",
+        "bucketMinutes" : 1,
+        "points" : [ {
+          "t" : "2026-03-10T11:47:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:48:00Z",
+          "total" : 2.0,
+          "push" : 2.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:49:00Z",
+          "total" : 1.0,
+          "push" : 0.0,
+          "pullRequest" : 1.0
+        }, {
+          "t" : "2026-03-10T11:50:00Z",
+          "total" : 1.0,
+          "push" : 0.0,
+          "pullRequest" : 1.0
+        }, {
+          "t" : "2026-03-10T11:51:00Z",
+          "total" : 1.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:52:00Z",
+          "total" : 1.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:53:00Z",
+          "total" : 2.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:54:00Z",
+          "total" : 1.0,
+          "push" : 0.0,
+          "pullRequest" : 1.0
+        }, {
+          "t" : "2026-03-10T11:55:00Z",
+          "total" : 1.0,
+          "push" : 1.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:56:00Z",
+          "total" : 1.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:57:00Z",
+          "total" : 3.0,
+          "push" : 0.0,
+          "pullRequest" : 1.0
+        }, {
+          "t" : "2026-03-10T11:58:00Z",
+          "total" : 1.0,
+          "push" : 1.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:59:00Z",
+          "total" : 3.0,
+          "push" : 2.0,
+          "pullRequest" : 0.0
+        } ]
+      },
+      "trending" : {
+        "mode" : "live",
+        "range" : "1h",
+        "scoreFormula" : "Activity Score = Push x 2 + Pull Request x 3 + Fork x 2 + Other x 1",
+        "weights" : {
+          "push" : 2.0,
+          "pullRequest" : 3.0,
+          "fork" : 2.0,
+          "other" : 1.0
+        },
+        "disclaimer" : "Most active repositories in the observed GitHub event sample, ranked by activity score. This is not a ranking of GitHub's most popular repositories.",
+        "repositories" : [ {
+          "rank" : 1,
+          "name" : "vercel/next.js",
+          "owner" : "vercel",
+          "url" : "https://github.com/vercel/next.js",
+          "score" : 9.0,
+          "share" : 1.0,
+          "totalEvents" : 3,
+          "pushEvents" : 0,
+          "pullRequestEvents" : 3,
+          "forkEvents" : 0,
+          "otherEvents" : 0,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0 ]
+        }, {
+          "rank" : 2,
+          "name" : "facebook/react",
+          "owner" : "facebook",
+          "url" : "https://github.com/facebook/react",
+          "score" : 6.0,
+          "share" : 0.7,
+          "totalEvents" : 4,
+          "pushEvents" : 2,
+          "pullRequestEvents" : 0,
+          "forkEvents" : 0,
+          "otherEvents" : 2,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 2, 0 ]
+        }, {
+          "rank" : 3,
+          "name" : "octo/hello",
+          "owner" : "octo",
+          "url" : "https://github.com/octo/hello",
+          "score" : 4.0,
+          "share" : 0.4,
+          "totalEvents" : 2,
+          "pushEvents" : 0,
+          "pullRequestEvents" : 1,
+          "forkEvents" : 0,
+          "otherEvents" : 1,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0 ]
+        }, {
+          "rank" : 4,
+          "name" : "apache/kafka",
+          "owner" : "apache",
+          "url" : "https://github.com/apache/kafka",
+          "score" : 3.0,
+          "share" : 0.3,
+          "totalEvents" : 2,
+          "pushEvents" : 1,
+          "pullRequestEvents" : 0,
+          "forkEvents" : 0,
+          "otherEvents" : 1,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0 ]
+        }, {
+          "rank" : 5,
+          "name" : "rust-lang/rust",
+          "owner" : "rust-lang",
+          "url" : "https://github.com/rust-lang/rust",
+          "score" : 3.0,
+          "share" : 0.3,
+          "totalEvents" : 2,
+          "pushEvents" : 1,
+          "pullRequestEvents" : 0,
+          "forkEvents" : 0,
+          "otherEvents" : 1,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0 ]
+        } ]
+      },
+      "breakdown" : {
+        "mode" : "live",
+        "range" : "1h",
+        "total" : 18,
+        "items" : [ {
+          "kind" : "PUSH",
+          "label" : "Push events",
+          "count" : 6,
+          "percent" : 33.3
+        }, {
+          "kind" : "PULL_REQUEST",
+          "label" : "Pull requests",
+          "count" : 4,
+          "percent" : 22.2
+        }, {
+          "kind" : "FORK",
+          "label" : "Forks",
+          "count" : 0,
+          "percent" : 0.0
+        }, {
+          "kind" : "WATCH",
+          "label" : "Stars",
+          "count" : 4,
+          "percent" : 22.2
+        }, {
+          "kind" : "ISSUES",
+          "label" : "Issues",
+          "count" : 3,
+          "percent" : 16.7
+        }, {
+          "kind" : "ISSUE_COMMENT",
+          "label" : "Issue comments",
+          "count" : 1,
+          "percent" : 5.6
+        }, {
+          "kind" : "OTHER",
+          "label" : "Other events",
+          "count" : 0,
+          "percent" : 0.0
+        } ]
+      }
+    },
+    "6h" : {
+      "metrics" : {
+        "mode" : "live",
+        "range" : "6h",
+        "windowStart" : "2026-03-10T06:01:00Z",
+        "windowEnd" : "2026-03-10T12:01:00Z",
+        "totalEvents" : {
+          "value" : 18,
+          "changePct" : 25.0,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 18 ],
+          "changeBasis" : "Only 12 minutes of data observed so far: last 6 min compared with the 6 min before"
+        },
+        "activeRepositories" : {
+          "value" : 8,
+          "changePct" : 40.0,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8 ],
+          "changeBasis" : "Only 12 minutes of data observed so far: last 6 min compared with the 6 min before"
+        },
+        "pushEvents" : {
+          "value" : 6,
+          "changePct" : 100.0,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6 ],
+          "changeBasis" : "Only 12 minutes of data observed so far: last 6 min compared with the 6 min before"
+        },
+        "commits" : {
+          "value" : 15,
+          "changePct" : 100.0,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 15 ],
+          "changeBasis" : "Only 12 minutes of data observed so far: last 6 min compared with the 6 min before"
+        },
+        "pullRequests" : {
+          "value" : 4,
+          "changePct" : 0.0,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4 ],
+          "changeBasis" : "Only 12 minutes of data observed so far: last 6 min compared with the 6 min before"
+        },
+        "forks" : {
+          "value" : 0,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        }
+      },
+      "activity" : {
+        "mode" : "live",
+        "range" : "6h",
+        "bucketMinutes" : 5,
+        "points" : [ {
+          "t" : "2026-03-10T11:45:00Z",
+          "total" : 0.6,
+          "push" : 0.4,
+          "pullRequest" : 0.2
+        }, {
+          "t" : "2026-03-10T11:50:00Z",
+          "total" : 1.2,
+          "push" : 0.0,
+          "pullRequest" : 0.4
+        }, {
+          "t" : "2026-03-10T11:55:00Z",
+          "total" : 1.8,
+          "push" : 0.8,
+          "pullRequest" : 0.2
+        } ]
+      },
+      "trending" : {
+        "mode" : "live",
+        "range" : "6h",
+        "scoreFormula" : "Activity Score = Push x 2 + Pull Request x 3 + Fork x 2 + Other x 1",
+        "weights" : {
+          "push" : 2.0,
+          "pullRequest" : 3.0,
+          "fork" : 2.0,
+          "other" : 1.0
+        },
+        "disclaimer" : "Most active repositories in the observed GitHub event sample, ranked by activity score. This is not a ranking of GitHub's most popular repositories.",
+        "repositories" : [ {
+          "rank" : 1,
+          "name" : "vercel/next.js",
+          "owner" : "vercel",
+          "url" : "https://github.com/vercel/next.js",
+          "score" : 9.0,
+          "share" : 1.0,
+          "totalEvents" : 3,
+          "pushEvents" : 0,
+          "pullRequestEvents" : 3,
+          "forkEvents" : 0,
+          "otherEvents" : 0,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0 ]
+        }, {
+          "rank" : 2,
+          "name" : "facebook/react",
+          "owner" : "facebook",
+          "url" : "https://github.com/facebook/react",
+          "score" : 6.0,
+          "share" : 0.7,
+          "totalEvents" : 4,
+          "pushEvents" : 2,
+          "pullRequestEvents" : 0,
+          "forkEvents" : 0,
+          "otherEvents" : 2,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0 ]
+        }, {
+          "rank" : 3,
+          "name" : "octo/hello",
+          "owner" : "octo",
+          "url" : "https://github.com/octo/hello",
+          "score" : 4.0,
+          "share" : 0.4,
+          "totalEvents" : 2,
+          "pushEvents" : 0,
+          "pullRequestEvents" : 1,
+          "forkEvents" : 0,
+          "otherEvents" : 1,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0 ]
+        }, {
+          "rank" : 4,
+          "name" : "apache/kafka",
+          "owner" : "apache",
+          "url" : "https://github.com/apache/kafka",
+          "score" : 3.0,
+          "share" : 0.3,
+          "totalEvents" : 2,
+          "pushEvents" : 1,
+          "pullRequestEvents" : 0,
+          "forkEvents" : 0,
+          "otherEvents" : 1,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0 ]
+        }, {
+          "rank" : 5,
+          "name" : "rust-lang/rust",
+          "owner" : "rust-lang",
+          "url" : "https://github.com/rust-lang/rust",
+          "score" : 3.0,
+          "share" : 0.3,
+          "totalEvents" : 2,
+          "pushEvents" : 1,
+          "pullRequestEvents" : 0,
+          "forkEvents" : 0,
+          "otherEvents" : 1,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0 ]
+        } ]
+      },
+      "breakdown" : {
+        "mode" : "live",
+        "range" : "6h",
+        "total" : 18,
+        "items" : [ {
+          "kind" : "PUSH",
+          "label" : "Push events",
+          "count" : 6,
+          "percent" : 33.3
+        }, {
+          "kind" : "PULL_REQUEST",
+          "label" : "Pull requests",
+          "count" : 4,
+          "percent" : 22.2
+        }, {
+          "kind" : "FORK",
+          "label" : "Forks",
+          "count" : 0,
+          "percent" : 0.0
+        }, {
+          "kind" : "WATCH",
+          "label" : "Stars",
+          "count" : 4,
+          "percent" : 22.2
+        }, {
+          "kind" : "ISSUES",
+          "label" : "Issues",
+          "count" : 3,
+          "percent" : 16.7
+        }, {
+          "kind" : "ISSUE_COMMENT",
+          "label" : "Issue comments",
+          "count" : 1,
+          "percent" : 5.6
+        }, {
+          "kind" : "OTHER",
+          "label" : "Other events",
+          "count" : 0,
+          "percent" : 0.0
+        } ]
+      }
+    },
+    "24h" : {
+      "metrics" : {
+        "mode" : "live",
+        "range" : "24h",
+        "windowStart" : "2026-03-09T12:01:00Z",
+        "windowEnd" : "2026-03-10T12:01:00Z",
+        "totalEvents" : {
+          "value" : 18,
+          "changePct" : 25.0,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 18 ],
+          "changeBasis" : "Only 12 minutes of data observed so far: last 6 min compared with the 6 min before"
+        },
+        "activeRepositories" : {
+          "value" : 8,
+          "changePct" : 40.0,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8 ],
+          "changeBasis" : "Only 12 minutes of data observed so far: last 6 min compared with the 6 min before"
+        },
+        "pushEvents" : {
+          "value" : 6,
+          "changePct" : 100.0,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6 ],
+          "changeBasis" : "Only 12 minutes of data observed so far: last 6 min compared with the 6 min before"
+        },
+        "commits" : {
+          "value" : 15,
+          "changePct" : 100.0,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 15 ],
+          "changeBasis" : "Only 12 minutes of data observed so far: last 6 min compared with the 6 min before"
+        },
+        "pullRequests" : {
+          "value" : 4,
+          "changePct" : 0.0,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4 ],
+          "changeBasis" : "Only 12 minutes of data observed so far: last 6 min compared with the 6 min before"
+        },
+        "forks" : {
+          "value" : 0,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        }
+      },
+      "activity" : {
+        "mode" : "live",
+        "range" : "24h",
+        "bucketMinutes" : 15,
+        "points" : [ {
+          "t" : "2026-03-10T11:45:00Z",
+          "total" : 1.2,
+          "push" : 0.4,
+          "pullRequest" : 0.3
+        } ]
+      },
+      "trending" : {
+        "mode" : "live",
+        "range" : "24h",
+        "scoreFormula" : "Activity Score = Push x 2 + Pull Request x 3 + Fork x 2 + Other x 1",
+        "weights" : {
+          "push" : 2.0,
+          "pullRequest" : 3.0,
+          "fork" : 2.0,
+          "other" : 1.0
+        },
+        "disclaimer" : "Most active repositories in the observed GitHub event sample, ranked by activity score. This is not a ranking of GitHub's most popular repositories.",
+        "repositories" : [ {
+          "rank" : 1,
+          "name" : "vercel/next.js",
+          "owner" : "vercel",
+          "url" : "https://github.com/vercel/next.js",
+          "score" : 9.0,
+          "share" : 1.0,
+          "totalEvents" : 3,
+          "pushEvents" : 0,
+          "pullRequestEvents" : 3,
+          "forkEvents" : 0,
+          "otherEvents" : 0,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0 ]
+        }, {
+          "rank" : 2,
+          "name" : "facebook/react",
+          "owner" : "facebook",
+          "url" : "https://github.com/facebook/react",
+          "score" : 6.0,
+          "share" : 0.7,
+          "totalEvents" : 4,
+          "pushEvents" : 2,
+          "pullRequestEvents" : 0,
+          "forkEvents" : 0,
+          "otherEvents" : 2,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0 ]
+        }, {
+          "rank" : 3,
+          "name" : "octo/hello",
+          "owner" : "octo",
+          "url" : "https://github.com/octo/hello",
+          "score" : 4.0,
+          "share" : 0.4,
+          "totalEvents" : 2,
+          "pushEvents" : 0,
+          "pullRequestEvents" : 1,
+          "forkEvents" : 0,
+          "otherEvents" : 1,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0 ]
+        }, {
+          "rank" : 4,
+          "name" : "apache/kafka",
+          "owner" : "apache",
+          "url" : "https://github.com/apache/kafka",
+          "score" : 3.0,
+          "share" : 0.3,
+          "totalEvents" : 2,
+          "pushEvents" : 1,
+          "pullRequestEvents" : 0,
+          "forkEvents" : 0,
+          "otherEvents" : 1,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0 ]
+        }, {
+          "rank" : 5,
+          "name" : "rust-lang/rust",
+          "owner" : "rust-lang",
+          "url" : "https://github.com/rust-lang/rust",
+          "score" : 3.0,
+          "share" : 0.3,
+          "totalEvents" : 2,
+          "pushEvents" : 1,
+          "pullRequestEvents" : 0,
+          "forkEvents" : 0,
+          "otherEvents" : 1,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0 ]
+        } ]
+      },
+      "breakdown" : {
+        "mode" : "live",
+        "range" : "24h",
+        "total" : 18,
+        "items" : [ {
+          "kind" : "PUSH",
+          "label" : "Push events",
+          "count" : 6,
+          "percent" : 33.3
+        }, {
+          "kind" : "PULL_REQUEST",
+          "label" : "Pull requests",
+          "count" : 4,
+          "percent" : 22.2
+        }, {
+          "kind" : "FORK",
+          "label" : "Forks",
+          "count" : 0,
+          "percent" : 0.0
+        }, {
+          "kind" : "WATCH",
+          "label" : "Stars",
+          "count" : 4,
+          "percent" : 22.2
+        }, {
+          "kind" : "ISSUES",
+          "label" : "Issues",
+          "count" : 3,
+          "percent" : 16.7
+        }, {
+          "kind" : "ISSUE_COMMENT",
+          "label" : "Issue comments",
+          "count" : 1,
+          "percent" : 5.6
+        }, {
+          "kind" : "OTHER",
+          "label" : "Other events",
+          "count" : 0,
+          "percent" : 0.0
+        } ]
+      }
+    }
+  },
+  "no-commit-counts" : {
+    "15m" : {
+      "metrics" : {
+        "mode" : "live",
+        "range" : "15m",
+        "windowStart" : "2026-03-10T11:46:00Z",
+        "windowEnd" : "2026-03-10T12:01:00Z",
+        "totalEvents" : {
+          "value" : 14,
+          "changePct" : -12.5,
+          "sparkline" : [ 0, 1, 2, 1, 0, 2, 0, 1, 1, 2, 1, 0, 2, 0 ],
+          "changeBasis" : "Compared with the previous 15m window"
+        },
+        "activeRepositories" : {
+          "value" : 8,
+          "changePct" : -11.1,
+          "sparkline" : [ 0, 1, 2, 1, 0, 2, 0, 1, 1, 1, 1, 0, 2, 0 ],
+          "changeBasis" : "Compared with the previous 15m window"
+        },
+        "pushEvents" : {
+          "value" : 7,
+          "changePct" : 16.7,
+          "sparkline" : [ 0, 0, 1, 1, 0, 2, 0, 1, 1, 0, 0, 0, 1, 0 ],
+          "changeBasis" : "Compared with the previous 15m window"
+        },
+        "commits" : {
+          "sparkline" : [ ],
+          "note" : "Not available: GitHub's public events API no longer reports commit counts in push events."
+        },
+        "pullRequests" : {
+          "value" : 2,
+          "changePct" : 0.0,
+          "sparkline" : [ 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+          "changeBasis" : "Compared with the previous 15m window"
+        },
+        "forks" : {
+          "value" : 0,
+          "changePct" : -100.0,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+          "changeBasis" : "Compared with the previous 15m window"
+        }
+      },
+      "activity" : {
+        "mode" : "live",
+        "range" : "15m",
+        "bucketMinutes" : 1,
+        "points" : [ {
+          "t" : "2026-03-10T11:45:00Z",
+          "total" : 2.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:46:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:47:00Z",
+          "total" : 1.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:48:00Z",
+          "total" : 2.0,
+          "push" : 1.0,
+          "pullRequest" : 1.0
+        }, {
+          "t" : "2026-03-10T11:49:00Z",
+          "total" : 1.0,
+          "push" : 1.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:50:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:51:00Z",
+          "total" : 2.0,
+          "push" : 2.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:52:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:53:00Z",
+          "total" : 1.0,
+          "push" : 1.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:54:00Z",
+          "total" : 1.0,
+          "push" : 1.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:55:00Z",
+          "total" : 2.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:56:00Z",
+          "total" : 1.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:57:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:58:00Z",
+          "total" : 2.0,
+          "push" : 1.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:59:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        } ]
+      },
+      "trending" : {
+        "mode" : "live",
+        "range" : "15m",
+        "scoreFormula" : "Activity Score = Push x 2 + Pull Request x 3 + Fork x 2 + Other x 1",
+        "weights" : {
+          "push" : 2.0,
+          "pullRequest" : 3.0,
+          "fork" : 2.0,
+          "other" : 1.0
+        },
+        "disclaimer" : "Most active repositories in the observed GitHub event sample, ranked by activity score. This is not a ranking of GitHub's most popular repositories.",
+        "repositories" : [ {
+          "rank" : 1,
+          "name" : "octo/hello",
+          "owner" : "octo",
+          "url" : "https://github.com/octo/hello",
+          "score" : 5.0,
+          "share" : 1.0,
+          "totalEvents" : 4,
+          "pushEvents" : 1,
+          "pullRequestEvents" : 0,
+          "forkEvents" : 0,
+          "otherEvents" : 3,
+          "sparkline" : [ 1, 0, 0, 0, 2, 0, 1, 0 ]
+        }, {
+          "rank" : 2,
+          "name" : "denoland/deno",
+          "owner" : "denoland",
+          "url" : "https://github.com/denoland/deno",
+          "score" : 4.0,
+          "share" : 0.8,
+          "totalEvents" : 2,
+          "pushEvents" : 2,
+          "pullRequestEvents" : 0,
+          "forkEvents" : 0,
+          "otherEvents" : 0,
+          "sparkline" : [ 0, 2, 0, 0, 0, 0, 0, 0 ]
+        }, {
+          "rank" : 3,
+          "name" : "apache/kafka",
+          "owner" : "apache",
+          "url" : "https://github.com/apache/kafka",
+          "score" : 3.0,
+          "share" : 0.6,
+          "totalEvents" : 2,
+          "pushEvents" : 1,
+          "pullRequestEvents" : 0,
+          "forkEvents" : 0,
+          "otherEvents" : 1,
+          "sparkline" : [ 0, 0, 1, 0, 0, 0, 1, 0 ]
+        }, {
+          "rank" : 4,
+          "name" : "facebook/react",
+          "owner" : "facebook",
+          "url" : "https://github.com/facebook/react",
+          "score" : 3.0,
+          "share" : 0.6,
+          "totalEvents" : 2,
+          "pushEvents" : 1,
+          "pullRequestEvents" : 0,
+          "forkEvents" : 0,
+          "otherEvents" : 1,
+          "sparkline" : [ 0, 0, 1, 0, 0, 1, 0, 0 ]
+        }, {
+          "rank" : 5,
+          "name" : "rust-lang/rust",
+          "owner" : "rust-lang",
+          "url" : "https://github.com/rust-lang/rust",
+          "score" : 3.0,
+          "share" : 0.6,
+          "totalEvents" : 1,
+          "pushEvents" : 0,
+          "pullRequestEvents" : 1,
+          "forkEvents" : 0,
+          "otherEvents" : 0,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 1 ]
+        } ]
+      },
+      "breakdown" : {
+        "mode" : "live",
+        "range" : "15m",
+        "total" : 14,
+        "items" : [ {
+          "kind" : "PUSH",
+          "label" : "Push events",
+          "count" : 7,
+          "percent" : 50.0
+        }, {
+          "kind" : "PULL_REQUEST",
+          "label" : "Pull requests",
+          "count" : 2,
+          "percent" : 14.3
+        }, {
+          "kind" : "FORK",
+          "label" : "Forks",
+          "count" : 0,
+          "percent" : 0.0
+        }, {
+          "kind" : "WATCH",
+          "label" : "Stars",
+          "count" : 4,
+          "percent" : 28.6
+        }, {
+          "kind" : "ISSUES",
+          "label" : "Issues",
+          "count" : 0,
+          "percent" : 0.0
+        }, {
+          "kind" : "ISSUE_COMMENT",
+          "label" : "Issue comments",
+          "count" : 1,
+          "percent" : 7.1
+        }, {
+          "kind" : "OTHER",
+          "label" : "Other events",
+          "count" : 0,
+          "percent" : 0.0
+        } ]
+      }
+    },
+    "1h" : {
+      "metrics" : {
+        "mode" : "live",
+        "range" : "1h",
+        "windowStart" : "2026-03-10T11:01:00Z",
+        "windowEnd" : "2026-03-10T12:01:00Z",
+        "totalEvents" : {
+          "value" : 59,
+          "changePct" : -1.7,
+          "sparkline" : [ 0, 2, 2, 3, 2, 1, 2, 2, 3, 1, 3, 1, 2, 2, 3, 1, 2, 2, 2, 3, 1, 2, 3, 1, 3, 2, 1, 3, 1, 2 ],
+          "changeBasis" : "Compared with the previous 1h window"
+        },
+        "activeRepositories" : {
+          "value" : 11,
+          "changePct" : 0.0,
+          "sparkline" : [ 0, 2, 1, 3, 2, 1, 2, 2, 2, 1, 3, 1, 2, 1, 3, 1, 2, 2, 2, 3, 1, 2, 3, 1, 2, 2, 1, 2, 1, 2 ],
+          "changeBasis" : "Compared with the previous 1h window"
+        },
+        "pushEvents" : {
+          "value" : 26,
+          "changePct" : -13.3,
+          "sparkline" : [ 0, 1, 1, 1, 2, 0, 0, 1, 0, 1, 1, 0, 1, 2, 2, 0, 1, 1, 2, 0, 1, 0, 1, 0, 2, 2, 1, 1, 0, 1 ],
+          "changeBasis" : "Compared with the previous 1h window"
+        },
+        "commits" : {
+          "sparkline" : [ ],
+          "note" : "Not available: GitHub's public events API no longer reports commit counts in push events."
+        },
+        "pullRequests" : {
+          "value" : 6,
+          "changePct" : 50.0,
+          "sparkline" : [ 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0 ],
+          "changeBasis" : "Compared with the previous 1h window"
+        },
+        "forks" : {
+          "value" : 1,
+          "changePct" : -80.0,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0 ],
+          "changeBasis" : "Compared with the previous 1h window"
+        }
+      },
+      "activity" : {
+        "mode" : "live",
+        "range" : "1h",
+        "bucketMinutes" : 1,
+        "points" : [ {
+          "t" : "2026-03-10T11:00:00Z",
+          "total" : 2.0,
+          "push" : 2.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:01:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:02:00Z",
+          "total" : 1.0,
+          "push" : 0.0,
+          "pullRequest" : 1.0
+        }, {
+          "t" : "2026-03-10T11:03:00Z",
+          "total" : 1.0,
+          "push" : 1.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:04:00Z",
+          "total" : 2.0,
+          "push" : 1.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:05:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:06:00Z",
+          "total" : 2.0,
+          "push" : 1.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:07:00Z",
+          "total" : 1.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:08:00Z",
+          "total" : 1.0,
+          "push" : 1.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:09:00Z",
+          "total" : 1.0,
+          "push" : 1.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:10:00Z",
+          "total" : 1.0,
+          "push" : 0.0,
+          "pullRequest" : 1.0
+        }, {
+          "t" : "2026-03-10T11:11:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:12:00Z",
+          "total" : 2.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:13:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:14:00Z",
+          "total" : 1.0,
+          "push" : 1.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:15:00Z",
+          "total" : 1.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:16:00Z",
+          "total" : 2.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:17:00Z",
+          "total" : 1.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:18:00Z",
+          "total" : 1.0,
+          "push" : 1.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:19:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:20:00Z",
+          "total" : 2.0,
+          "push" : 1.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:21:00Z",
+          "total" : 1.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:22:00Z",
+          "total" : 1.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:23:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:24:00Z",
+          "total" : 2.0,
+          "push" : 1.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:25:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:26:00Z",
+          "total" : 1.0,
+          "push" : 1.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:27:00Z",
+          "total" : 1.0,
+          "push" : 1.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:28:00Z",
+          "total" : 2.0,
+          "push" : 1.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:29:00Z",
+          "total" : 1.0,
+          "push" : 1.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:30:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:31:00Z",
+          "total" : 1.0,
+          "push" : 0.0,
+          "pullRequest" : 1.0
+        }, {
+          "t" : "2026-03-10T11:32:00Z",
+          "total" : 2.0,
+          "push" : 1.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:33:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:34:00Z",
+          "total" : 2.0,
+          "push" : 1.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:35:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:36:00Z",
+          "total" : 1.0,
+          "push" : 1.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:37:00Z",
+          "total" : 1.0,
+          "push" : 1.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:38:00Z",
+          "total" : 2.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:39:00Z",
+          "total" : 1.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:40:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:41:00Z",
+          "total" : 1.0,
+          "push" : 1.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:42:00Z",
+          "total" : 1.0,
+          "push" : 0.0,
+          "pullRequest" : 1.0
+        }, {
+          "t" : "2026-03-10T11:43:00Z",
+          "total" : 1.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:44:00Z",
+          "total" : 1.0,
+          "push" : 1.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:45:00Z",
+          "total" : 2.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:46:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:47:00Z",
+          "total" : 1.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:48:00Z",
+          "total" : 2.0,
+          "push" : 1.0,
+          "pullRequest" : 1.0
+        }, {
+          "t" : "2026-03-10T11:49:00Z",
+          "total" : 1.0,
+          "push" : 1.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:50:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:51:00Z",
+          "total" : 2.0,
+          "push" : 2.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:52:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:53:00Z",
+          "total" : 1.0,
+          "push" : 1.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:54:00Z",
+          "total" : 1.0,
+          "push" : 1.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:55:00Z",
+          "total" : 2.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:56:00Z",
+          "total" : 1.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:57:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:58:00Z",
+          "total" : 2.0,
+          "push" : 1.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:59:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        } ]
+      },
+      "trending" : {
+        "mode" : "live",
+        "range" : "1h",
+        "scoreFormula" : "Activity Score = Push x 2 + Pull Request x 3 + Fork x 2 + Other x 1",
+        "weights" : {
+          "push" : 2.0,
+          "pullRequest" : 3.0,
+          "fork" : 2.0,
+          "other" : 1.0
+        },
+        "disclaimer" : "Most active repositories in the observed GitHub event sample, ranked by activity score. This is not a ranking of GitHub's most popular repositories.",
+        "repositories" : [ {
+          "rank" : 1,
+          "name" : "apache/kafka",
+          "owner" : "apache",
+          "url" : "https://github.com/apache/kafka",
+          "score" : 17.0,
+          "share" : 1.0,
+          "totalEvents" : 9,
+          "pushEvents" : 4,
+          "pullRequestEvents" : 2,
+          "forkEvents" : 0,
+          "otherEvents" : 3,
+          "sparkline" : [ 1, 0, 2, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0 ]
+        }, {
+          "rank" : 2,
+          "name" : "octo/hello",
+          "owner" : "octo",
+          "url" : "https://github.com/octo/hello",
+          "score" : 15.0,
+          "share" : 0.9,
+          "totalEvents" : 9,
+          "pushEvents" : 4,
+          "pullRequestEvents" : 1,
+          "forkEvents" : 0,
+          "otherEvents" : 4,
+          "sparkline" : [ 1, 0, 0, 1, 1, 0, 1, 0, 1, 1, 0, 3, 0 ]
+        }, {
+          "rank" : 3,
+          "name" : "facebook/react",
+          "owner" : "facebook",
+          "url" : "https://github.com/facebook/react",
+          "score" : 12.0,
+          "share" : 0.7,
+          "totalEvents" : 8,
+          "pushEvents" : 4,
+          "pullRequestEvents" : 0,
+          "forkEvents" : 0,
+          "otherEvents" : 4,
+          "sparkline" : [ 2, 0, 0, 0, 1, 1, 0, 2, 0, 0, 1, 1, 0 ]
+        }, {
+          "rank" : 4,
+          "name" : "vercel/next.js",
+          "owner" : "vercel",
+          "url" : "https://github.com/vercel/next.js",
+          "score" : 11.0,
+          "share" : 0.6,
+          "totalEvents" : 8,
+          "pushEvents" : 2,
+          "pullRequestEvents" : 0,
+          "forkEvents" : 1,
+          "otherEvents" : 5,
+          "sparkline" : [ 0, 1, 0, 3, 1, 2, 0, 0, 0, 1, 0, 0, 0 ]
+        }, {
+          "rank" : 5,
+          "name" : "torvalds/linux",
+          "owner" : "torvalds",
+          "url" : "https://github.com/torvalds/linux",
+          "score" : 10.0,
+          "share" : 0.6,
+          "totalEvents" : 6,
+          "pushEvents" : 2,
+          "pullRequestEvents" : 1,
+          "forkEvents" : 0,
+          "otherEvents" : 3,
+          "sparkline" : [ 0, 1, 1, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0 ]
+        } ]
+      },
+      "breakdown" : {
+        "mode" : "live",
+        "range" : "1h",
+        "total" : 59,
+        "items" : [ {
+          "kind" : "PUSH",
+          "label" : "Push events",
+          "count" : 26,
+          "percent" : 44.1
+        }, {
+          "kind" : "PULL_REQUEST",
+          "label" : "Pull requests",
+          "count" : 6,
+          "percent" : 10.2
+        }, {
+          "kind" : "FORK",
+          "label" : "Forks",
+          "count" : 1,
+          "percent" : 1.7
+        }, {
+          "kind" : "WATCH",
+          "label" : "Stars",
+          "count" : 13,
+          "percent" : 22.0
+        }, {
+          "kind" : "ISSUES",
+          "label" : "Issues",
+          "count" : 2,
+          "percent" : 3.4
+        }, {
+          "kind" : "ISSUE_COMMENT",
+          "label" : "Issue comments",
+          "count" : 5,
+          "percent" : 8.5
+        }, {
+          "kind" : "OTHER",
+          "label" : "Other events",
+          "count" : 6,
+          "percent" : 10.2
+        } ]
+      }
+    },
+    "6h" : {
+      "metrics" : {
+        "mode" : "live",
+        "range" : "6h",
+        "windowStart" : "2026-03-10T06:01:00Z",
+        "windowEnd" : "2026-03-10T12:01:00Z",
+        "totalEvents" : {
+          "value" : 180,
+          "changePct" : 1.1,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 12, 11, 12, 12, 13, 11, 12, 12, 12, 12, 12, 12, 12, 12, 12 ],
+          "changeBasis" : "Only 180 minutes of data observed so far: last 90 min compared with the 90 min before"
+        },
+        "activeRepositories" : {
+          "value" : 12,
+          "changePct" : -8.3,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 7, 7, 5, 5, 6, 7, 6, 7, 8, 8, 7, 9, 9, 7 ],
+          "changeBasis" : "Only 180 minutes of data observed so far: last 90 min compared with the 90 min before"
+        },
+        "pushEvents" : {
+          "value" : 84,
+          "changePct" : 27.0,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 5, 7, 7, 6, 3, 6, 4, 7, 8, 7, 3, 7, 4, 7 ],
+          "changeBasis" : "Only 180 minutes of data observed so far: last 90 min compared with the 90 min before"
+        },
+        "commits" : {
+          "sparkline" : [ ],
+          "note" : "Not available: GitHub's public events API no longer reports commit counts in push events."
+        },
+        "pullRequests" : {
+          "value" : 15,
+          "changePct" : 0.0,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 2, 0, 0, 2, 0, 2, 0, 1, 1, 1 ],
+          "changeBasis" : "Only 180 minutes of data observed so far: last 90 min compared with the 90 min before"
+        },
+        "forks" : {
+          "value" : 9,
+          "changePct" : -87.5,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 2, 1, 2, 0, 0, 0, 0, 0, 1, 0 ],
+          "changeBasis" : "Only 180 minutes of data observed so far: last 90 min compared with the 90 min before"
+        }
+      },
+      "activity" : {
+        "mode" : "live",
+        "range" : "6h",
+        "bucketMinutes" : 5,
+        "points" : [ {
+          "t" : "2026-03-10T08:55:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T09:00:00Z",
+          "total" : 1.0,
+          "push" : 0.2,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T09:05:00Z",
+          "total" : 1.0,
+          "push" : 0.2,
+          "pullRequest" : 0.2
+        }, {
+          "t" : "2026-03-10T09:10:00Z",
+          "total" : 0.8,
+          "push" : 0.4,
+          "pullRequest" : 0.2
+        }, {
+          "t" : "2026-03-10T09:15:00Z",
+          "total" : 1.0,
+          "push" : 0.4,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T09:20:00Z",
+          "total" : 1.2,
+          "push" : 0.6,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T09:25:00Z",
+          "total" : 0.8,
+          "push" : 0.6,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T09:30:00Z",
+          "total" : 1.0,
+          "push" : 0.4,
+          "pullRequest" : 0.2
+        }, {
+          "t" : "2026-03-10T09:35:00Z",
+          "total" : 1.2,
+          "push" : 0.6,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T09:40:00Z",
+          "total" : 1.0,
+          "push" : 0.8,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T09:45:00Z",
+          "total" : 0.8,
+          "push" : 0.6,
+          "pullRequest" : 0.2
+        }, {
+          "t" : "2026-03-10T09:50:00Z",
+          "total" : 1.0,
+          "push" : 0.4,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T09:55:00Z",
+          "total" : 1.2,
+          "push" : 0.4,
+          "pullRequest" : 0.2
+        }, {
+          "t" : "2026-03-10T10:00:00Z",
+          "total" : 1.0,
+          "push" : 0.0,
+          "pullRequest" : 0.4
+        }, {
+          "t" : "2026-03-10T10:05:00Z",
+          "total" : 0.8,
+          "push" : 0.2,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T10:10:00Z",
+          "total" : 1.0,
+          "push" : 0.6,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T10:15:00Z",
+          "total" : 1.2,
+          "push" : 0.8,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T10:20:00Z",
+          "total" : 1.0,
+          "push" : 0.2,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T10:25:00Z",
+          "total" : 0.8,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T10:30:00Z",
+          "total" : 1.2,
+          "push" : 0.8,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T10:35:00Z",
+          "total" : 1.0,
+          "push" : 0.2,
+          "pullRequest" : 0.4
+        }, {
+          "t" : "2026-03-10T10:40:00Z",
+          "total" : 1.0,
+          "push" : 1.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T10:45:00Z",
+          "total" : 0.8,
+          "push" : 0.4,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T10:50:00Z",
+          "total" : 1.2,
+          "push" : 0.8,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T10:55:00Z",
+          "total" : 0.8,
+          "push" : 0.6,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:00:00Z",
+          "total" : 1.2,
+          "push" : 0.8,
+          "pullRequest" : 0.2
+        }, {
+          "t" : "2026-03-10T11:05:00Z",
+          "total" : 1.0,
+          "push" : 0.6,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:10:00Z",
+          "total" : 0.8,
+          "push" : 0.2,
+          "pullRequest" : 0.2
+        }, {
+          "t" : "2026-03-10T11:15:00Z",
+          "total" : 1.0,
+          "push" : 0.2,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:20:00Z",
+          "total" : 1.2,
+          "push" : 0.4,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:25:00Z",
+          "total" : 1.0,
+          "push" : 0.8,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:30:00Z",
+          "total" : 1.0,
+          "push" : 0.4,
+          "pullRequest" : 0.2
+        }, {
+          "t" : "2026-03-10T11:35:00Z",
+          "total" : 1.0,
+          "push" : 0.4,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:40:00Z",
+          "total" : 0.8,
+          "push" : 0.4,
+          "pullRequest" : 0.2
+        }, {
+          "t" : "2026-03-10T11:45:00Z",
+          "total" : 1.2,
+          "push" : 0.4,
+          "pullRequest" : 0.2
+        }, {
+          "t" : "2026-03-10T11:50:00Z",
+          "total" : 0.8,
+          "push" : 0.8,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:55:00Z",
+          "total" : 1.0,
+          "push" : 0.2,
+          "pullRequest" : 0.0
+        } ]
+      },
+      "trending" : {
+        "mode" : "live",
+        "range" : "6h",
+        "scoreFormula" : "Activity Score = Push x 2 + Pull Request x 3 + Fork x 2 + Other x 1",
+        "weights" : {
+          "push" : 2.0,
+          "pullRequest" : 3.0,
+          "fork" : 2.0,
+          "other" : 1.0
+        },
+        "disclaimer" : "Most active repositories in the observed GitHub event sample, ranked by activity score. This is not a ranking of GitHub's most popular repositories.",
+        "repositories" : [ {
+          "rank" : 1,
+          "name" : "facebook/react",
+          "owner" : "facebook",
+          "url" : "https://github.com/facebook/react",
+          "score" : 59.0,
+          "share" : 1.0,
+          "totalEvents" : 33,
+          "pushEvents" : 17,
+          "pullRequestEvents" : 4,
+          "forkEvents" : 1,
+          "otherEvents" : 11,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 10, 2, 5, 7, 5, 4, 0 ]
+        }, {
+          "rank" : 2,
+          "name" : "torvalds/linux",
+          "owner" : "torvalds",
+          "url" : "https://github.com/torvalds/linux",
+          "score" : 51.0,
+          "share" : 0.9,
+          "totalEvents" : 28,
+          "pushEvents" : 17,
+          "pullRequestEvents" : 3,
+          "forkEvents" : 0,
+          "otherEvents" : 8,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 2, 11, 3, 5, 4, 3, 0 ]
+        }, {
+          "rank" : 3,
+          "name" : "vercel/next.js",
+          "owner" : "vercel",
+          "url" : "https://github.com/vercel/next.js",
+          "score" : 39.0,
+          "share" : 0.7,
+          "totalEvents" : 25,
+          "pushEvents" : 7,
+          "pullRequestEvents" : 2,
+          "forkEvents" : 3,
+          "otherEvents" : 13,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 3, 7, 4, 3, 7, 1, 0 ]
+        }, {
+          "rank" : 4,
+          "name" : "apache/kafka",
+          "owner" : "apache",
+          "url" : "https://github.com/apache/kafka",
+          "score" : 39.0,
+          "share" : 0.7,
+          "totalEvents" : 22,
+          "pushEvents" : 11,
+          "pullRequestEvents" : 2,
+          "forkEvents" : 2,
+          "otherEvents" : 7,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 6, 0, 2, 5, 5, 4, 0 ]
+        }, {
+          "rank" : 5,
+          "name" : "octo/hello",
+          "owner" : "octo",
+          "url" : "https://github.com/octo/hello",
+          "score" : 30.0,
+          "share" : 0.5,
+          "totalEvents" : 18,
+          "pushEvents" : 9,
+          "pullRequestEvents" : 1,
+          "forkEvents" : 1,
+          "otherEvents" : 7,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 1, 5, 1, 2, 3, 6, 0 ]
+        } ]
+      },
+      "breakdown" : {
+        "mode" : "live",
+        "range" : "6h",
+        "total" : 180,
+        "items" : [ {
+          "kind" : "PUSH",
+          "label" : "Push events",
+          "count" : 84,
+          "percent" : 46.7
+        }, {
+          "kind" : "PULL_REQUEST",
+          "label" : "Pull requests",
+          "count" : 15,
+          "percent" : 8.3
+        }, {
+          "kind" : "FORK",
+          "label" : "Forks",
+          "count" : 9,
+          "percent" : 5.0
+        }, {
+          "kind" : "WATCH",
+          "label" : "Stars",
+          "count" : 36,
+          "percent" : 20.0
+        }, {
+          "kind" : "ISSUES",
+          "label" : "Issues",
+          "count" : 7,
+          "percent" : 3.9
+        }, {
+          "kind" : "ISSUE_COMMENT",
+          "label" : "Issue comments",
+          "count" : 14,
+          "percent" : 7.8
+        }, {
+          "kind" : "OTHER",
+          "label" : "Other events",
+          "count" : 15,
+          "percent" : 8.3
+        } ]
+      }
+    },
+    "24h" : {
+      "metrics" : {
+        "mode" : "live",
+        "range" : "24h",
+        "windowStart" : "2026-03-09T12:01:00Z",
+        "windowEnd" : "2026-03-10T12:01:00Z",
+        "totalEvents" : {
+          "value" : 180,
+          "changePct" : 1.1,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 35, 48, 48, 48 ],
+          "changeBasis" : "Only 180 minutes of data observed so far: last 90 min compared with the 90 min before"
+        },
+        "activeRepositories" : {
+          "value" : 12,
+          "changePct" : -8.3,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9, 11, 9, 11 ],
+          "changeBasis" : "Only 180 minutes of data observed so far: last 90 min compared with the 90 min before"
+        },
+        "pushEvents" : {
+          "value" : 84,
+          "changePct" : 27.0,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 15, 22, 26, 21 ],
+          "changeBasis" : "Only 180 minutes of data observed so far: last 90 min compared with the 90 min before"
+        },
+        "commits" : {
+          "sparkline" : [ ],
+          "note" : "Not available: GitHub's public events API no longer reports commit counts in push events."
+        },
+        "pullRequests" : {
+          "value" : 15,
+          "changePct" : 0.0,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 4, 4, 3 ],
+          "changeBasis" : "Only 180 minutes of data observed so far: last 90 min compared with the 90 min before"
+        },
+        "forks" : {
+          "value" : 9,
+          "changePct" : -87.5,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 4, 2, 1 ],
+          "changeBasis" : "Only 180 minutes of data observed so far: last 90 min compared with the 90 min before"
+        }
+      },
+      "activity" : {
+        "mode" : "live",
+        "range" : "24h",
+        "bucketMinutes" : 15,
+        "points" : [ {
+          "t" : "2026-03-10T08:45:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T09:00:00Z",
+          "total" : 0.9,
+          "push" : 0.3,
+          "pullRequest" : 0.1
+        }, {
+          "t" : "2026-03-10T09:15:00Z",
+          "total" : 1.0,
+          "push" : 0.5,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T09:30:00Z",
+          "total" : 1.1,
+          "push" : 0.6,
+          "pullRequest" : 0.1
+        }, {
+          "t" : "2026-03-10T09:45:00Z",
+          "total" : 1.0,
+          "push" : 0.5,
+          "pullRequest" : 0.1
+        }, {
+          "t" : "2026-03-10T10:00:00Z",
+          "total" : 0.9,
+          "push" : 0.3,
+          "pullRequest" : 0.1
+        }, {
+          "t" : "2026-03-10T10:15:00Z",
+          "total" : 1.0,
+          "push" : 0.3,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T10:30:00Z",
+          "total" : 1.1,
+          "push" : 0.7,
+          "pullRequest" : 0.1
+        }, {
+          "t" : "2026-03-10T10:45:00Z",
+          "total" : 0.9,
+          "push" : 0.6,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:00:00Z",
+          "total" : 1.0,
+          "push" : 0.5,
+          "pullRequest" : 0.1
+        }, {
+          "t" : "2026-03-10T11:15:00Z",
+          "total" : 1.1,
+          "push" : 0.5,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:30:00Z",
+          "total" : 0.9,
+          "push" : 0.4,
+          "pullRequest" : 0.1
+        }, {
+          "t" : "2026-03-10T11:45:00Z",
+          "total" : 1.0,
+          "push" : 0.5,
+          "pullRequest" : 0.1
+        } ]
+      },
+      "trending" : {
+        "mode" : "live",
+        "range" : "24h",
+        "scoreFormula" : "Activity Score = Push x 2 + Pull Request x 3 + Fork x 2 + Other x 1",
+        "weights" : {
+          "push" : 2.0,
+          "pullRequest" : 3.0,
+          "fork" : 2.0,
+          "other" : 1.0
+        },
+        "disclaimer" : "Most active repositories in the observed GitHub event sample, ranked by activity score. This is not a ranking of GitHub's most popular repositories.",
+        "repositories" : [ {
+          "rank" : 1,
+          "name" : "facebook/react",
+          "owner" : "facebook",
+          "url" : "https://github.com/facebook/react",
+          "score" : 59.0,
+          "share" : 1.0,
+          "totalEvents" : 33,
+          "pushEvents" : 17,
+          "pullRequestEvents" : 4,
+          "forkEvents" : 1,
+          "otherEvents" : 11,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 12, 21, 0 ]
+        }, {
+          "rank" : 2,
+          "name" : "torvalds/linux",
+          "owner" : "torvalds",
+          "url" : "https://github.com/torvalds/linux",
+          "score" : 51.0,
+          "share" : 0.9,
+          "totalEvents" : 28,
+          "pushEvents" : 17,
+          "pullRequestEvents" : 3,
+          "forkEvents" : 0,
+          "otherEvents" : 8,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 13, 15, 0 ]
+        }, {
+          "rank" : 3,
+          "name" : "vercel/next.js",
+          "owner" : "vercel",
+          "url" : "https://github.com/vercel/next.js",
+          "score" : 39.0,
+          "share" : 0.7,
+          "totalEvents" : 25,
+          "pushEvents" : 7,
+          "pullRequestEvents" : 2,
+          "forkEvents" : 3,
+          "otherEvents" : 13,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 15, 0 ]
+        }, {
+          "rank" : 4,
+          "name" : "apache/kafka",
+          "owner" : "apache",
+          "url" : "https://github.com/apache/kafka",
+          "score" : 39.0,
+          "share" : 0.7,
+          "totalEvents" : 22,
+          "pushEvents" : 11,
+          "pullRequestEvents" : 2,
+          "forkEvents" : 2,
+          "otherEvents" : 7,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 16, 0 ]
+        }, {
+          "rank" : 5,
+          "name" : "octo/hello",
+          "owner" : "octo",
+          "url" : "https://github.com/octo/hello",
+          "score" : 30.0,
+          "share" : 0.5,
+          "totalEvents" : 18,
+          "pushEvents" : 9,
+          "pullRequestEvents" : 1,
+          "forkEvents" : 1,
+          "otherEvents" : 7,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 12, 0 ]
+        } ]
+      },
+      "breakdown" : {
+        "mode" : "live",
+        "range" : "24h",
+        "total" : 180,
+        "items" : [ {
+          "kind" : "PUSH",
+          "label" : "Push events",
+          "count" : 84,
+          "percent" : 46.7
+        }, {
+          "kind" : "PULL_REQUEST",
+          "label" : "Pull requests",
+          "count" : 15,
+          "percent" : 8.3
+        }, {
+          "kind" : "FORK",
+          "label" : "Forks",
+          "count" : 9,
+          "percent" : 5.0
+        }, {
+          "kind" : "WATCH",
+          "label" : "Stars",
+          "count" : 36,
+          "percent" : 20.0
+        }, {
+          "kind" : "ISSUES",
+          "label" : "Issues",
+          "count" : 7,
+          "percent" : 3.9
+        }, {
+          "kind" : "ISSUE_COMMENT",
+          "label" : "Issue comments",
+          "count" : 14,
+          "percent" : 7.8
+        }, {
+          "kind" : "OTHER",
+          "label" : "Other events",
+          "count" : 15,
+          "percent" : 8.3
+        } ]
+      }
+    }
+  },
+  "stale-data" : {
+    "15m" : {
+      "metrics" : {
+        "mode" : "live",
+        "range" : "15m",
+        "windowStart" : "2026-03-10T11:46:00Z",
+        "windowEnd" : "2026-03-10T12:01:00Z",
+        "totalEvents" : {
+          "value" : 0,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        },
+        "activeRepositories" : {
+          "value" : 0,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        },
+        "pushEvents" : {
+          "value" : 0,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        },
+        "commits" : {
+          "sparkline" : [ ],
+          "note" : "Not available: GitHub's public events API no longer reports commit counts in push events."
+        },
+        "pullRequests" : {
+          "value" : 0,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        },
+        "forks" : {
+          "value" : 0,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        }
+      },
+      "activity" : {
+        "mode" : "live",
+        "range" : "15m",
+        "bucketMinutes" : 1,
+        "points" : [ {
+          "t" : "2026-03-10T11:45:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:46:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:47:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:48:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:49:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:50:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:51:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:52:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:53:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:54:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:55:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:56:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:57:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:58:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:59:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        } ]
+      },
+      "trending" : {
+        "mode" : "live",
+        "range" : "15m",
+        "scoreFormula" : "Activity Score = Push x 2 + Pull Request x 3 + Fork x 2 + Other x 1",
+        "weights" : {
+          "push" : 2.0,
+          "pullRequest" : 3.0,
+          "fork" : 2.0,
+          "other" : 1.0
+        },
+        "disclaimer" : "Most active repositories in the observed GitHub event sample, ranked by activity score. This is not a ranking of GitHub's most popular repositories.",
+        "repositories" : [ ]
+      },
+      "breakdown" : {
+        "mode" : "live",
+        "range" : "15m",
+        "total" : 0,
+        "items" : [ {
+          "kind" : "PUSH",
+          "label" : "Push events",
+          "count" : 0,
+          "percent" : 0.0
+        }, {
+          "kind" : "PULL_REQUEST",
+          "label" : "Pull requests",
+          "count" : 0,
+          "percent" : 0.0
+        }, {
+          "kind" : "FORK",
+          "label" : "Forks",
+          "count" : 0,
+          "percent" : 0.0
+        }, {
+          "kind" : "WATCH",
+          "label" : "Stars",
+          "count" : 0,
+          "percent" : 0.0
+        }, {
+          "kind" : "ISSUES",
+          "label" : "Issues",
+          "count" : 0,
+          "percent" : 0.0
+        }, {
+          "kind" : "ISSUE_COMMENT",
+          "label" : "Issue comments",
+          "count" : 0,
+          "percent" : 0.0
+        }, {
+          "kind" : "OTHER",
+          "label" : "Other events",
+          "count" : 0,
+          "percent" : 0.0
+        } ]
+      }
+    },
+    "1h" : {
+      "metrics" : {
+        "mode" : "live",
+        "range" : "1h",
+        "windowStart" : "2026-03-10T11:01:00Z",
+        "windowEnd" : "2026-03-10T12:01:00Z",
+        "totalEvents" : {
+          "value" : 0,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        },
+        "activeRepositories" : {
+          "value" : 0,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        },
+        "pushEvents" : {
+          "value" : 0,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        },
+        "commits" : {
+          "sparkline" : [ ],
+          "note" : "Not available: GitHub's public events API no longer reports commit counts in push events."
+        },
+        "pullRequests" : {
+          "value" : 0,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        },
+        "forks" : {
+          "value" : 0,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        }
+      },
+      "activity" : {
+        "mode" : "live",
+        "range" : "1h",
+        "bucketMinutes" : 1,
+        "points" : [ {
+          "t" : "2026-03-10T11:00:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:01:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:02:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:03:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:04:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:05:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:06:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:07:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:08:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:09:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:10:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:11:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:12:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:13:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:14:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:15:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:16:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:17:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:18:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:19:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:20:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:21:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:22:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:23:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:24:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:25:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:26:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:27:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:28:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:29:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:30:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:31:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:32:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:33:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:34:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:35:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:36:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:37:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:38:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:39:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:40:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:41:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:42:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:43:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:44:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:45:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:46:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:47:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:48:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:49:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:50:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:51:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:52:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:53:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:54:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:55:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:56:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:57:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:58:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:59:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        } ]
+      },
+      "trending" : {
+        "mode" : "live",
+        "range" : "1h",
+        "scoreFormula" : "Activity Score = Push x 2 + Pull Request x 3 + Fork x 2 + Other x 1",
+        "weights" : {
+          "push" : 2.0,
+          "pullRequest" : 3.0,
+          "fork" : 2.0,
+          "other" : 1.0
+        },
+        "disclaimer" : "Most active repositories in the observed GitHub event sample, ranked by activity score. This is not a ranking of GitHub's most popular repositories.",
+        "repositories" : [ ]
+      },
+      "breakdown" : {
+        "mode" : "live",
+        "range" : "1h",
+        "total" : 0,
+        "items" : [ {
+          "kind" : "PUSH",
+          "label" : "Push events",
+          "count" : 0,
+          "percent" : 0.0
+        }, {
+          "kind" : "PULL_REQUEST",
+          "label" : "Pull requests",
+          "count" : 0,
+          "percent" : 0.0
+        }, {
+          "kind" : "FORK",
+          "label" : "Forks",
+          "count" : 0,
+          "percent" : 0.0
+        }, {
+          "kind" : "WATCH",
+          "label" : "Stars",
+          "count" : 0,
+          "percent" : 0.0
+        }, {
+          "kind" : "ISSUES",
+          "label" : "Issues",
+          "count" : 0,
+          "percent" : 0.0
+        }, {
+          "kind" : "ISSUE_COMMENT",
+          "label" : "Issue comments",
+          "count" : 0,
+          "percent" : 0.0
+        }, {
+          "kind" : "OTHER",
+          "label" : "Other events",
+          "count" : 0,
+          "percent" : 0.0
+        } ]
+      }
+    },
+    "6h" : {
+      "metrics" : {
+        "mode" : "live",
+        "range" : "6h",
+        "windowStart" : "2026-03-10T06:01:00Z",
+        "windowEnd" : "2026-03-10T12:01:00Z",
+        "totalEvents" : {
+          "value" : 120,
+          "changePct" : -100.0,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 11, 13, 12, 12, 11, 12, 12, 12, 13, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+          "changeBasis" : "Only 240 minutes of data observed so far: last 120 min compared with the 120 min before"
+        },
+        "activeRepositories" : {
+          "value" : 11,
+          "changePct" : -100.0,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 8, 7, 5, 4, 6, 6, 6, 6, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+          "changeBasis" : "Only 240 minutes of data observed so far: last 120 min compared with the 120 min before"
+        },
+        "pushEvents" : {
+          "value" : 60,
+          "changePct" : -100.0,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 6, 4, 7, 6, 6, 6, 6, 8, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+          "changeBasis" : "Only 240 minutes of data observed so far: last 120 min compared with the 120 min before"
+        },
+        "commits" : {
+          "value" : 181,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 20, 17, 23, 12, 20, 23, 15, 27, 17, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+          "note" : "Based on 50 of 60 push events that reported a commit count."
+        },
+        "pullRequests" : {
+          "value" : 12,
+          "changePct" : -100.0,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 3, 1, 1, 1, 0, 2, 2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+          "changeBasis" : "Only 240 minutes of data observed so far: last 120 min compared with the 120 min before"
+        },
+        "forks" : {
+          "value" : 7,
+          "changePct" : -100.0,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 1, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+          "changeBasis" : "Only 240 minutes of data observed so far: last 120 min compared with the 120 min before"
+        }
+      },
+      "activity" : {
+        "mode" : "live",
+        "range" : "6h",
+        "bucketMinutes" : 5,
+        "points" : [ {
+          "t" : "2026-03-10T08:00:00Z",
+          "total" : 0.8,
+          "push" : 0.4,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T08:05:00Z",
+          "total" : 1.2,
+          "push" : 0.4,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T08:10:00Z",
+          "total" : 0.8,
+          "push" : 0.6,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T08:15:00Z",
+          "total" : 1.2,
+          "push" : 0.6,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T08:20:00Z",
+          "total" : 0.8,
+          "push" : 0.2,
+          "pullRequest" : 0.2
+        }, {
+          "t" : "2026-03-10T08:25:00Z",
+          "total" : 1.2,
+          "push" : 0.4,
+          "pullRequest" : 0.2
+        }, {
+          "t" : "2026-03-10T08:30:00Z",
+          "total" : 0.8,
+          "push" : 0.4,
+          "pullRequest" : 0.2
+        }, {
+          "t" : "2026-03-10T08:35:00Z",
+          "total" : 1.0,
+          "push" : 0.6,
+          "pullRequest" : 0.2
+        }, {
+          "t" : "2026-03-10T08:40:00Z",
+          "total" : 1.2,
+          "push" : 0.6,
+          "pullRequest" : 0.2
+        }, {
+          "t" : "2026-03-10T08:45:00Z",
+          "total" : 0.8,
+          "push" : 0.4,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T08:50:00Z",
+          "total" : 1.0,
+          "push" : 0.2,
+          "pullRequest" : 0.2
+        }, {
+          "t" : "2026-03-10T08:55:00Z",
+          "total" : 1.0,
+          "push" : 0.8,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T09:00:00Z",
+          "total" : 1.2,
+          "push" : 0.6,
+          "pullRequest" : 0.2
+        }, {
+          "t" : "2026-03-10T09:05:00Z",
+          "total" : 0.8,
+          "push" : 0.2,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T09:10:00Z",
+          "total" : 1.0,
+          "push" : 0.6,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T09:15:00Z",
+          "total" : 1.0,
+          "push" : 0.4,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T09:20:00Z",
+          "total" : 1.2,
+          "push" : 0.8,
+          "pullRequest" : 0.2
+        }, {
+          "t" : "2026-03-10T09:25:00Z",
+          "total" : 0.8,
+          "push" : 0.4,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T09:30:00Z",
+          "total" : 1.0,
+          "push" : 0.4,
+          "pullRequest" : 0.2
+        }, {
+          "t" : "2026-03-10T09:35:00Z",
+          "total" : 1.2,
+          "push" : 0.8,
+          "pullRequest" : 0.2
+        }, {
+          "t" : "2026-03-10T09:40:00Z",
+          "total" : 1.0,
+          "push" : 0.8,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T09:45:00Z",
+          "total" : 0.8,
+          "push" : 0.4,
+          "pullRequest" : 0.2
+        }, {
+          "t" : "2026-03-10T09:50:00Z",
+          "total" : 1.0,
+          "push" : 0.8,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T09:55:00Z",
+          "total" : 1.2,
+          "push" : 0.2,
+          "pullRequest" : 0.2
+        }, {
+          "t" : "2026-03-10T10:00:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T10:05:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T10:10:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T10:15:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T10:20:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T10:25:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T10:30:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T10:35:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T10:40:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T10:45:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T10:50:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T10:55:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:00:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:05:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:10:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:15:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:20:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:25:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:30:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:35:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:40:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:45:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:50:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:55:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        } ]
+      },
+      "trending" : {
+        "mode" : "live",
+        "range" : "6h",
+        "scoreFormula" : "Activity Score = Push x 2 + Pull Request x 3 + Fork x 2 + Other x 1",
+        "weights" : {
+          "push" : 2.0,
+          "pullRequest" : 3.0,
+          "fork" : 2.0,
+          "other" : 1.0
+        },
+        "disclaimer" : "Most active repositories in the observed GitHub event sample, ranked by activity score. This is not a ranking of GitHub's most popular repositories.",
+        "repositories" : [ {
+          "rank" : 1,
+          "name" : "facebook/react",
+          "owner" : "facebook",
+          "url" : "https://github.com/facebook/react",
+          "score" : 56.0,
+          "share" : 1.0,
+          "totalEvents" : 33,
+          "pushEvents" : 15,
+          "pullRequestEvents" : 2,
+          "forkEvents" : 4,
+          "otherEvents" : 12,
+          "sparkline" : [ 0, 0, 0, 0, 7, 9, 10, 7, 0, 0, 0, 0, 0 ]
+        }, {
+          "rank" : 2,
+          "name" : "torvalds/linux",
+          "owner" : "torvalds",
+          "url" : "https://github.com/torvalds/linux",
+          "score" : 33.0,
+          "share" : 0.6,
+          "totalEvents" : 19,
+          "pushEvents" : 8,
+          "pullRequestEvents" : 2,
+          "forkEvents" : 2,
+          "otherEvents" : 7,
+          "sparkline" : [ 0, 0, 0, 0, 3, 8, 4, 4, 0, 0, 0, 0, 0 ]
+        }, {
+          "rank" : 3,
+          "name" : "rust-lang/rust",
+          "owner" : "rust-lang",
+          "url" : "https://github.com/rust-lang/rust",
+          "score" : 32.0,
+          "share" : 0.6,
+          "totalEvents" : 18,
+          "pushEvents" : 10,
+          "pullRequestEvents" : 2,
+          "forkEvents" : 0,
+          "otherEvents" : 6,
+          "sparkline" : [ 0, 0, 0, 0, 3, 2, 4, 9, 0, 0, 0, 0, 0 ]
+        }, {
+          "rank" : 4,
+          "name" : "vercel/next.js",
+          "owner" : "vercel",
+          "url" : "https://github.com/vercel/next.js",
+          "score" : 29.0,
+          "share" : 0.5,
+          "totalEvents" : 16,
+          "pushEvents" : 7,
+          "pullRequestEvents" : 3,
+          "forkEvents" : 0,
+          "otherEvents" : 6,
+          "sparkline" : [ 0, 0, 0, 0, 7, 4, 2, 3, 0, 0, 0, 0, 0 ]
+        }, {
+          "rank" : 5,
+          "name" : "apache/kafka",
+          "owner" : "apache",
+          "url" : "https://github.com/apache/kafka",
+          "score" : 17.0,
+          "share" : 0.3,
+          "totalEvents" : 11,
+          "pushEvents" : 6,
+          "pullRequestEvents" : 0,
+          "forkEvents" : 0,
+          "otherEvents" : 5,
+          "sparkline" : [ 0, 0, 0, 0, 3, 0, 5, 3, 0, 0, 0, 0, 0 ]
+        } ]
+      },
+      "breakdown" : {
+        "mode" : "live",
+        "range" : "6h",
+        "total" : 120,
+        "items" : [ {
+          "kind" : "PUSH",
+          "label" : "Push events",
+          "count" : 60,
+          "percent" : 50.0
+        }, {
+          "kind" : "PULL_REQUEST",
+          "label" : "Pull requests",
+          "count" : 12,
+          "percent" : 10.0
+        }, {
+          "kind" : "FORK",
+          "label" : "Forks",
+          "count" : 7,
+          "percent" : 5.8
+        }, {
+          "kind" : "WATCH",
+          "label" : "Stars",
+          "count" : 27,
+          "percent" : 22.5
+        }, {
+          "kind" : "ISSUES",
+          "label" : "Issues",
+          "count" : 9,
+          "percent" : 7.5
+        }, {
+          "kind" : "ISSUE_COMMENT",
+          "label" : "Issue comments",
+          "count" : 1,
+          "percent" : 0.8
+        }, {
+          "kind" : "OTHER",
+          "label" : "Other events",
+          "count" : 4,
+          "percent" : 3.3
+        } ]
+      }
+    },
+    "24h" : {
+      "metrics" : {
+        "mode" : "live",
+        "range" : "24h",
+        "windowStart" : "2026-03-09T12:01:00Z",
+        "windowEnd" : "2026-03-10T12:01:00Z",
+        "totalEvents" : {
+          "value" : 120,
+          "changePct" : -100.0,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 48, 47, 25, 0, 0 ],
+          "changeBasis" : "Only 240 minutes of data observed so far: last 120 min compared with the 120 min before"
+        },
+        "activeRepositories" : {
+          "value" : 11,
+          "changePct" : -100.0,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 11, 10, 8, 0, 0 ],
+          "changeBasis" : "Only 240 minutes of data observed so far: last 120 min compared with the 120 min before"
+        },
+        "pushEvents" : {
+          "value" : 60,
+          "changePct" : -100.0,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 22, 24, 14, 0, 0 ],
+          "changeBasis" : "Only 240 minutes of data observed so far: last 120 min compared with the 120 min before"
+        },
+        "commits" : {
+          "value" : 181,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 67, 70, 44, 0, 0 ],
+          "note" : "Based on 50 of 60 push events that reported a commit count."
+        },
+        "pullRequests" : {
+          "value" : 12,
+          "changePct" : -100.0,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 4, 3, 0, 0 ],
+          "changeBasis" : "Only 240 minutes of data observed so far: last 120 min compared with the 120 min before"
+        },
+        "forks" : {
+          "value" : 7,
+          "changePct" : -100.0,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 2, 0, 0, 0 ],
+          "changeBasis" : "Only 240 minutes of data observed so far: last 120 min compared with the 120 min before"
+        }
+      },
+      "activity" : {
+        "mode" : "live",
+        "range" : "24h",
+        "bucketMinutes" : 15,
+        "points" : [ {
+          "t" : "2026-03-10T08:00:00Z",
+          "total" : 0.9,
+          "push" : 0.5,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T08:15:00Z",
+          "total" : 1.1,
+          "push" : 0.4,
+          "pullRequest" : 0.1
+        }, {
+          "t" : "2026-03-10T08:30:00Z",
+          "total" : 1.0,
+          "push" : 0.5,
+          "pullRequest" : 0.2
+        }, {
+          "t" : "2026-03-10T08:45:00Z",
+          "total" : 0.9,
+          "push" : 0.5,
+          "pullRequest" : 0.1
+        }, {
+          "t" : "2026-03-10T09:00:00Z",
+          "total" : 1.0,
+          "push" : 0.5,
+          "pullRequest" : 0.1
+        }, {
+          "t" : "2026-03-10T09:15:00Z",
+          "total" : 1.0,
+          "push" : 0.5,
+          "pullRequest" : 0.1
+        }, {
+          "t" : "2026-03-10T09:30:00Z",
+          "total" : 1.1,
+          "push" : 0.7,
+          "pullRequest" : 0.1
+        }, {
+          "t" : "2026-03-10T09:45:00Z",
+          "total" : 1.0,
+          "push" : 0.5,
+          "pullRequest" : 0.1
+        }, {
+          "t" : "2026-03-10T10:00:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T10:15:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T10:30:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T10:45:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:00:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:15:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:30:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        }, {
+          "t" : "2026-03-10T11:45:00Z",
+          "total" : 0.0,
+          "push" : 0.0,
+          "pullRequest" : 0.0
+        } ]
+      },
+      "trending" : {
+        "mode" : "live",
+        "range" : "24h",
+        "scoreFormula" : "Activity Score = Push x 2 + Pull Request x 3 + Fork x 2 + Other x 1",
+        "weights" : {
+          "push" : 2.0,
+          "pullRequest" : 3.0,
+          "fork" : 2.0,
+          "other" : 1.0
+        },
+        "disclaimer" : "Most active repositories in the observed GitHub event sample, ranked by activity score. This is not a ranking of GitHub's most popular repositories.",
+        "repositories" : [ {
+          "rank" : 1,
+          "name" : "facebook/react",
+          "owner" : "facebook",
+          "url" : "https://github.com/facebook/react",
+          "score" : 56.0,
+          "share" : 1.0,
+          "totalEvents" : 33,
+          "pushEvents" : 15,
+          "pullRequestEvents" : 2,
+          "forkEvents" : 4,
+          "otherEvents" : 12,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 33, 0, 0 ]
+        }, {
+          "rank" : 2,
+          "name" : "torvalds/linux",
+          "owner" : "torvalds",
+          "url" : "https://github.com/torvalds/linux",
+          "score" : 33.0,
+          "share" : 0.6,
+          "totalEvents" : 19,
+          "pushEvents" : 8,
+          "pullRequestEvents" : 2,
+          "forkEvents" : 2,
+          "otherEvents" : 7,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 19, 0, 0 ]
+        }, {
+          "rank" : 3,
+          "name" : "rust-lang/rust",
+          "owner" : "rust-lang",
+          "url" : "https://github.com/rust-lang/rust",
+          "score" : 32.0,
+          "share" : 0.6,
+          "totalEvents" : 18,
+          "pushEvents" : 10,
+          "pullRequestEvents" : 2,
+          "forkEvents" : 0,
+          "otherEvents" : 6,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 18, 0, 0 ]
+        }, {
+          "rank" : 4,
+          "name" : "vercel/next.js",
+          "owner" : "vercel",
+          "url" : "https://github.com/vercel/next.js",
+          "score" : 29.0,
+          "share" : 0.5,
+          "totalEvents" : 16,
+          "pushEvents" : 7,
+          "pullRequestEvents" : 3,
+          "forkEvents" : 0,
+          "otherEvents" : 6,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 16, 0, 0 ]
+        }, {
+          "rank" : 5,
+          "name" : "apache/kafka",
+          "owner" : "apache",
+          "url" : "https://github.com/apache/kafka",
+          "score" : 17.0,
+          "share" : 0.3,
+          "totalEvents" : 11,
+          "pushEvents" : 6,
+          "pullRequestEvents" : 0,
+          "forkEvents" : 0,
+          "otherEvents" : 5,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 11, 0, 0 ]
+        } ]
+      },
+      "breakdown" : {
+        "mode" : "live",
+        "range" : "24h",
+        "total" : 120,
+        "items" : [ {
+          "kind" : "PUSH",
+          "label" : "Push events",
+          "count" : 60,
+          "percent" : 50.0
+        }, {
+          "kind" : "PULL_REQUEST",
+          "label" : "Pull requests",
+          "count" : 12,
+          "percent" : 10.0
+        }, {
+          "kind" : "FORK",
+          "label" : "Forks",
+          "count" : 7,
+          "percent" : 5.8
+        }, {
+          "kind" : "WATCH",
+          "label" : "Stars",
+          "count" : 27,
+          "percent" : 22.5
+        }, {
+          "kind" : "ISSUES",
+          "label" : "Issues",
+          "count" : 9,
+          "percent" : 7.5
+        }, {
+          "kind" : "ISSUE_COMMENT",
+          "label" : "Issue comments",
+          "count" : 1,
+          "percent" : 0.8
+        }, {
+          "kind" : "OTHER",
+          "label" : "Other events",
+          "count" : 4,
+          "percent" : 3.3
+        } ]
+      }
+    }
+  },
+  "empty" : {
+    "15m" : {
+      "metrics" : {
+        "mode" : "live",
+        "range" : "15m",
+        "windowStart" : "2026-03-10T11:46:00Z",
+        "windowEnd" : "2026-03-10T12:01:00Z",
+        "totalEvents" : {
+          "value" : 0,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        },
+        "activeRepositories" : {
+          "value" : 0,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        },
+        "pushEvents" : {
+          "value" : 0,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        },
+        "commits" : {
+          "sparkline" : [ ],
+          "note" : "Not available: GitHub's public events API no longer reports commit counts in push events."
+        },
+        "pullRequests" : {
+          "value" : 0,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        },
+        "forks" : {
+          "value" : 0,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        }
+      },
+      "activity" : {
+        "mode" : "live",
+        "range" : "15m",
+        "bucketMinutes" : 1,
+        "points" : [ ]
+      },
+      "trending" : {
+        "mode" : "live",
+        "range" : "15m",
+        "scoreFormula" : "Activity Score = Push x 2 + Pull Request x 3 + Fork x 2 + Other x 1",
+        "weights" : {
+          "push" : 2.0,
+          "pullRequest" : 3.0,
+          "fork" : 2.0,
+          "other" : 1.0
+        },
+        "disclaimer" : "Most active repositories in the observed GitHub event sample, ranked by activity score. This is not a ranking of GitHub's most popular repositories.",
+        "repositories" : [ ]
+      },
+      "breakdown" : {
+        "mode" : "live",
+        "range" : "15m",
+        "total" : 0,
+        "items" : [ {
+          "kind" : "PUSH",
+          "label" : "Push events",
+          "count" : 0,
+          "percent" : 0.0
+        }, {
+          "kind" : "PULL_REQUEST",
+          "label" : "Pull requests",
+          "count" : 0,
+          "percent" : 0.0
+        }, {
+          "kind" : "FORK",
+          "label" : "Forks",
+          "count" : 0,
+          "percent" : 0.0
+        }, {
+          "kind" : "WATCH",
+          "label" : "Stars",
+          "count" : 0,
+          "percent" : 0.0
+        }, {
+          "kind" : "ISSUES",
+          "label" : "Issues",
+          "count" : 0,
+          "percent" : 0.0
+        }, {
+          "kind" : "ISSUE_COMMENT",
+          "label" : "Issue comments",
+          "count" : 0,
+          "percent" : 0.0
+        }, {
+          "kind" : "OTHER",
+          "label" : "Other events",
+          "count" : 0,
+          "percent" : 0.0
+        } ]
+      }
+    },
+    "1h" : {
+      "metrics" : {
+        "mode" : "live",
+        "range" : "1h",
+        "windowStart" : "2026-03-10T11:01:00Z",
+        "windowEnd" : "2026-03-10T12:01:00Z",
+        "totalEvents" : {
+          "value" : 0,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        },
+        "activeRepositories" : {
+          "value" : 0,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        },
+        "pushEvents" : {
+          "value" : 0,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        },
+        "commits" : {
+          "sparkline" : [ ],
+          "note" : "Not available: GitHub's public events API no longer reports commit counts in push events."
+        },
+        "pullRequests" : {
+          "value" : 0,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        },
+        "forks" : {
+          "value" : 0,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        }
+      },
+      "activity" : {
+        "mode" : "live",
+        "range" : "1h",
+        "bucketMinutes" : 1,
+        "points" : [ ]
+      },
+      "trending" : {
+        "mode" : "live",
+        "range" : "1h",
+        "scoreFormula" : "Activity Score = Push x 2 + Pull Request x 3 + Fork x 2 + Other x 1",
+        "weights" : {
+          "push" : 2.0,
+          "pullRequest" : 3.0,
+          "fork" : 2.0,
+          "other" : 1.0
+        },
+        "disclaimer" : "Most active repositories in the observed GitHub event sample, ranked by activity score. This is not a ranking of GitHub's most popular repositories.",
+        "repositories" : [ ]
+      },
+      "breakdown" : {
+        "mode" : "live",
+        "range" : "1h",
+        "total" : 0,
+        "items" : [ {
+          "kind" : "PUSH",
+          "label" : "Push events",
+          "count" : 0,
+          "percent" : 0.0
+        }, {
+          "kind" : "PULL_REQUEST",
+          "label" : "Pull requests",
+          "count" : 0,
+          "percent" : 0.0
+        }, {
+          "kind" : "FORK",
+          "label" : "Forks",
+          "count" : 0,
+          "percent" : 0.0
+        }, {
+          "kind" : "WATCH",
+          "label" : "Stars",
+          "count" : 0,
+          "percent" : 0.0
+        }, {
+          "kind" : "ISSUES",
+          "label" : "Issues",
+          "count" : 0,
+          "percent" : 0.0
+        }, {
+          "kind" : "ISSUE_COMMENT",
+          "label" : "Issue comments",
+          "count" : 0,
+          "percent" : 0.0
+        }, {
+          "kind" : "OTHER",
+          "label" : "Other events",
+          "count" : 0,
+          "percent" : 0.0
+        } ]
+      }
+    },
+    "6h" : {
+      "metrics" : {
+        "mode" : "live",
+        "range" : "6h",
+        "windowStart" : "2026-03-10T06:01:00Z",
+        "windowEnd" : "2026-03-10T12:01:00Z",
+        "totalEvents" : {
+          "value" : 0,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        },
+        "activeRepositories" : {
+          "value" : 0,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        },
+        "pushEvents" : {
+          "value" : 0,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        },
+        "commits" : {
+          "sparkline" : [ ],
+          "note" : "Not available: GitHub's public events API no longer reports commit counts in push events."
+        },
+        "pullRequests" : {
+          "value" : 0,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        },
+        "forks" : {
+          "value" : 0,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        }
+      },
+      "activity" : {
+        "mode" : "live",
+        "range" : "6h",
+        "bucketMinutes" : 5,
+        "points" : [ ]
+      },
+      "trending" : {
+        "mode" : "live",
+        "range" : "6h",
+        "scoreFormula" : "Activity Score = Push x 2 + Pull Request x 3 + Fork x 2 + Other x 1",
+        "weights" : {
+          "push" : 2.0,
+          "pullRequest" : 3.0,
+          "fork" : 2.0,
+          "other" : 1.0
+        },
+        "disclaimer" : "Most active repositories in the observed GitHub event sample, ranked by activity score. This is not a ranking of GitHub's most popular repositories.",
+        "repositories" : [ ]
+      },
+      "breakdown" : {
+        "mode" : "live",
+        "range" : "6h",
+        "total" : 0,
+        "items" : [ {
+          "kind" : "PUSH",
+          "label" : "Push events",
+          "count" : 0,
+          "percent" : 0.0
+        }, {
+          "kind" : "PULL_REQUEST",
+          "label" : "Pull requests",
+          "count" : 0,
+          "percent" : 0.0
+        }, {
+          "kind" : "FORK",
+          "label" : "Forks",
+          "count" : 0,
+          "percent" : 0.0
+        }, {
+          "kind" : "WATCH",
+          "label" : "Stars",
+          "count" : 0,
+          "percent" : 0.0
+        }, {
+          "kind" : "ISSUES",
+          "label" : "Issues",
+          "count" : 0,
+          "percent" : 0.0
+        }, {
+          "kind" : "ISSUE_COMMENT",
+          "label" : "Issue comments",
+          "count" : 0,
+          "percent" : 0.0
+        }, {
+          "kind" : "OTHER",
+          "label" : "Other events",
+          "count" : 0,
+          "percent" : 0.0
+        } ]
+      }
+    },
+    "24h" : {
+      "metrics" : {
+        "mode" : "live",
+        "range" : "24h",
+        "windowStart" : "2026-03-09T12:01:00Z",
+        "windowEnd" : "2026-03-10T12:01:00Z",
+        "totalEvents" : {
+          "value" : 0,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        },
+        "activeRepositories" : {
+          "value" : 0,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        },
+        "pushEvents" : {
+          "value" : 0,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        },
+        "commits" : {
+          "sparkline" : [ ],
+          "note" : "Not available: GitHub's public events API no longer reports commit counts in push events."
+        },
+        "pullRequests" : {
+          "value" : 0,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        },
+        "forks" : {
+          "value" : 0,
+          "sparkline" : [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+        }
+      },
+      "activity" : {
+        "mode" : "live",
+        "range" : "24h",
+        "bucketMinutes" : 15,
+        "points" : [ ]
+      },
+      "trending" : {
+        "mode" : "live",
+        "range" : "24h",
+        "scoreFormula" : "Activity Score = Push x 2 + Pull Request x 3 + Fork x 2 + Other x 1",
+        "weights" : {
+          "push" : 2.0,
+          "pullRequest" : 3.0,
+          "fork" : 2.0,
+          "other" : 1.0
+        },
+        "disclaimer" : "Most active repositories in the observed GitHub event sample, ranked by activity score. This is not a ranking of GitHub's most popular repositories.",
+        "repositories" : [ ]
+      },
+      "breakdown" : {
+        "mode" : "live",
+        "range" : "24h",
+        "total" : 0,
+        "items" : [ {
+          "kind" : "PUSH",
+          "label" : "Push events",
+          "count" : 0,
+          "percent" : 0.0
+        }, {
+          "kind" : "PULL_REQUEST",
+          "label" : "Pull requests",
+          "count" : 0,
+          "percent" : 0.0
+        }, {
+          "kind" : "FORK",
+          "label" : "Forks",
+          "count" : 0,
+          "percent" : 0.0
+        }, {
+          "kind" : "WATCH",
+          "label" : "Stars",
+          "count" : 0,
+          "percent" : 0.0
+        }, {
+          "kind" : "ISSUES",
+          "label" : "Issues",
+          "count" : 0,
+          "percent" : 0.0
+        }, {
+          "kind" : "ISSUE_COMMENT",
+          "label" : "Issue comments",
+          "count" : 0,
+          "percent" : 0.0
+        }, {
+          "kind" : "OTHER",
+          "label" : "Other events",
+          "count" : 0,
+          "percent" : 0.0
+        } ]
+      }
+    }
+  }
+}

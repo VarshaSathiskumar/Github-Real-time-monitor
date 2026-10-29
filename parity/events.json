@@ -1,0 +1,877 @@
+[
+ {
+  "name": "push-size",
+  "raw": {
+   "id": "1",
+   "type": "PushEvent",
+   "actor": {
+    "login": "alice"
+   },
+   "repo": {
+    "id": 4242,
+    "name": "octo/hello"
+   },
+   "payload": {
+    "ref": "refs/heads/main",
+    "size": 3
+   },
+   "created_at": "2026-03-10T11:59:00Z"
+  }
+ },
+ {
+  "name": "push-single-commit",
+  "raw": {
+   "id": "2",
+   "type": "PushEvent",
+   "actor": {
+    "login": "alice"
+   },
+   "repo": {
+    "id": 4242,
+    "name": "octo/hello"
+   },
+   "payload": {
+    "ref": "refs/heads/feature/x",
+    "size": 1
+   },
+   "created_at": "2026-03-10T11:59:00Z"
+  }
+ },
+ {
+  "name": "push-distinct-size",
+  "raw": {
+   "id": "3",
+   "type": "PushEvent",
+   "actor": {
+    "login": "alice"
+   },
+   "repo": {
+    "id": 4242,
+    "name": "octo/hello"
+   },
+   "payload": {
+    "ref": "refs/heads/dev",
+    "distinct_size": 2
+   },
+   "created_at": "2026-03-10T11:59:00Z"
+  }
+ },
+ {
+  "name": "push-commits-array",
+  "raw": {
+   "id": "4",
+   "type": "PushEvent",
+   "actor": {
+    "login": "alice"
+   },
+   "repo": {
+    "id": 4242,
+    "name": "octo/hello"
+   },
+   "payload": {
+    "ref": "refs/heads/dev",
+    "commits": [
+     {},
+     {},
+     {},
+     {}
+    ]
+   },
+   "created_at": "2026-03-10T11:59:00Z"
+  }
+ },
+ {
+  "name": "push-no-count",
+  "raw": {
+   "id": "5",
+   "type": "PushEvent",
+   "actor": {
+    "login": "alice"
+   },
+   "repo": {
+    "id": 4242,
+    "name": "octo/hello"
+   },
+   "payload": {
+    "ref": "refs/heads/main"
+   },
+   "created_at": "2026-03-10T11:59:00Z"
+  }
+ },
+ {
+  "name": "push-zero-size",
+  "raw": {
+   "id": "6",
+   "type": "PushEvent",
+   "actor": {
+    "login": "alice"
+   },
+   "repo": {
+    "id": 4242,
+    "name": "octo/hello"
+   },
+   "payload": {
+    "ref": "refs/heads/main",
+    "size": 0
+   },
+   "created_at": "2026-03-10T11:59:00Z"
+  }
+ },
+ {
+  "name": "push-negative-size",
+  "raw": {
+   "id": "7",
+   "type": "PushEvent",
+   "actor": {
+    "login": "alice"
+   },
+   "repo": {
+    "id": 4242,
+    "name": "octo/hello"
+   },
+   "payload": {
+    "ref": "refs/heads/main",
+    "size": -4
+   },
+   "created_at": "2026-03-10T11:59:00Z"
+  }
+ },
+ {
+  "name": "push-tag-ref",
+  "raw": {
+   "id": "8",
+   "type": "PushEvent",
+   "actor": {
+    "login": "alice"
+   },
+   "repo": {
+    "id": 4242,
+    "name": "octo/hello"
+   },
+   "payload": {
+    "ref": "refs/tags/v1",
+    "size": 2
+   },
+   "created_at": "2026-03-10T11:59:00Z"
+  }
+ },
+ {
+  "name": "push-no-ref",
+  "raw": {
+   "id": "9",
+   "type": "PushEvent",
+   "actor": {
+    "login": "alice"
+   },
+   "repo": {
+    "id": 4242,
+    "name": "octo/hello"
+   },
+   "payload": {
+    "size": 2
+   },
+   "created_at": "2026-03-10T11:59:00Z"
+  }
+ },
+ {
+  "name": "push-text-size",
+  "raw": {
+   "id": "10",
+   "type": "PushEvent",
+   "actor": {
+    "login": "alice"
+   },
+   "repo": {
+    "id": 4242,
+    "name": "octo/hello"
+   },
+   "payload": {
+    "ref": "refs/heads/main",
+    "size": "5"
+   },
+   "created_at": "2026-03-10T11:59:00Z"
+  }
+ },
+ {
+  "name": "pr-opened",
+  "raw": {
+   "id": "11",
+   "type": "PullRequestEvent",
+   "actor": {
+    "login": "alice"
+   },
+   "repo": {
+    "id": 4242,
+    "name": "octo/hello"
+   },
+   "payload": {
+    "action": "opened",
+    "pull_request": {
+     "html_url": "https://github.com/octo/hello/pull/7"
+    }
+   },
+   "created_at": "2026-03-10T11:59:00Z"
+  }
+ },
+ {
+  "name": "pr-synchronize",
+  "raw": {
+   "id": "12",
+   "type": "PullRequestEvent",
+   "actor": {
+    "login": "alice"
+   },
+   "repo": {
+    "id": 4242,
+    "name": "octo/hello"
+   },
+   "payload": {
+    "action": "synchronize"
+   },
+   "created_at": "2026-03-10T11:59:00Z"
+  }
+ },
+ {
+  "name": "pr-review-requested",
+  "raw": {
+   "id": "13",
+   "type": "PullRequestEvent",
+   "actor": {
+    "login": "alice"
+   },
+   "repo": {
+    "id": 4242,
+    "name": "octo/hello"
+   },
+   "payload": {
+    "action": "review_requested"
+   },
+   "created_at": "2026-03-10T11:59:00Z"
+  }
+ },
+ {
+  "name": "pr-closed",
+  "raw": {
+   "id": "14",
+   "type": "PullRequestEvent",
+   "actor": {
+    "login": "alice"
+   },
+   "repo": {
+    "id": 4242,
+    "name": "octo/hello"
+   },
+   "payload": {
+    "action": "closed"
+   },
+   "created_at": "2026-03-10T11:59:00Z"
+  }
+ },
+ {
+  "name": "pr-no-action",
+  "raw": {
+   "id": "15",
+   "type": "PullRequestEvent",
+   "actor": {
+    "login": "alice"
+   },
+   "repo": {
+    "id": 4242,
+    "name": "octo/hello"
+   },
+   "payload": {},
+   "created_at": "2026-03-10T11:59:00Z"
+  }
+ },
+ {
+  "name": "fork",
+  "raw": {
+   "id": "16",
+   "type": "ForkEvent",
+   "actor": {
+    "login": "alice"
+   },
+   "repo": {
+    "id": 4242,
+    "name": "octo/hello"
+   },
+   "payload": {
+    "forkee": {
+     "html_url": "https://github.com/alice/hello"
+    }
+   },
+   "created_at": "2026-03-10T11:59:00Z"
+  }
+ },
+ {
+  "name": "fork-no-url",
+  "raw": {
+   "id": "17",
+   "type": "ForkEvent",
+   "actor": {
+    "login": "alice"
+   },
+   "repo": {
+    "id": 4242,
+    "name": "octo/hello"
+   },
+   "payload": {},
+   "created_at": "2026-03-10T11:59:00Z"
+  }
+ },
+ {
+  "name": "watch",
+  "raw": {
+   "id": "18",
+   "type": "WatchEvent",
+   "actor": {
+    "login": "alice"
+   },
+   "repo": {
+    "id": 4242,
+    "name": "octo/hello"
+   },
+   "payload": {
+    "action": "started"
+   },
+   "created_at": "2026-03-10T11:59:00Z"
+  }
+ },
+ {
+  "name": "issues-opened",
+  "raw": {
+   "id": "19",
+   "type": "IssuesEvent",
+   "actor": {
+    "login": "alice"
+   },
+   "repo": {
+    "id": 4242,
+    "name": "octo/hello"
+   },
+   "payload": {
+    "action": "opened",
+    "issue": {
+     "html_url": "https://github.com/octo/hello/issues/1"
+    }
+   },
+   "created_at": "2026-03-10T11:59:00Z"
+  }
+ },
+ {
+  "name": "issues-no-action",
+  "raw": {
+   "id": "20",
+   "type": "IssuesEvent",
+   "actor": {
+    "login": "alice"
+   },
+   "repo": {
+    "id": 4242,
+    "name": "octo/hello"
+   },
+   "payload": {},
+   "created_at": "2026-03-10T11:59:00Z"
+  }
+ },
+ {
+  "name": "issue-comment",
+  "raw": {
+   "id": "21",
+   "type": "IssueCommentEvent",
+   "actor": {
+    "login": "alice"
+   },
+   "repo": {
+    "id": 4242,
+    "name": "octo/hello"
+   },
+   "payload": {
+    "comment": {
+     "html_url": "https://github.com/octo/hello/issues/1#c"
+    }
+   },
+   "created_at": "2026-03-10T11:59:00Z"
+  }
+ },
+ {
+  "name": "create",
+  "raw": {
+   "id": "22",
+   "type": "CreateEvent",
+   "actor": {
+    "login": "alice"
+   },
+   "repo": {
+    "id": 4242,
+    "name": "octo/hello"
+   },
+   "payload": {
+    "ref_type": "branch"
+   },
+   "created_at": "2026-03-10T11:59:00Z"
+  }
+ },
+ {
+  "name": "release",
+  "raw": {
+   "id": "23",
+   "type": "ReleaseEvent",
+   "actor": {
+    "login": "alice"
+   },
+   "repo": {
+    "id": 4242,
+    "name": "octo/hello"
+   },
+   "payload": {},
+   "created_at": "2026-03-10T11:59:00Z"
+  }
+ },
+ {
+  "name": "pr-review-comment",
+  "raw": {
+   "id": "24",
+   "type": "PullRequestReviewCommentEvent",
+   "actor": {
+    "login": "alice"
+   },
+   "repo": {
+    "id": 4242,
+    "name": "octo/hello"
+   },
+   "payload": {},
+   "created_at": "2026-03-10T11:59:00Z"
+  }
+ },
+ {
+  "name": "public",
+  "raw": {
+   "id": "25",
+   "type": "PublicEvent",
+   "actor": {
+    "login": "alice"
+   },
+   "repo": {
+    "id": 4242,
+    "name": "octo/hello"
+   },
+   "payload": {},
+   "created_at": "2026-03-10T11:59:00Z"
+  }
+ },
+ {
+  "name": "unknown-type-no-suffix",
+  "raw": {
+   "id": "26",
+   "type": "Something",
+   "actor": {
+    "login": "alice"
+   },
+   "repo": {
+    "id": 4242,
+    "name": "octo/hello"
+   },
+   "payload": {},
+   "created_at": "2026-03-10T11:59:00Z"
+  }
+ },
+ {
+  "name": "repo-id-missing",
+  "raw": {
+   "id": "27",
+   "type": "WatchEvent",
+   "actor": {
+    "login": "bob"
+   },
+   "repo": {
+    "name": "octo/no-id"
+   },
+   "payload": {},
+   "created_at": "2026-03-10T11:59:00Z"
+  }
+ },
+ {
+  "name": "repo-id-text",
+  "raw": {
+   "id": "28",
+   "type": "WatchEvent",
+   "actor": {
+    "login": "alice"
+   },
+   "repo": {
+    "id": "991",
+    "name": "octo/hello"
+   },
+   "payload": {},
+   "created_at": "2026-03-10T11:59:00Z"
+  }
+ },
+ {
+  "name": "repo-id-long-name-hash",
+  "raw": {
+   "id": "29",
+   "type": "WatchEvent",
+   "actor": {
+    "login": "bob"
+   },
+   "repo": {
+    "name": "some-organisation-with-a-long-name/an-equally-long-repository-name"
+   },
+   "payload": {},
+   "created_at": "2026-03-10T11:59:00Z"
+  }
+ },
+ {
+  "name": "ingested-at-present",
+  "raw": {
+   "id": "30",
+   "type": "PushEvent",
+   "actor": {
+    "login": "alice"
+   },
+   "repo": {
+    "id": 4242,
+    "name": "octo/hello"
+   },
+   "payload": {
+    "ref": "refs/heads/main",
+    "size": 1
+   },
+   "created_at": "2026-03-10T11:59:00Z",
+   "ingested_at": "2026-03-10T12:00:05Z"
+  }
+ },
+ {
+  "name": "created-at-fraction",
+  "raw": {
+   "id": "31",
+   "type": "WatchEvent",
+   "actor": {
+    "login": "alice"
+   },
+   "repo": {
+    "id": 4242,
+    "name": "octo/hello"
+   },
+   "payload": {},
+   "created_at": "2026-03-10T11:59:00.250Z"
+  }
+ },
+ {
+  "name": "numeric-id",
+  "raw": {
+   "id": 32,
+   "type": "WatchEvent",
+   "actor": {
+    "login": "alice"
+   },
+   "repo": {
+    "id": 4242,
+    "name": "octo/hello"
+   },
+   "payload": {},
+   "created_at": "2026-03-10T11:59:00Z"
+  }
+ },
+ {
+  "name": "padded-id",
+  "raw": {
+   "id": " 33 ",
+   "type": "WatchEvent",
+   "actor": {
+    "login": "alice"
+   },
+   "repo": {
+    "id": 4242,
+    "name": "octo/hello"
+   },
+   "payload": {},
+   "created_at": "2026-03-10T11:59:00Z"
+  }
+ },
+ {
+  "name": "payload-missing",
+  "raw": {
+   "id": "34",
+   "type": "WatchEvent",
+   "actor": {
+    "login": "bob"
+   },
+   "repo": {
+    "id": 1,
+    "name": "octo/x"
+   },
+   "created_at": "2026-03-10T11:59:00Z"
+  }
+ },
+ {
+  "name": "bad-json",
+  "raw": "{not json"
+ },
+ {
+  "name": "empty-string",
+  "raw": ""
+ },
+ {
+  "name": "blank-string",
+  "raw": "   "
+ },
+ {
+  "name": "json-array",
+  "raw": [
+   1,
+   2,
+   3
+  ]
+ },
+ {
+  "name": "json-string-literal",
+  "raw": "\"text\""
+ },
+ {
+  "name": "missing-id",
+  "raw": {
+   "type": "PushEvent",
+   "actor": {
+    "login": "alice"
+   },
+   "repo": {
+    "id": 4242,
+    "name": "octo/hello"
+   },
+   "payload": {},
+   "created_at": "2026-03-10T11:59:00Z"
+  }
+ },
+ {
+  "name": "null-id",
+  "raw": {
+   "id": null,
+   "type": "PushEvent",
+   "actor": {
+    "login": "alice"
+   },
+   "repo": {
+    "id": 4242,
+    "name": "octo/hello"
+   },
+   "payload": {},
+   "created_at": "2026-03-10T11:59:00Z"
+  }
+ },
+ {
+  "name": "non-numeric-id",
+  "raw": {
+   "id": "abc",
+   "type": "PushEvent",
+   "actor": {
+    "login": "alice"
+   },
+   "repo": {
+    "id": 4242,
+    "name": "octo/hello"
+   },
+   "payload": {},
+   "created_at": "2026-03-10T11:59:00Z"
+  }
+ },
+ {
+  "name": "decimal-id",
+  "raw": {
+   "id": "1.5",
+   "type": "PushEvent",
+   "actor": {
+    "login": "alice"
+   },
+   "repo": {
+    "id": 4242,
+    "name": "octo/hello"
+   },
+   "payload": {},
+   "created_at": "2026-03-10T11:59:00Z"
+  }
+ },
+ {
+  "name": "missing-type",
+  "raw": {
+   "id": "44",
+   "actor": {
+    "login": "alice"
+   },
+   "repo": {
+    "id": 4242,
+    "name": "octo/hello"
+   },
+   "payload": {},
+   "created_at": "2026-03-10T11:59:00Z"
+  }
+ },
+ {
+  "name": "blank-type",
+  "raw": {
+   "id": "45",
+   "type": "  ",
+   "actor": {
+    "login": "alice"
+   },
+   "repo": {
+    "id": 4242,
+    "name": "octo/hello"
+   },
+   "payload": {},
+   "created_at": "2026-03-10T11:59:00Z"
+  }
+ },
+ {
+  "name": "missing-actor",
+  "raw": {
+   "id": "46",
+   "type": "PushEvent",
+   "repo": {
+    "id": 4242,
+    "name": "octo/hello"
+   },
+   "payload": {},
+   "created_at": "2026-03-10T11:59:00Z"
+  }
+ },
+ {
+  "name": "missing-login",
+  "raw": {
+   "id": "47",
+   "type": "PushEvent",
+   "actor": {},
+   "repo": {
+    "id": 4242,
+    "name": "octo/hello"
+   },
+   "payload": {},
+   "created_at": "2026-03-10T11:59:00Z"
+  }
+ },
+ {
+  "name": "missing-repo",
+  "raw": {
+   "id": "48",
+   "type": "PushEvent",
+   "actor": {
+    "login": "alice"
+   },
+   "payload": {},
+   "created_at": "2026-03-10T11:59:00Z"
+  }
+ },
+ {
+  "name": "repo-without-slash",
+  "raw": {
+   "id": "49",
+   "type": "PushEvent",
+   "actor": {
+    "login": "alice"
+   },
+   "repo": {
+    "id": 4242,
+    "name": "justname"
+   },
+   "payload": {},
+   "created_at": "2026-03-10T11:59:00Z"
+  }
+ },
+ {
+  "name": "repo-slash-first",
+  "raw": {
+   "id": "50",
+   "type": "PushEvent",
+   "actor": {
+    "login": "alice"
+   },
+   "repo": {
+    "id": 4242,
+    "name": "/name"
+   },
+   "payload": {},
+   "created_at": "2026-03-10T11:59:00Z"
+  }
+ },
+ {
+  "name": "missing-created-at",
+  "raw": {
+   "id": "51",
+   "type": "PushEvent",
+   "actor": {
+    "login": "alice"
+   },
+   "repo": {
+    "id": 4242,
+    "name": "octo/hello"
+   },
+   "payload": {}
+  }
+ },
+ {
+  "name": "bad-created-at",
+  "raw": {
+   "id": "52",
+   "type": "PushEvent",
+   "actor": {
+    "login": "alice"
+   },
+   "repo": {
+    "id": 4242,
+    "name": "octo/hello"
+   },
+   "payload": {},
+   "created_at": "yesterday"
+  }
+ },
+ {
+  "name": "impossible-date",
+  "raw": {
+   "id": "53",
+   "type": "PushEvent",
+   "actor": {
+    "login": "alice"
+   },
+   "repo": {
+    "id": 4242,
+    "name": "octo/hello"
+   },
+   "payload": {},
+   "created_at": "2026-02-30T10:00:00Z"
+  }
+ },
+ {
+  "name": "created-at-no-zone",
+  "raw": {
+   "id": "54",
+   "type": "PushEvent",
+   "actor": {
+    "login": "alice"
+   },
+   "repo": {
+    "id": 4242,
+    "name": "octo/hello"
+   },
+   "payload": {},
+   "created_at": "2026-03-10T11:59:00"
+  }
+ },
+ {
+  "name": "bad-ingested-at",
+  "raw": {
+   "id": "55",
+   "type": "PushEvent",
+   "actor": {
+    "login": "alice"
+   },
+   "repo": {
+    "id": 4242,
+    "name": "octo/hello"
+   },
+   "payload": {},
+   "created_at": "2026-03-10T11:59:00Z",
+   "ingested_at": "soon"
+  }
+ }
+]

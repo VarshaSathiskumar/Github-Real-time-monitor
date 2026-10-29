@@ -7,6 +7,7 @@ import type {
   Mode,
   RangeCode,
   Rising,
+  Snapshot,
   SystemStatus,
   Trending,
 } from './types'
@@ -27,6 +28,7 @@ export const api = {
   events: async (mode: Mode, limit = 100) =>
     (await get<{ events: FeedEvent[] }>('/api/events/recent', { mode, limit })).events,
   status: (mode: Mode) => get<SystemStatus>('/api/system/status', { mode }),
+  snapshot: (mode: Mode, range: RangeCode) => get<Snapshot>('/api/snapshot', { mode, range }),
   startDemo: async () => {
     const res = await fetch(`${API_BASE}/api/demo/start`, { method: 'POST' })
     if (!res.ok) throw new Error(`demo start responded ${res.status}`)

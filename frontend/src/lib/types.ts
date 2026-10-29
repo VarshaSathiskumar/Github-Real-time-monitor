@@ -68,6 +68,7 @@ export interface Trending {
   mode: Mode
   range: RangeCode
   scoreFormula: string
+  weights?: { push: number; pullRequest: number; fork: number; other: number }
   disclaimer: string
   repositories: TrendingRepo[]
   generatedAt: string
@@ -139,6 +140,8 @@ export interface IngestionInfo {
 
 export interface SystemStatus {
   mode: Mode
+  /** Absent on the full Docker architecture; the serverless-lite functions report 'serverless-lite'. */
+  architecture?: 'serverless-lite'
   ingestion: IngestionInfo
   analytics: {
     streamsState: string
@@ -149,6 +152,20 @@ export interface SystemStatus {
   }
   demo: { running: boolean; startedAt?: string }
   disclaimer: string
+  generatedAt: string
+}
+
+/** Everything the dashboard shows in one response, served by the serverless-lite deployment. */
+export interface Snapshot {
+  mode: Mode
+  range: RangeCode
+  metrics: Metrics
+  activity: Activity
+  trending: Trending
+  breakdown: Breakdown
+  rising: Rising
+  events: FeedEvent[]
+  status: SystemStatus
   generatedAt: string
 }
 

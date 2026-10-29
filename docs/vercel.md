@@ -1,5 +1,7 @@
 # Deploying the frontend on Vercel
 
+> No server to host? [serverless-lite.md](serverless-lite.md) describes a free variant where Vercel Functions and Neon replace the whole backend. It is a smaller architecture and not equivalent to the one below.
+
 Vercel hosts only the React frontend. The backend (Kafka, ingestion, analytics, PostgreSQL, Redis) must run on a Docker host with a public HTTPS URL, see [deployment.md](deployment.md). Vercel cannot proxy WebSockets, so the browser talks to the backend directly.
 
 ## 1. Backend first

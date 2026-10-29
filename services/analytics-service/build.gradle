@@ -31,6 +31,8 @@ dependencies {
 }
 
 tasks.withType(Test).configureEach {
+    // Golden files shared with the TypeScript functions, see ServerlessParityTest
+    inputs.dir(rootProject.file('parity')).withPropertyName('parity')
     // e.g. -Pit.kafka=localhost:9092 runs the Kafka integration test against an existing broker
     if (project.hasProperty('it.kafka')) {
         systemProperty 'it.kafka', project.property('it.kafka')

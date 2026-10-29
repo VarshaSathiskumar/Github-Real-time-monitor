@@ -1,5 +1,5 @@
 import { AnimatePresence } from 'framer-motion'
-import { CloudOff } from 'lucide-react'
+import { CloudOff, Info, PauseCircle } from 'lucide-react'
 import { ActivityBreakdown } from '@/components/ActivityBreakdown'
 import { ActivityChart } from '@/components/ActivityChart'
 import { AlertToast } from '@/components/AlertToast'
@@ -13,13 +13,13 @@ import { Toolbar } from '@/components/Toolbar'
 import { TrendingRepos } from '@/components/TrendingRepos'
 import { TooltipProvider } from '@/components/ui/tooltip'
 import { GraphView } from '@/components/graph/GraphView'
-import { POLLING_MODE } from '@/lib/config'
+import { LITE_MODE, POLLING_MODE } from '@/lib/config'
 import { useDashboard } from '@/hooks/useDashboard'
 import { useGraph } from '@/hooks/useGraph'
 import { useView } from '@/hooks/useView'
 
 export default function App() {
-  const { state, paused, pendingCount, setPaused, setRange, returnToLive, dismissAlert, subscribeEvents } =
+  const { state, paused, idle, pendingCount, setPaused, setRange, launchDemo, returnToLive, dismissAlert, subscribeEvents } =
     useDashboard()
   const { mode, range } = state
   const [view, setView] = useView()
@@ -39,10 +39,35 @@ export default function App() {
 
       <main className="mx-auto flex max-w-[1320px] flex-col gap-4 px-4 pb-16 pt-5 sm:gap-5 sm:px-6 sm:pt-6">
         {view === 'analytics' && (
-          <Toolbar mode={mode} range={range} onRange={setRange} onReturnToLive={returnToLive} />
+          <Toolbar mode={mode} range={range} onRange={setRange} onLaunchDemo={launchDemo} onReturnToLive={returnToLive} />
         )}
 
         <AnimatePresence initial={false}>{mode === 'demo' && <DemoBanner onReturn={returnToLive} />}</AnimatePresence>
+
+        {LITE_MODE && mode === 'live' && (
+          <div
+            role="note"
+            className="flex items-start gap-3 rounded-2xl border border-sky-300 bg-sky-50 px-4 py-3 text-xs text-sky-950"
+          >
+            <Info className="mt-0.5 h-4 w-4 shrink-0" aria-hidden />
+            <p>
+              <strong className="font-semibold">Serverless lite deployment.</strong> GitHub is polled by a Vercel
+              function only while someone has the dashboard open, so history builds up while people watch. There is
+              no Kafka, Kafka Streams or Redis here, and refreshes are REST polling every few seconds. Latency and
+              throughput figures of the full Docker Compose architecture do not apply to this deployment.
+            </p>
+          </div>
+        )}
+
+        {LITE_MODE && idle && (
+          <div
+            role="status"
+            className="flex items-start gap-3 rounded-2xl border border-amber-400/25 bg-amber-400/10 px-4 py-3 text-sm text-amber-900"
+          >
+            <PauseCircle className="mt-0.5 h-4 w-4 shrink-0" aria-hidden />
+            <p>Live refresh is paused after a period without activity. Move the mouse or press a key to resume.</p>
+          </div>
+        )}
 
         {state.loadFailed && !state.metrics && (
           <div
@@ -96,7 +121,9 @@ export default function App() {
 
         <footer className="pt-2 text-center text-xs text-slate-500">
           GitHubPulse. Data from GitHub&apos;s public events API, not affiliated with or endorsed by GitHub.
-          {POLLING_MODE && ' This deployed demo uses REST polling to refresh analytics data.'}
+          {LITE_MODE
+            ? ' Serverless lite deployment (Vercel Functions and Neon PostgreSQL). The full Kafka based architecture runs locally with Docker Compose.'
+            : POLLING_MODE && ' This deployed demo uses REST polling to refresh analytics data.'}
         </footer>
       </main>
 
