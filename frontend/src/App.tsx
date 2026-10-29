@@ -19,7 +19,7 @@ import { useGraph } from '@/hooks/useGraph'
 import { useView } from '@/hooks/useView'
 
 export default function App() {
-  const { state, paused, idle, pendingCount, setPaused, setRange, launchDemo, returnToLive, dismissAlert, subscribeEvents } =
+  const { state, paused, idle, pendingCount, setPaused, setRange, returnToLive, dismissAlert, subscribeEvents } =
     useDashboard()
   const { mode, range } = state
   const [view, setView] = useView()
@@ -39,7 +39,7 @@ export default function App() {
 
       <main className="mx-auto flex max-w-[1320px] flex-col gap-4 px-4 pb-16 pt-5 sm:gap-5 sm:px-6 sm:pt-6">
         {view === 'analytics' && (
-          <Toolbar mode={mode} range={range} onRange={setRange} onLaunchDemo={launchDemo} onReturnToLive={returnToLive} />
+          <Toolbar mode={mode} range={range} onRange={setRange} onReturnToLive={returnToLive} />
         )}
 
         <AnimatePresence initial={false}>{mode === 'demo' && <DemoBanner onReturn={returnToLive} />}</AnimatePresence>
@@ -51,10 +51,11 @@ export default function App() {
           >
             <Info className="mt-0.5 h-4 w-4 shrink-0" aria-hidden />
             <p>
-              <strong className="font-semibold">Serverless lite deployment.</strong> GitHub is polled by a Vercel
-              function only while someone has the dashboard open, so history builds up while people watch. There is
-              no Kafka, Kafka Streams or Redis here, and refreshes are REST polling every few seconds. Latency and
-              throughput figures of the full Docker Compose architecture do not apply to this deployment.
+              <strong className="font-semibold">Serverless lite deployment.</strong> The main architecture, available
+              on GitHub, uses Java, Spring Boot, Apache Kafka, Kafka Streams, Redis, PostgreSQL, and WebSockets for
+              real-time event processing and analytics. This live demo uses a lightweight serverless deployment on
+              Vercel and Neon PostgreSQL, with on-demand GitHub event ingestion and REST polling. Performance
+              benchmarks are based on the full Docker Compose architecture.
             </p>
           </div>
         )}

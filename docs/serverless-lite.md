@@ -100,7 +100,7 @@ Leave `VITE_API_BASE_URL` empty: the functions are served from the same origin. 
 5. **Verify** (do not call the deployment working before this):
    - `curl 'https://<app>/api/snapshot?mode=demo'` returns JSON with `"mode":"demo"`.
    - `curl 'https://<app>/api/snapshot?mode=live'` returns 200; after a minute `status.ingestion.status` is `HEALTHY` and `eventsIngested` grows (if it shows `RATE_LIMITED` or `DEGRADED`, `lastError` says why).
-   - Open the site, check the "Serverless lite deployment" notice, the live feed, **Launch Demo Activity** and **Return to Live Data**.
+   - Open the site, check the "Serverless lite deployment" notice, the live feed and the charts.
 
 ## Tests
 
@@ -115,7 +115,7 @@ cd frontend && npm test          # includes the api/ tests, run on an in-process
 
 ## Limitations
 
-- Data is only collected while someone watches; an idle site shows an empty 1 h window until the first visitor has been there a while. Use **Launch Demo Activity** for an immediately full dashboard.
+- Data is only collected while someone watches; an idle site shows an empty 1 h window until the first visitor has been there a while.
 - Refresh is polling every 10 s, not push. The latency and throughput of the Kafka pipeline were measured only for that pipeline.
 - One shared poller per deployment: the visitors all see the same sample.
 - The activity feed order of events inside one poll is by event id, since they share the same observation time.
