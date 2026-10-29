@@ -230,17 +230,6 @@ It measures end-to-end throughput, event latency over REST and WebSocket, API la
 - **Raw WebSocket instead of STOMP**, with a small typed JSON envelope. One computation per distinct (mode, range) per tick is shared by all clients watching it.
 - **Demo data lives in process memory**, completely outside Kafka, Redis and PostgreSQL, so it cannot contaminate real metrics.
 
-## Known limitations
-
-- The events API is a **sample**: roughly 100 to 300 events per minute out of far more on GitHub, with delays. Rankings among repositories that each have one or two events are essentially arbitrary.
-- **Commit counts are unavailable** from GitHub's events API, so there is no Commits card.
-- Spike detection needs history: after a restart it stays quiet until a few 5-minute windows have been observed. Kafka Streams state is persisted in a Docker volume to shorten this.
-- A single Kafka broker and one instance of each service: no high availability, replication factor 1.
-- Docker Compose, the Docker images and the Terraform deployment were validated statically (`terraform validate`, Compose YAML parsing). They have **not been executed on a machine with Docker or against a real AWS account** by the author of this repository, so expect to fix small environment-specific issues on first run. CI builds the images on every push.
-- The serverless-lite deployment (see above) only collects data while the dashboard is open, and has not been run against a real Neon database or Vercel project by the author of this repository.
-- The in-memory demo simulator is global: everyone using demo mode at the same time shares one simulated stream.
-- No authentication or rate limiting on the public API; put a CDN or WAF in front for real public exposure.
-
 ## License
 
 [MIT](LICENSE)
