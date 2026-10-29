@@ -10,6 +10,8 @@ Behind the UI sits a small distributed system: a polling ingestion service, Apac
 
 *Left: the Network Graph landing page. Right: the Analytics tab. Both show live GitHub events.*
 
+**Live-Demo** : https://github-real-time-monitor.vercel.app/
+
 ## What it does
 
 - **Network Graph (landing page)**: an interactive graph of repositories, developers and events built from the live WebSocket stream. Zoom, pan and drag; click a node to see its details in a side panel. Click a repository to expand its developers and events. The graph updates incrementally and is capped at 60 repositories, 120 developers and 200 events. Everything below is on the **Analytics** tab.
