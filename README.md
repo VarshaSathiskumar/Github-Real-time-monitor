@@ -226,7 +226,7 @@ It measures end-to-end throughput, event latency over REST and WebSocket, API la
 - **One shared raw topic** for the MVP. It keeps ordering and operations simple; per-type topics would help only at much larger volume.
 - **Redis is a speed layer.** Counters expire after 26 hours; PostgreSQL is the durable record and serves every range above one hour.
 - **One PostgreSQL insert per event.** Simple and idempotent, and the measured bottleneck (see load test). Batching would raise throughput at the cost of retry granularity.
-- **Single EC2 instance, no Kubernetes.** Cheap and easy to reason about. It is a single point of failure; see limitations.
+- **Single EC2 instance, no Kubernetes.** Cheap and easy to reason about.
 - **Raw WebSocket instead of STOMP**, with a small typed JSON envelope. One computation per distinct (mode, range) per tick is shared by all clients watching it.
 - **Demo data lives in process memory**, completely outside Kafka, Redis and PostgreSQL, so it cannot contaminate real metrics.
 
